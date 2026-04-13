@@ -1,0 +1,133 @@
+{
+  "nav": {
+    "home": "ホーム",
+    "tryFree": "無料体験",
+    "business": "ビジネス向け",
+    "hardware": "ホワイトラベルハードウェア",
+    "api": "APIサービス",
+    "saas": "SaaSプラットフォーム",
+    "implementation": "実装プロセス",
+    "dashboard": "マイアカウント",
+    "getStarted": "始める"
+  },
+  "home": {
+    "hero": {
+      "badge": "AI駆動の髪と頭皮のインテリジェンス",
+      "title": "あなた専用の",
+      "titleHighlight": "AIヘアヘルスエキスパート",
+      "subtitle": "医療レベルのAI分析技術、リアルタイムの髪の健康トラッキング、\nパーソナライズされたケアソリューション",
+      "titleSerif": "Your Hair Health,",
+      "titleSans": "Decoded by AI",
+      "subtitleShort": "Medical-grade diagnostics for hair and scalp. Precision hardware meets clinical intelligence.",
+      "valueTag": "Analysis-ready",
+      "valueBody": "Start in the browser with a selfie—deeper scans and tracking continue in the Lushair app.",
+      "tryFree": "無料AI分析",
+      "forBusiness": "企業向けB2Bソリューション",
+      "shopDevices": "Shop analyzers",
+      "webBased": "↓ Webベース、ダウンロード不要",
+      "instant": "セルフィーをアップロード → 即座にAIレポート"
+    },
+    "hud": {
+      "scanning": "Scanning active",
+      "metricDensity": "Follicle density",
+      "metricDensityVal": "142/cm²",
+      "metricHealth": "Health score",
+      "metricHealthVal": "87.4%"
+    },
+    "precision": {
+      "title": "Clinical-grade precision",
+      "subtitle": "Three pillars of AI-powered diagnostics. Medical accuracy meets real-time insight.",
+      "card1Title": "Follicle density mapping",
+      "card1Desc": "Precision mapping of growth patterns across scalp regions.",
+      "card2Title": "Scalp condition signals",
+      "card2Desc": "Surface and texture cues to spot stress, oil, and inflammation risk.",
+      "card3Title": "Strand-level measurement",
+      "card3Desc": "Micron-level cues for thickness and damage—actionable, not generic."
+    },
+    "tabs": {
+      "title": "誰のため？",
+      "subtitle": "個人でも企業でも、完璧なソリューションをご用意しています",
+      "consumers": "個人消費者向け",
+      "consumersHint": "個人向けデバイス、アプリ、ウェブ分析",
+      "business": "ビジネス向け",
+      "businessRibbon": "B2B",
+      "businessHint": "ハードウェア · API · SaaS",
+      "businessChipHardware": "ハードウェア",
+      "businessChipApi": "API",
+      "businessChipSaas": "SaaS"
+    },
+    "consumers": {
+      "medical": {
+        "title": "医療レベルのホーム分析",
+        "desc": "$699プロフェッショナルデバイス、医療レベルのAI分析技術、自宅でプロフェッショナルな検査",
+        "cta": "今すぐ試す"
+      },
+      "tracking": {
+        "title": "AIスマートトラッキング",
+        "desc": "継続的な髪の健康モニタリング、AIアシスタントがリアルタイム分析とパーソナライズされた推奨を提供",
+        "cta": "詳細を見る"
+      },
+      "personalized": {
+        "title": "パーソナライズされた製品推奨",
+        "desc": "AI分析結果に基づいて、最適なヘアケア製品とケアプランを推奨",
+        "cta": "分析を開始"
+      }
+    },
+    "business": {
+      "hardware": {
+        "title": "ホワイトラベルハードウェア",
+        "desc": "ストアと同じラインナップ：Lushair One $99〜、Pro $299〜、Studio $1,290〜。法人向けブランド・大口も提供。",
+        "cta": "価格を見る"
+      },
+      "api": {
+        "title": "API統合",
+        "desc": "$13,999/年から、プラットフォームへの柔軟なAPI統合",
+        "cta": "APIドキュメント"
+      },
+      "saas": {
+        "title": "完全なSaaSプラットフォーム",
+        "desc": "クリニックやサロン向けの完全な管理システム、顧客管理と分析レポートのワンストップソリューション",
+        "cta": "デモを予約"
+      }
+    },
+    "stats": {
+      "title": "信頼できるパートナー",
+      "subtitle": "世界中の50,000人以上のユーザーと1,000社以上の企業に選ばれています",
+      "users": "アクティブユーザー",
+      "businesses": "ビジネスクライアント",
+      "satisfaction": "満足度",
+      "analyses": "分析"
+    },
+    "testimonials": {
+      "user1": {
+        "name": "張さん",
+        "role": "個人ユーザー",
+        "content": "Lushairを3ヶ月使用した後、私の髪の健康状態が大幅に改善されました。AI分析は非常に正確で、推奨製品も効果的です！"
+      },
+      "user2": {
+        "name": "李医師",
+        "role": "医療美容クリニックディレクター",
+        "content": "API統合は非常にスムーズで、髪の分析サービスに対する顧客満足度が大幅に向上しました。技術サポートチームも非常にプロフェッショナルです。"
+      },
+      "user3": {
+        "name": "王マネージャー",
+        "role": "チェーンヘアサロン",
+        "content": "SaaSプラットフォームは、顧客体験と製品販売の向上に役立ちました。今では、すべての顧客に科学的なヘアケアソリューションを提供できます。"
+      }
+    },
+    "cta": {
+      "title": "髪の健康への旅を始める準備はできましたか？",
+      "subtitle": "今すぐAI分析を試して、パーソナライズされた髪の健康レポートを取得してください",
+      "tryFree": "無料トライアルを開始",
+      "learnBusiness": "企業ソリューションについて学ぶ"
+    }
+  },
+  "common": {
+    "learnMore": "詳細を見る",
+    "getStarted": "始める",
+    "contactUs": "お問い合わせ",
+    "bookDemo": "デモを予約",
+    "startTrial": "トライアルを開始",
+    "viewPricing": "価格を見る"
+  }
+}

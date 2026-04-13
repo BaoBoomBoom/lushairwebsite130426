@@ -1,0 +1,133 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "tryFree": "Prueba Gratis",
+    "business": "Para Empresas",
+    "hardware": "Hardware de Marca Blanca",
+    "api": "Servicios API",
+    "saas": "Plataforma SaaS",
+    "implementation": "Implementación",
+    "dashboard": "Mi Cuenta",
+    "getStarted": "Comenzar"
+  },
+  "home": {
+    "hero": {
+      "badge": "Inteligencia Capilar y del Cuero Cabelludo Impulsada por IA",
+      "title": "Tu",
+      "titleHighlight": "Experto en Salud Capilar IA Personal",
+      "subtitle": "Tecnología de análisis de IA de grado médico, seguimiento en tiempo real de la salud capilar,\nsoluciones de cuidado personalizadas",
+      "titleSerif": "Your Hair Health,",
+      "titleSans": "Decoded by AI",
+      "subtitleShort": "Medical-grade diagnostics for hair and scalp. Precision hardware meets clinical intelligence.",
+      "valueTag": "Analysis-ready",
+      "valueBody": "Start in the browser with a selfie—deeper scans and tracking continue in the Lushair app.",
+      "tryFree": "Análisis IA Gratis",
+      "forBusiness": "Soluciones B2B Empresariales",
+      "shopDevices": "Shop analyzers",
+      "webBased": "↓ Basado en web, no requiere descarga",
+      "instant": "Subir selfie → Informe IA instantáneo"
+    },
+    "hud": {
+      "scanning": "Scanning active",
+      "metricDensity": "Follicle density",
+      "metricDensityVal": "142/cm²",
+      "metricHealth": "Health score",
+      "metricHealthVal": "87.4%"
+    },
+    "precision": {
+      "title": "Clinical-grade precision",
+      "subtitle": "Three pillars of AI-powered diagnostics. Medical accuracy meets real-time insight.",
+      "card1Title": "Follicle density mapping",
+      "card1Desc": "Precision mapping of growth patterns across scalp regions.",
+      "card2Title": "Scalp condition signals",
+      "card2Desc": "Surface and texture cues to spot stress, oil, and inflammation risk.",
+      "card3Title": "Strand-level measurement",
+      "card3Desc": "Micron-level cues for thickness and damage—actionable, not generic."
+    },
+    "tabs": {
+      "title": "¿Para Quién Es?",
+      "subtitle": "Ya seas individual o empresa, tenemos la solución perfecta",
+      "consumers": "Para Consumidores",
+      "consumersHint": "Dispositivos personales, app y análisis web",
+      "business": "Para Empresas",
+      "businessRibbon": "B2B",
+      "businessHint": "Hardware · API · SaaS",
+      "businessChipHardware": "Hardware",
+      "businessChipApi": "API",
+      "businessChipSaas": "SaaS"
+    },
+    "consumers": {
+      "medical": {
+        "title": "Análisis en Casa de Grado Médico",
+        "desc": "Dispositivo profesional $699, tecnología de análisis IA de grado médico, pruebas profesionales en casa",
+        "cta": "Probar Ahora"
+      },
+      "tracking": {
+        "title": "Seguimiento Inteligente IA",
+        "desc": "Monitoreo continuo de salud capilar, asistente IA proporciona análisis en tiempo real y recomendaciones personalizadas",
+        "cta": "Saber Más"
+      },
+      "personalized": {
+        "title": "Recomendaciones de Productos Personalizadas",
+        "desc": "Basado en resultados de análisis IA, recomienda productos de cuidado capilar y planes de cuidado más adecuados",
+        "cta": "Comenzar Análisis"
+      }
+    },
+    "business": {
+      "hardware": {
+        "title": "Hardware de Marca Blanca",
+        "desc": "Misma gama que la tienda: Lushair One desde $99, Pro desde $299, Studio desde $1,290; white label y volumen disponibles.",
+        "cta": "Ver Precios"
+      },
+      "api": {
+        "title": "Integración API",
+        "desc": "Desde $13,999/año, integración API flexible en su plataforma",
+        "cta": "Documentación API"
+      },
+      "saas": {
+        "title": "Plataforma SaaS Completa",
+        "desc": "Sistema de gestión completo para clínicas y salones, solución integral para gestión de clientes e informes de análisis",
+        "cta": "Reservar Demo"
+      }
+    },
+    "stats": {
+      "title": "Socios de Confianza",
+      "subtitle": "Elegido por más de 50,000 usuarios y 1,000 empresas en todo el mundo",
+      "users": "Usuarios Activos",
+      "businesses": "Clientes Empresariales",
+      "satisfaction": "Satisfacción",
+      "analyses": "Análisis"
+    },
+    "testimonials": {
+      "user1": {
+        "name": "Sra. Zhang",
+        "role": "Usuario Individual",
+        "content": "Después de usar Lushair durante tres meses, mi salud capilar ha mejorado significativamente. ¡El análisis IA es muy preciso y los productos recomendados funcionan genial!"
+      },
+      "user2": {
+        "name": "Dr. Li",
+        "role": "Director de Clínica de Estética Médica",
+        "content": "La integración de API fue muy fluida y la satisfacción del cliente con nuestros servicios de análisis capilar ha aumentado significativamente. El equipo de soporte técnico también es muy profesional."
+      },
+      "user3": {
+        "name": "Gerente Wang",
+        "role": "Salón de Peluquería en Cadena",
+        "content": "La plataforma SaaS nos ha ayudado a mejorar la experiencia del cliente y las ventas de productos. Ahora podemos proporcionar soluciones científicas de cuidado capilar para cada cliente."
+      }
+    },
+    "cta": {
+      "title": "¿Listo para Comenzar tu Viaje de Salud Capilar?",
+      "subtitle": "Prueba el análisis IA ahora y obtén tu informe personalizado de salud capilar",
+      "tryFree": "Comenzar Prueba Gratis",
+      "learnBusiness": "Conocer Soluciones Empresariales"
+    }
+  },
+  "common": {
+    "learnMore": "Saber Más",
+    "getStarted": "Comenzar",
+    "contactUs": "Contáctenos",
+    "bookDemo": "Reservar Demo",
+    "startTrial": "Comenzar Prueba",
+    "viewPricing": "Ver Precios"
+  }
+}

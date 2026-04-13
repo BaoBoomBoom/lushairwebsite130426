@@ -1,0 +1,640 @@
+{
+  "nav": {
+    "home": "Início",
+    "tryFree": "Experimente Grátis",
+    "business": "Para Empresas",
+    "hardware": "Hardware Marca Branca",
+    "api": "Serviços API",
+    "saas": "Plataforma SaaS",
+    "implementation": "Implementação",
+    "dashboard": "Minha Conta",
+    "getStarted": "Começar"
+  },
+  "home": {
+    "hero": {
+      "badge": "Inteligência Capilar e do Couro Cabeludo Impulsionada por IA",
+      "title": "Seu",
+      "titleHighlight": "Especialista em Saúde Capilar IA Pessoal",
+      "subtitle": "Tecnologia de análise de IA de nível médico, rastreamento em tempo real da saúde capilar,\nsoluções de cuidados personalizadas",
+      "titleSerif": "Your Hair Health,",
+      "titleSans": "Decoded by AI",
+      "subtitleShort": "Medical-grade diagnostics for hair and scalp. Precision hardware meets clinical intelligence.",
+      "valueTag": "Analysis-ready",
+      "valueBody": "Start in the browser with a selfie—deeper scans and tracking continue in the Lushair app.",
+      "tryFree": "Análise IA Grátis",
+      "forBusiness": "Soluções B2B Empresariais",
+      "shopDevices": "Shop analyzers",
+      "webBased": "↓ Baseado na web, não requer download",
+      "instant": "Enviar selfie → Relatório IA instantâneo"
+    },
+    "hud": {
+      "scanning": "Scanning active",
+      "metricDensity": "Follicle density",
+      "metricDensityVal": "142/cm²",
+      "metricHealth": "Health score",
+      "metricHealthVal": "87.4%"
+    },
+    "precision": {
+      "title": "Clinical-grade precision",
+      "subtitle": "Three pillars of AI-powered diagnostics. Medical accuracy meets real-time insight.",
+      "card1Title": "Follicle density mapping",
+      "card1Desc": "Precision mapping of growth patterns across scalp regions.",
+      "card2Title": "Scalp condition signals",
+      "card2Desc": "Surface and texture cues to spot stress, oil, and inflammation risk.",
+      "card3Title": "Strand-level measurement",
+      "card3Desc": "Micron-level cues for thickness and damage—actionable, not generic."
+    },
+    "tabs": {
+      "title": "Para Quem É?",
+      "subtitle": "Seja você individual ou empresa, temos a solução perfeita",
+      "consumers": "Para Consumidores",
+      "consumersHint": "Dispositivos pessoais, app e análise web",
+      "business": "Para Empresas",
+      "businessRibbon": "B2B",
+      "businessHint": "Hardware · API · SaaS",
+      "businessChipHardware": "Hardware",
+      "businessChipApi": "API",
+      "businessChipSaas": "SaaS"
+    },
+    "consumers": {
+      "medical": {
+        "title": "Análise em Casa de Nível Médico",
+        "desc": "Dispositivo profissional $699, tecnologia de análise IA de nível médico, testes profissionais em casa",
+        "cta": "Experimentar Agora"
+      },
+      "tracking": {
+        "title": "Rastreamento Inteligente IA",
+        "desc": "Monitoramento contínuo da saúde capilar, assistente IA fornece análise em tempo real e recomendações personalizadas",
+        "cta": "Saber Mais"
+      },
+      "personalized": {
+        "title": "Recomendações de Produtos Personalizadas",
+        "desc": "Baseado em resultados de análise IA, recomenda produtos de cuidado capilar e planos de cuidado mais adequados",
+        "cta": "Começar Análise"
+      }
+    },
+    "business": {
+      "hardware": {
+        "title": "Hardware Marca Branca",
+        "desc": "Igual à loja: Lushair One a partir de $99, Pro a partir de $299, Studio a partir de $1,290 — white label e volume.",
+        "cta": "Ver Preços"
+      },
+      "api": {
+        "title": "Integração API",
+        "desc": "A partir de $13,999/ano, integração API flexível em sua plataforma",
+        "cta": "Documentação API"
+      },
+      "saas": {
+        "title": "Plataforma SaaS Completa",
+        "desc": "Sistema de gestão completo para clínicas e salões, solução integral para gestão de clientes e relatórios de análise",
+        "cta": "Reservar Demo"
+      }
+    },
+    "stats": {
+      "title": "Parceiros de Confiança",
+      "subtitle": "Escolhido por mais de 50.000 usuários e 1.000 empresas em todo o mundo",
+      "users": "Usuários Ativos",
+      "businesses": "Clientes Empresariais",
+      "satisfaction": "Satisfação",
+      "analyses": "Análises"
+    },
+    "testimonials": {
+      "user1": {
+        "name": "Sra. Zhang",
+        "role": "Usuário Individual",
+        "content": "Depois de usar Lushair por três meses, minha saúde capilar melhorou significativamente. A análise IA é muito precisa e os produtos recomendados funcionam muito bem!"
+      },
+      "user2": {
+        "name": "Dr. Li",
+        "role": "Diretor de Clínica de Estética Médica",
+        "content": "A integração da API foi muito fluida e a satisfação do cliente com nossos serviços de análise capilar aumentou significativamente. A equipe de suporte técnico também é muito profissional."
+      },
+      "user3": {
+        "name": "Gerente Wang",
+        "role": "Salão de Cabeleireiro em Cadeia",
+        "content": "A plataforma SaaS nos ajudou a melhorar a experiência do cliente e as vendas de produtos. Agora podemos fornecer soluções científicas de cuidado capilar para cada cliente."
+      }
+    },
+    "cta": {
+      "title": "Pronto para Começar sua Jornada de Saúde Capilar?",
+      "subtitle": "Experimente a análise IA agora e obtenha seu relatório personalizado de saúde capilar",
+      "tryFree": "Começar Teste Grátis",
+      "learnBusiness": "Conhecer Soluções Empresariais"
+    }
+  },
+  "tryFree": {
+    "title": "Análise IA Capilar Grátis",
+    "subtitle": "Envie sua foto e obtenha um relatório profissional de saúde capilar",
+    "backHome": "Voltar ao Início",
+    "steps": {
+      "upload": "Enviar Foto",
+      "questionnaire": "Preencher Info",
+      "analyzing": "Análise IA",
+      "results": "Ver Relatório"
+    },
+    "upload": {
+      "title": "Envie sua Selfie",
+      "dragDrop": "Arraste e solte ou clique para enviar",
+      "formats": "Suporta formatos JPG, PNG",
+      "tip1": "Vista frontal funciona melhor",
+      "tip2": "Boa iluminação",
+      "tip3": "Cabelo totalmente visível"
+    },
+    "questionnaire": {
+      "title": "Conte-nos Mais",
+      "age": "Faixa Etária",
+      "selectAge": "Por favor selecione",
+      "gender": "Gênero",
+      "selectGender": "Por favor selecione",
+      "female": "Feminino",
+      "male": "Masculino",
+      "other": "Outro",
+      "concerns": "Suas Preocupações Capilares (Múltiplas)",
+      "hairLoss": "Queda de Cabelo",
+      "dandruff": "Caspa",
+      "oily": "Couro Cabeludo Oleoso",
+      "dry": "Couro Cabeludo Seco",
+      "thinning": "Cabelo Ralo",
+      "damage": "Danos ao Cabelo",
+      "previous": "Anterior",
+      "analyze": "Iniciar Análise"
+    },
+    "analyzing": {
+      "title": "IA Analisando...",
+      "detecting": "✓ Detectando zonas do couro cabeludo...",
+      "density": "✓ Analisando densidade capilar...",
+      "oil": "✓ Verificando níveis de oleosidade...",
+      "generating": "✓ Gerando relatório personalizado..."
+    },
+    "results": {
+      "complete": "Análise Completa!",
+      "yourScore": "Sua Pontuação de Saúde Capilar",
+      "healthStatus": "Estado de Saúde: Bom",
+      "sebum": "Nível de Sebo do Couro Cabeludo",
+      "high": "Alto",
+      "density": "Densidade Capilar",
+      "normal": "Normal",
+      "scalp": "Saúde do Couro Cabeludo",
+      "mild": "Leve Vermelhidão",
+      "findings": "Principais Descobertas:",
+      "finding1": "Níveis altos de sebo detectados, recomendamos shampoo de controle de oleosidade",
+      "finding2": "Densidade capilar normal, continue bons hábitos de cuidado",
+      "finding3": "Leve vermelhidão detectada na área da coroa, pode precisar de cuidados calmantes",
+      "detailedReport": "Relatório de Análise Detalhado",
+      "getFullReport": "Obter Relatório Completo + Plano Personalizado",
+      "downloadApp": "Baixar Aplicativo Lushair",
+      "haveAccount": "Já tem uma conta?",
+      "signIn": "Entrar",
+      "emailResults": "Ou envie-me os resultados por e-mail:",
+      "emailPlaceholder": "seu@email.com",
+      "send": "Enviar"
+    }
+  },
+  "hardware": {
+    "badge": "Soluções de Hardware Marca Branca",
+    "title": "Preços de Hardware Marca Branca Lushair",
+    "subtitle": "Hardware profissional de análise capilar, personalização de marca, preços escalonados flexíveis, entrega rápida",
+    "gen1": "Gen 1 (Em Estoque)",
+    "gen2": "Gen 2 (Premium)",
+    "products": {
+      "single": {
+        "title": "Espectro Único",
+        "subtitle": "Análise Básica",
+        "whiteLight": "Luz branca",
+        "sensor": "Sensor 20MP",
+        "bluetooth": "Bluetooth",
+        "appRequired": "Aplicativo necessário"
+      },
+      "tri": {
+        "title": "Tri-Espectro",
+        "subtitle": "IA Avançada",
+        "popular": "Popular",
+        "uva": "Luz UV-A",
+        "polarized": "Polarizada"
+      },
+      "triScreen": {
+        "title": "Tri-Espectro + Tela",
+        "subtitle": "Premium Autônomo",
+        "oled": "Tela OLED 2.4\"",
+        "standalone": "Modo Autônomo",
+        "optional": "Aplicativo Opcional",
+        "noApp": "Sem Necessidade de Aplicativo"
+      }
+    },
+    "pricing": {
+      "title": "Preços por Volume",
+      "starting": "inicial/unidade",
+      "units": "unidades",
+      "freeBranding": "+ Marca GRÁTIS 🎁"
+    },
+    "calculator": {
+      "title": "Calculadora de Preços",
+      "quantity": "Quantidade Estimada do Pedido",
+      "unitPrice": "Preço Unitário:",
+      "totalCost": "Custo Total:",
+      "delivery": "Entrega:",
+      "requestQuote": "💬 Solicitar Orçamento Personalizado",
+      "scheduleCall": "📞 Agendar Chamada"
+    },
+    "timeline": {
+      "title": "Cronograma de Entrega",
+      "gen1Stock": "Gen 1 (Unidades em Estoque)",
+      "gen2Custom": "Gen 2 (Fabricação Personalizada)",
+      "tooling": "Ferramentas",
+      "production": "Produção",
+      "shipping": "Envio",
+      "total": "Total: ~75-90 dias (2,5-3 meses)",
+      "noTooling": "⚡ Sem necessidade de ferramentas? Economize 15-30 dias!",
+      "month": "mês",
+      "months": "meses",
+      "days": "dias",
+      "about": "~"
+    }
+  },
+  "api": {
+    "badge": "Serviços de API de Análise IA",
+    "title": "API de Análise Capilar Lushair",
+    "subtitle": "Integre análise IA de nível médico em sua plataforma, assinatura flexível, integração rápida",
+    "plans": {
+      "basic": {
+        "name": "Básico",
+        "perMetric": "por métrica/ano",
+        "qps": "QPS",
+        "calls": "100K chamadas/mês",
+        "support": "Suporte por e-mail",
+        "sla": "SLA de 7 dias"
+      },
+      "standard": {
+        "name": "Padrão",
+        "recommended": "Recomendado",
+        "calls": "500K chamadas/mês",
+        "support": "Suporte prioritário",
+        "sla": "SLA de 24h"
+      },
+      "professional": {
+        "name": "Profissional",
+        "calls": "3M chamadas/mês",
+        "support": "Gerente dedicado",
+        "sla": "SLA de 4h"
+      },
+      "selected": "Selecionado",
+      "select": "Selecionar Plano"
+    },
+    "metrics": {
+      "title": "Métricas Disponíveis",
+      "subtitle": "Selecione as métricas de análise que você precisa (cada métrica cobrada separadamente)",
+      "hairDensity": "Análise de Densidade Capilar",
+      "scalpHealth": "Pontuação de Saúde do Couro Cabeludo",
+      "sebum": "Detecção de Nível de Sebo",
+      "follicle": "Medição de Diâmetro do Folículo",
+      "hairLoss": "Classificação de Estágio de Queda de Cabelo",
+      "dandruff": "Detecção de Caspa/Condição do Couro Cabeludo",
+      "damage": "Avaliação de Danos ao Cabelo",
+      "recommendations": "Recomendações de Produtos Personalizadas",
+      "selected": "{count} métricas selecionadas",
+      "totalPrice": "Total: ${price}/ano",
+      "startTrial": "Iniciar Teste Grátis de 14 Dias",
+      "trialNote": "💡 Teste de 14 dias, sem necessidade de cartão de crédito"
+    },
+    "docs": {
+      "title": "Prévia da Documentação da API",
+      "authentication": "Autenticação",
+      "authComment": "// Adicionar Chave API no cabeçalho da solicitação",
+      "endpoint": "POST /v1/analyze",
+      "endpointDesc": "Analisar cabelo e couro cabeludo a partir de imagem",
+      "responseExample": "Exemplo de Resposta",
+      "viewFullDocs": "📖 Ver Documentação Completa",
+      "getApiKey": "🔑 Obter Chave API"
+    },
+    "playground": {
+      "title": "Teste Interativo de API",
+      "subtitle": "Teste chamadas de API diretamente no seu navegador",
+      "apiKey": "Chave API",
+      "uploadImage": "Enviar Imagem",
+      "selectMetrics": "Selecionar Métricas",
+      "hairDensity": "Densidade Capilar",
+      "scalpHealth": "Saúde do Couro Cabeludo",
+      "sendRequest": "Enviar Solicitação",
+      "responseComment": "// Resultado da Resposta"
+    },
+    "keys": {
+      "title": "Minhas Chaves API",
+      "createNew": "Criar Nova Chave",
+      "production": "Produção",
+      "testing": "Teste",
+      "created": "Criado",
+      "lastUsed": "Último Uso",
+      "requestsToday": "Solicitações Hoje",
+      "neverUsed": "Nunca Usado",
+      "testLimit": "⚠️ Chaves de teste limitadas a 100 solicitações/dia"
+    }
+  },
+  "saas": {
+    "badge": "Sistema SaaS de Gestão de Lojas",
+    "title": "Plataforma de Gestão Completa para Salões e Clínicas",
+    "subtitle": "Gestão de clientes, relatórios de análise, recomendações de produtos, rastreamento de receita - solução tudo-em-um",
+    "demo": {
+      "title": "Experiência de Demo Interativa",
+      "subtitle": "Clique abaixo para ver o sistema de gestão em ação",
+      "header": "Sistema de Gestão de Lojas Lushair",
+      "demoAccount": "Conta Demo",
+      "customerManagement": "Gestão de Clientes",
+      "analytics": "Análise de Dados",
+      "lastVisit": "Última visita",
+      "healthTrend": "Tendência de Saúde Capilar:",
+      "recommendedProducts": "Produtos Recomendados:",
+      "viewReport": "Ver Relatório Completo",
+      "scheduleFollowup": "Agendar Acompanhamento",
+      "todayStats": "Estatísticas de Hoje:",
+      "scansPerformed": "scans realizados",
+      "recommendations": "em recomendações de produtos",
+      "conversionRate": "taxa de conversão",
+      "newCustomers": "novos clientes",
+      "topProducts": "Produtos Mais Vendidos",
+      "launchDemo": "▶ Iniciar Demo Completa"
+    },
+    "features": {
+      "customer": {
+        "title": "Gestão de Perfil do Cliente",
+        "desc": "Informações completas do cliente, histórico, rastreamento de preferências"
+      },
+      "analytics": {
+        "title": "Análise de Dados Inteligente",
+        "desc": "Estatísticas de receita em tempo real, análise de vendas de produtos, previsão de tendências"
+      },
+      "recommendations": {
+        "title": "Motor de Recomendação de Produtos",
+        "desc": "Recomendações de produtos personalizadas impulsionadas por IA, aumente a conversão de vendas"
+      },
+      "appointments": {
+        "title": "Gestão de Agendamentos",
+        "desc": "Reserva online, lembretes automáticos, agendamento"
+      },
+      "tracking": {
+        "title": "Rastreamento de Saúde",
+        "desc": "Análise de tendência de saúde capilar de longo prazo, exibição visual"
+      },
+      "inventory": {
+        "title": "Gestão de Inventário",
+        "desc": "Sincronização de inventário de produtos, alertas de baixo estoque, sugestões de compra"
+      }
+    },
+    "pricing": {
+      "title": "Planos de Assinatura Flexíveis",
+      "subtitle": "Escolha o plano que melhor se adapta ao tamanho do seu negócio",
+      "starter": {
+        "name": "Inicial",
+        "users": "1-100 usuários",
+        "feature1": "Banco de Dados de Clientes",
+        "feature2": "Histórico de Scans",
+        "feature3": "Recomendações de Produtos",
+        "feature4": "Suporte por E-mail"
+      },
+      "growth": {
+        "name": "Crescimento",
+        "popular": "Mais Popular",
+        "users": "101-300 usuários",
+        "feature1": "Tudo do Inicial+",
+        "feature2": "Relatórios de Tendências",
+        "feature3": "Sincronização de Inventário",
+        "feature4": "Suporte Prioritário"
+      },
+      "professional": {
+        "name": "Profissional",
+        "users": "301-500 usuários",
+        "feature1": "Tudo do Crescimento+",
+        "feature2": "Multi-localização",
+        "feature3": "UI Marca Branca",
+        "feature4": "Integrações Personalizadas"
+      },
+      "business": {
+        "name": "Empresarial",
+        "users": "501-2000 usuários",
+        "feature1": "Tudo do Pro+",
+        "feature2": "Acesso à API",
+        "feature3": "Relatórios Personalizados",
+        "feature4": "Webhooks"
+      },
+      "enterprise": {
+        "name": "Corporativo",
+        "users": "2001-5000 usuários",
+        "feature1": "Tudo do Empresarial+",
+        "feature2": "Infraestrutura Dedicada",
+        "feature3": "Análise Avançada",
+        "feature4": "Gerente de Conta"
+      },
+      "flagship": {
+        "name": "Carro-Chefe",
+        "users": "5000+ usuários",
+        "feature1": "Tudo do Corporativo+",
+        "feature2": "SLA Personalizado",
+        "feature3": "Desenvolvimento Personalizado",
+        "feature4": "Equipe Dedicada"
+      },
+      "month": "/mês",
+      "startTrial": "Iniciar Teste Grátis",
+      "contactSales": "Contatar Vendas",
+      "includes": "💡 Todos os planos incluem:",
+      "include1": "• Scans ilimitados",
+      "include2": "• Motor de recomendação de produtos com personalização",
+      "include3": "• Perfis de clientes e registros históricos",
+      "include4": "• Aplicativo móvel para equipe (iOS/Android)"
+    },
+    "cta": {
+      "title": "Pronto para Elevar Seu Negócio?",
+      "subtitle": "Inicie seu teste grátis de 14 dias agora, sem necessidade de cartão de crédito, cancele a qualquer momento",
+      "startTrial": "Iniciar Teste Grátis",
+      "bookDemo": "Reservar Demo do Produto"
+    }
+  },
+  "implementation": {
+    "badge": "Cronograma de Implementação",
+    "title": "Da Consulta ao Lançamento: Sua Jornada Lushair",
+    "subtitle": "Processo transparente, cronograma claro, entrega previsível",
+    "overview": {
+      "title": "Ciclo de Implementação Completo",
+      "weeks": "12-16 semanas",
+      "months": "(aproximadamente 3-4 meses)"
+    },
+    "steps": {
+      "step1": {
+        "title": "Discussão de Parceria",
+        "duration": "1-2 semanas",
+        "task1": "Chamada de consulta inicial",
+        "task2": "Assinatura de NDA",
+        "task3": "Coleta de requisitos",
+        "cta": "💬 Agendar Consulta"
+      },
+      "step2": {
+        "title": "Validação Técnica",
+        "duration": "1 semana",
+        "task1": "Tour pela fábrica (opcional, virtual/presencial)",
+        "task2": "Teste de dispositivo de amostra",
+        "task3": "Prova de conceito de integração API",
+        "cta": "🏭 Reservar Visita à Fábrica"
+      },
+      "step3": {
+        "title": "Orçamento e Contrato",
+        "duration": "1 semana",
+        "task1": "Preços finais baseados no volume",
+        "task2": "Opções de personalização selecionadas",
+        "task3": "Assinatura de contrato e depósito (30%)"
+      },
+      "step4": {
+        "title": "Início da Produção",
+        "duration": "1-2 semanas",
+        "task1": "Ativos de marca finalizados (logotipo, cores)",
+        "task2": "Unidades de amostra produzidas",
+        "task3": "Configuração de Software/API"
+      },
+      "step5": {
+        "title": "Teste e QA",
+        "duration": "1-2 semanas",
+        "task1": "Aprovação de amostra de hardware",
+        "task2": "Teste de integração de software",
+        "task3": "Validação de fluxo de trabalho de ponta a ponta"
+      },
+      "step6": {
+        "title": "Produção em Massa e Entrega",
+        "duration": "6-8 semanas",
+        "task1": "Produção (4-6 semanas)",
+        "task2": "Inspeção de qualidade",
+        "task3": "Logística e envio (2-4 semanas)",
+        "task4": "Pagamento final (70%) antes do envio"
+      }
+    },
+    "gantt": {
+      "title": "Gráfico de Gantt Interativo",
+      "step": "Passo",
+      "downloadPdf": "📥 Baixar Roteiro Detalhado em PDF"
+    },
+    "decision": {
+      "title": "Qual Solução É Certa para Você?",
+      "subtitle": "Escolha a solução mais adequada com base em suas necessidades",
+      "question1": "Você tem um aplicativo existente?",
+      "yes": "Sim",
+      "no": "Não",
+      "question2": "Você já tem hardware?",
+      "question3": "Você planeja pedir 1000+ unidades?",
+      "apiService": "Apenas API",
+      "apiPrice": "$13,999+/ano",
+      "apiDesc": "Apenas interface API necessária para integrar análise IA",
+      "bundle": "Pacote Hardware + API",
+      "bundlePrice": "Desconto por Volume",
+      "bundleDesc": "Desconto de pacote disponível",
+      "fullPackage": "Pacote Completo GRÁTIS",
+      "fullPrice": "Grátis",
+      "fullItem1": "• Hardware marca branca",
+      "fullItem2": "• Aplicativo com marca",
+      "fullItem3": "• Integração API",
+      "fullItem4": "• SDK fornecido",
+      "basicPackage": "Pacote Básico",
+      "basicPrice": "$70,000",
+      "basicItem1": "• Hardware marca branca",
+      "basicItem2": "• Aplicativo com marca",
+      "basicNote": "⚠️ Reembolsado se pedir 1000+ unidades até o final do ano!",
+      "best": "Melhor",
+      "contactSales": "💬 Contatar Vendas para Solução Personalizada"
+    },
+    "cases": {
+      "title": "Histórias de Sucesso",
+      "case1": {
+        "company": "Salão de Beleza em Cadeia",
+        "type": "Salão de Cabeleireiro em Cadeia",
+        "locations": "50 localizações",
+        "timeline": "Implementado em 3 meses",
+        "result1": "Satisfação do cliente +35%",
+        "result2": "Vendas de produtos +120%",
+        "result3": "Taxa de recompra +40%"
+      },
+      "case2": {
+        "company": "Clínica Médica de Bem-Estar",
+        "type": "Estética Médica",
+        "locations": "5 clínicas",
+        "timeline": "Implementado em 2,5 meses",
+        "result1": "Novos clientes +80%",
+        "result2": "Eficiência de serviço +50%",
+        "result3": "Receita +150%"
+      },
+      "case3": {
+        "company": "Plataforma de E-commerce de Beleza",
+        "type": "E-commerce",
+        "locations": "Integração API",
+        "timeline": "Integrado em 1 mês",
+        "result1": "Retenção de usuários +60%",
+        "result2": "Taxa de conversão +85%",
+        "result3": "Valor médio do pedido +45%"
+      },
+      "keyResults": "Principais Resultados:"
+    }
+  },
+  "dashboard": {
+    "welcome": "Bem-vinda de volta, Sra. Zhang! 👋",
+    "lastScan": "Último scan: 3 dias atrás",
+    "newScan": "Novo Scan",
+    "tabs": {
+      "overview": "Visão Geral",
+      "history": "Histórico",
+      "recommendations": "Recomendações"
+    },
+    "overview": {
+      "totalScore": "Pontuação Geral de Saúde",
+      "improved": "+4 do mês passado",
+      "trend": "Tendência (Últimas 5 vezes)",
+      "hairDensity": "Densidade Capilar",
+      "scalpHealth": "Saúde do Couro Cabeludo",
+      "oilLevel": "Nível de Oleosidade",
+      "hairDamage": "Danos ao Cabelo",
+      "stable": "Estável",
+      "aiInsights": "Análise Inteligente IA",
+      "insight1": {
+        "title": "Melhoria na Densidade Capilar",
+        "desc": "Sua densidade capilar continua melhorando, o que pode estar relacionado à máscara nutritiva para cabelos que você tem usado recentemente. Recomendamos continuar sua rotina de cuidados atual."
+      },
+      "insight2": {
+        "title": "Saúde do Couro Cabeludo Precisa de Atenção",
+        "desc": "Detectada diminuição na pontuação de saúde do couro cabeludo. Recomendamos reduzir a frequência do uso de ferramentas de calor e aumentar os cuidados hidratantes do couro cabeludo."
+      },
+      "insight3": {
+        "title": "Recomendações de Cuidados",
+        "desc": "Com base no seu tipo de cabelo e condição atual, recomendamos 2-3 tratamentos profundos por semana usando produtos de cuidado capilar suaves."
+      }
+    },
+    "history": {
+      "title": "Histórico de Scans",
+      "healthScore": "Pontuação de Saúde",
+      "improved": "Melhorado",
+      "baseline": "Linha de Base"
+    },
+    "recommendations": {
+      "title": "Recomendado Para Você",
+      "basedOn": "Com base na sua condição capilar",
+      "match": "compatível",
+      "buy": "Comprar",
+      "whyThese": "Por Que Esses Produtos?",
+      "reason1": "• Com base nos seus níveis atuais de sebo alto, shampoo de controle de oleosidade é mais adequado",
+      "reason2": "• Sérum para couro cabeludo pode ajudar a melhorar inflamação leve",
+      "reason3": "• Máscara nutritiva ajuda a melhorar continuamente a densidade capilar"
+    }
+  },
+  "notFound": {
+    "title": "Página Não Encontrada",
+    "subtitle": "Desculpe, a página que você está procurando não existe ou foi removida",
+    "backHome": "Voltar ao Início",
+    "tryFree": "Experimentar Grátis",
+    "mightWant": "Você pode querer visitar:",
+    "hardware": "Hardware Marca Branca",
+    "api": "Serviços API",
+    "saas": "Plataforma SaaS",
+    "implementation": "Implementação",
+    "dashboard": "Minha Conta"
+  },
+  "common": {
+    "learnMore": "Saber Mais",
+    "getStarted": "Começar",
+    "contactUs": "Contate-nos",
+    "bookDemo": "Reservar Demo",
+    "startTrial": "Começar Teste",
+    "viewPricing": "Ver Preços"
+  }
+}

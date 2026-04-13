@@ -1,0 +1,829 @@
+{
+  "nav": {
+    "home": "Home",
+    "tryFree": "Try Free",
+    "business": "For Business",
+    "shop": "Shop",
+    "hardware": "White Label Hardware",
+    "api": "API Services",
+    "saas": "SaaS Platform",
+    "implementation": "Implementation",
+    "dashboard": "My Account",
+    "getStarted": "Get Started"
+  },
+  "home": {
+    "hero": {
+      "badge": "AI-Powered Hair & Scalp Intelligence",
+      "title": "Your Personal",
+      "titleHighlight": "AI Hair Health Expert",
+      "titleSerif": "Your Hair Health,",
+      "titleSans": "Decoded by AI",
+      "subtitle": "Medical-grade AI analysis technology, real-time hair health tracking,\npersonalized care solutions",
+      "subtitleShort": "Medical-grade diagnostics for hair and scalp. Precision hardware meets clinical intelligence.",
+      "valueTag": "Analysis-ready",
+      "valueBody": "Start in the browser with a selfie—deeper scans and tracking continue in the Lushair app.",
+      "tryFree": "Free AI Analysis",
+      "forBusiness": "Enterprise B2B Solutions",
+      "shopDevices": "Shop analyzers",
+      "webBased": "↓ Web-based, no download required",
+      "instant": "Upload selfie → Instant AI report"
+    },
+    "hud": {
+      "scanning": "Scanning active",
+      "metricDensity": "Follicle density",
+      "metricDensityVal": "142/cm²",
+      "metricHealth": "Health score",
+      "metricHealthVal": "87.4%"
+    },
+    "precision": {
+      "title": "Clinical-grade precision",
+      "subtitle": "Three pillars of AI-powered diagnostics. Medical accuracy meets real-time insight.",
+      "card1Title": "Follicle density mapping",
+      "card1Desc": "Precision mapping of growth patterns across scalp regions.",
+      "card2Title": "Scalp condition signals",
+      "card2Desc": "Surface and texture cues to spot stress, oil, and inflammation risk.",
+      "card3Title": "Strand-level measurement",
+      "card3Desc": "Micron-level cues for thickness and damage—actionable, not generic."
+    },
+    "floatingStats": {
+      "analysisComplete": "Analysis Complete",
+      "healthScore": "Hair Health Score: 85/100",
+      "improving": "Continuously Improving",
+      "monthlyGain": "+12% from last month"
+    },
+    "tabs": {
+      "title": "Who Is It For?",
+      "subtitle": "Whether you're an individual or enterprise, we have the perfect solution",
+      "consumers": "For Consumers",
+      "consumersHint": "Personal devices, app & web analysis",
+      "business": "For Business",
+      "businessRibbon": "B2B",
+      "businessHint": "Hardware · API · SaaS",
+      "businessChipHardware": "Hardware",
+      "businessChipApi": "API",
+      "businessChipSaas": "SaaS"
+    },
+    "consumers": {
+      "ctas": {
+        "downloadApp": "Download app",
+        "buyDevices": "Buy devices",
+        "freeAnalysis": "Free AI analysis"
+      },
+      "medical": {
+        "title": "Medical-Grade Home Analysis",
+        "desc": "Start with a free web analysis—no app required. Your full report and ongoing care sync to the Lushair app when you are ready.",
+        "note": "Try on the web first; download the app after your report for tracking and reminders.",
+        "cta": "Try Now"
+      },
+      "tracking": {
+        "title": "AI Smart Tracking",
+        "desc": "Long-term trends, reminders, and insights live in the Lushair mobile app—built for daily hair health.",
+        "cta": "App introduction"
+      },
+      "personalized": {
+        "title": "Personalized Product Recommendations",
+        "desc": "Selfie analysis powers your baseline; the in-app AI assistant refines picks and answers follow-up questions.",
+        "cta": "Start with selfie analysis"
+      }
+    },
+    "business": {
+      "hardware": {
+        "title": "White Label Hardware",
+        "desc": "Same family as our store: Lushair One from $99, Pro from $199, Studio from $1,699—plus branded & volume B2B programs.",
+        "cta": "View Pricing"
+      },
+      "api": {
+        "badge": "Developer API",
+        "title": "API Integration",
+        "desc": "Starting from $1,999/year, flexible API integration into your platform",
+        "cta": "Open API services"
+      },
+      "saas": {
+        "badge": "All-in-one SaaS",
+        "title": "Complete SaaS Platform",
+        "desc": "Complete management system for clinics and salons, one-stop solution for customer management and analysis reports",
+        "cta": "Explore SaaS platform"
+      },
+      "apiSaasStrip": {
+        "title": "Integrate without guesswork",
+        "apiTitle": "Hair analysis API",
+        "apiBlurb": "REST endpoints, keys, and medical-grade models—embed scans in your own product.",
+        "apiCta": "View API & pricing",
+        "saasTitle": "Salon & clinic SaaS",
+        "saasBlurb": "Clients, scans, staff apps, and analytics in one branded workspace.",
+        "saasCta": "See SaaS features"
+      }
+    },
+    "stats": {
+      "title": "Trusted Partners",
+      "subtitle": "Chosen by 50,000+ users and 1,000+ businesses worldwide",
+      "users": "Active Users",
+      "businesses": "Business Clients",
+      "satisfaction": "Satisfaction",
+      "analyses": "Analyses"
+    },
+    "testimonials": {
+      "user1": {
+        "name": "Ms. Zhang",
+        "role": "Individual User",
+        "content": "After using Lushair for three months, my hair health has improved significantly. The AI analysis is very accurate, and the recommended products work great!"
+      },
+      "user2": {
+        "name": "Dr. Li",
+        "role": "Medical Aesthetics Clinic Director",
+        "content": "API integration was very smooth, and customer satisfaction with our hair analysis services has increased significantly. The technical support team is also very professional."
+      },
+      "user3": {
+        "name": "Manager Wang",
+        "role": "Chain Hair Salon",
+        "content": "The SaaS platform has helped us improve customer experience and product sales. Now we can provide scientific hair care solutions for every customer."
+      }
+    },
+    "cta": {
+      "title": "Ready to Start Your Hair Health Journey?",
+      "subtitle": "Try AI analysis now and get your personalized hair health report",
+      "tryFree": "Start Free Trial",
+      "learnBusiness": "Learn About Enterprise Solutions"
+    }
+  },
+  "tryFree": {
+    "title": "Free AI Hair Analysis",
+    "subtitle": "Upload your photo and get a professional hair health report",
+    "backHome": "Back to Home",
+    "steps": {
+      "upload": "Upload Photo",
+      "questionnaire": "Fill Info",
+      "analyzing": "AI Analysis",
+      "results": "View Report"
+    },
+    "upload": {
+      "title": "Upload Your Selfie",
+      "dragDrop": "Drag & drop or click to upload",
+      "formats": "Supports JPG, PNG formats",
+      "tip1": "Front view works best",
+      "tip2": "Good lighting",
+      "tip3": "Hair fully visible"
+    },
+    "questionnaire": {
+      "title": "Tell Us More",
+      "age": "Age Range",
+      "selectAge": "Please select",
+      "gender": "Gender",
+      "selectGender": "Please select",
+      "female": "Female",
+      "male": "Male",
+      "other": "Other",
+      "concerns": "Your Hair Concerns (Multiple)",
+      "hairLoss": "Hair Loss",
+      "dandruff": "Dandruff",
+      "oily": "Oily Scalp",
+      "dry": "Dry Scalp",
+      "thinning": "Thinning Hair",
+      "damage": "Hair Damage",
+      "previous": "Previous",
+      "analyze": "Start Analysis"
+    },
+    "analyzing": {
+      "title": "AI Analyzing...",
+      "detecting": "✓ Detecting scalp zones...",
+      "density": "✓ Analyzing hair density...",
+      "oil": "✓ Checking oil levels...",
+      "generating": "✓ Generating personalized report..."
+    },
+    "results": {
+      "complete": "Analysis Complete!",
+      "yourScore": "Your Hair Health Score",
+      "healthStatus": "Health Status: Good",
+      "sebum": "Scalp Sebum Level",
+      "high": "High",
+      "density": "Hair Density",
+      "normal": "Normal",
+      "scalp": "Scalp Health",
+      "mild": "Mild Redness",
+      "findings": "Key Findings:",
+      "finding1": "High sebum levels detected, recommend oil-control shampoo",
+      "finding2": "Normal hair density, continue good care habits",
+      "finding3": "Mild redness detected in crown area, may need soothing care",
+      "detailedReport": "Detailed Analysis Report",
+      "getFullReport": "Get Full Report + Personalized Plan",
+      "downloadApp": "Download Lushair app",
+      "haveAccount": "Already have an account?",
+      "signIn": "Sign In",
+      "emailResults": "Or email me the results:",
+      "emailPlaceholder": "your@email.com",
+      "send": "Send",
+      "apiFailed": "We could not complete the live API call from your browser (network, CORS, or server rules). Sample scores are shown below.",
+      "apiMetricsTitle": "Analysis metrics",
+      "apiDocs": "Hair & scalp API reference",
+      "apiSelfieHint": "This page POSTs your image to /file/selfieApi on your API host (override with VITE_LUSHAIR_API_BASE).",
+      "apiTrichoscopeHint": "The interactive JSON hair/scalp API (image URL + signed request) uses POST /file/trichoscopeApi—see the documentation link below.",
+      "apiFieldHint": "Responses may include follicle count, density, radii, terminal/vellus ratios, redness, oiliness, keratinocyte signal, dandruff, white-hair ratio, and more—see the docs."
+    }
+  },
+  "hardware": {
+    "badge": "White Label Hardware Solutions",
+    "title": "Lushair White Label Hardware Pricing",
+    "subtitle": "Professional hair analysis hardware, brand customization, flexible tiered pricing, fast delivery",
+    "banner": {
+      "tier1to50": "1–50 units (entry tier)",
+      "volumeNote": "Higher volumes unlock lower per-unit pricing—see the volume table and calculator below."
+    },
+    "gen1": "Lushair One line · In stock",
+    "gen2": "Lushair Pro & Studio · Premium custom",
+    "products": {
+      "single": {
+        "title": "Lushair One",
+        "subtitle": "Single-spectrum · Basic analysis",
+        "whiteLight": "White light",
+        "sensor": "20MP sensor",
+        "bluetooth": "Bluetooth",
+        "appRequired": "App required"
+      },
+      "tri": {
+        "title": "Lushair Pro",
+        "subtitle": "Tri-spectrum · Advanced AI",
+        "popular": "Popular",
+        "uva": "UV-A light",
+        "polarized": "Polarized"
+      },
+      "triScreen": {
+        "title": "Lushair Studio",
+        "subtitle": "Tri-spectrum + screen · Premium standalone",
+        "oled": "2.4\" OLED Screen",
+        "standalone": "Standalone Mode",
+        "optional": "Optional App",
+        "noApp": "No App Required"
+      }
+    },
+    "pricing": {
+      "title": "Volume Pricing",
+      "starting": "starting/unit",
+      "perUnitAbbrev": "/unit",
+      "perUnitWord": "per unit",
+      "units": "units",
+      "freeBranding": "+ FREE Branding 🎁"
+    },
+    "calculator": {
+      "title": "Pricing Calculator",
+      "quantity": "Estimated Order Quantity",
+      "unitPrice": "Unit Price:",
+      "totalCost": "Total Cost:",
+      "delivery": "Delivery:",
+      "requestQuote": "💬 Request Custom Quote",
+      "scheduleCall": "📞 Schedule Call"
+    },
+    "timeline": {
+      "title": "Delivery Timeline",
+      "gen1Stock": "Lushair One line · In-stock programs",
+      "gen2Custom": "Lushair Pro & Studio · Custom manufacturing",
+      "tooling": "Tooling",
+      "production": "Production",
+      "shipping": "Shipping",
+      "total": "Total: ~75-90 days (2.5-3 months)",
+      "noTooling": "⚡ No tooling required? Save 15-30 days!",
+      "month": "month",
+      "months": "months",
+      "days": "days",
+      "about": "~"
+    }
+  },
+  "api": {
+    "badge": "AI Analysis API Services",
+    "title": "Lushair Hair Analysis API",
+    "subtitle": "Integrate medical-grade AI analysis into your platform, flexible subscription, quick integration",
+    "plans": {
+      "basic": {
+        "name": "Basic",
+        "perMetric": "per metric/year",
+        "qps": "QPS",
+        "calls": "100K calls/mo",
+        "support": "Email support",
+        "sla": "7 day SLA"
+      },
+      "standard": {
+        "name": "Standard",
+        "recommended": "Recommended",
+        "calls": "500K calls/mo",
+        "support": "Priority support",
+        "sla": "24hr SLA"
+      },
+      "professional": {
+        "name": "Professional",
+        "calls": "3M calls/mo",
+        "support": "Dedicated manager",
+        "sla": "4hr SLA"
+      },
+      "selected": "Selected",
+      "select": "Select Plan"
+    },
+    "metrics": {
+      "title": "Available Metrics",
+      "subtitle": "Select the analysis metrics you need (each metric billed separately)",
+      "hairDensity": "Hair Density Analysis",
+      "scalpHealth": "Scalp Health Score",
+      "sebum": "Sebum Level Detection",
+      "follicle": "Follicle Diameter Measurement",
+      "hairLoss": "Hair Loss Stage Classification",
+      "dandruff": "Dandruff/Scalp Condition Detection",
+      "damage": "Hair Damage Assessment",
+      "recommendations": "Personalized Product Recommendations",
+      "selected": "Selected {count} metrics",
+      "totalPrice": "Total: ${price}/year",
+      "startTrial": "Start 14-Day Free Trial",
+      "trialNote": "💡 14-day trial, no credit card required"
+    },
+    "docs": {
+      "title": "API Documentation Preview",
+      "authentication": "Authentication",
+      "authComment": "// Add API Key in request header",
+      "endpoint": "POST /v1/analyze",
+      "endpointDesc": "Analyze hair and scalp from image",
+      "responseExample": "Response Example",
+      "viewFullDocs": "📖 View Full Documentation",
+      "getApiKey": "🔑 Get API Key"
+    },
+    "playground": {
+      "title": "Interactive API Testing",
+      "subtitle": "Test API calls directly in your browser",
+      "apiKey": "API Key",
+      "uploadImage": "Upload Image",
+      "selectMetrics": "Select Metrics",
+      "hairDensity": "Hair Density",
+      "scalpHealth": "Scalp Health",
+      "sendRequest": "Send Request",
+      "responseComment": "// Response Result"
+    },
+    "keys": {
+      "title": "My API Keys",
+      "createNew": "Create New Key",
+      "production": "Production",
+      "testing": "Testing",
+      "created": "Created",
+      "lastUsed": "Last Used",
+      "requestsToday": "Requests Today",
+      "neverUsed": "Never Used",
+      "testLimit": "⚠️ Test keys limited to 100 requests/day"
+    }
+  },
+  "saas": {
+    "badge": "Store Management SaaS System",
+    "title": "Complete Management Platform for Salons and Clinics",
+    "subtitle": "Customer management, analysis reports, product recommendations, revenue tracking - all-in-one solution",
+    "demo": {
+      "title": "Interactive Demo Experience",
+      "subtitle": "Click below to see the management system in action",
+      "header": "Lushair Store Management System",
+      "demoAccount": "Demo Account",
+      "customerManagement": "Customer Management",
+      "analytics": "Data Analytics",
+      "lastVisit": "Last visit",
+      "healthTrend": "Hair Health Trend:",
+      "recommendedProducts": "Recommended Products:",
+      "viewReport": "View Full Report",
+      "scheduleFollowup": "Schedule Follow-up",
+      "todayStats": "Today's Stats:",
+      "scansPerformed": "scans performed",
+      "recommendations": "in product recommendations",
+      "conversionRate": "conversion rate",
+      "newCustomers": "new customers",
+      "topProducts": "Top Selling Products",
+      "launchDemo": "▶ Launch Full Demo"
+    },
+    "features": {
+      "customer": {
+        "title": "Customer Profile Management",
+        "desc": "Complete customer information, history, preference tracking"
+      },
+      "analytics": {
+        "title": "Smart Data Analytics",
+        "desc": "Real-time revenue statistics, product sales analysis, trend forecasting"
+      },
+      "recommendations": {
+        "title": "Product Recommendation Engine",
+        "desc": "AI-driven personalized product recommendations, boost sales conversion"
+      },
+      "appointments": {
+        "title": "Appointment Management",
+        "desc": "Online booking, automatic reminders, scheduling"
+      },
+      "tracking": {
+        "title": "Health Tracking",
+        "desc": "Long-term hair health trend analysis, visual display"
+      },
+      "inventory": {
+        "title": "Inventory Management",
+        "desc": "Product inventory sync, low stock alerts, purchase suggestions"
+      }
+    },
+    "pricing": {
+      "title": "Flexible Subscription Plans",
+      "subtitle": "Choose the plan that best fits your business size",
+      "starter": {
+        "name": "Starter",
+        "users": "1-100 users",
+        "feature1": "Customer Database",
+        "feature2": "Scan History",
+        "feature3": "Product Recommendations",
+        "feature4": "Email Support"
+      },
+      "growth": {
+        "name": "Growth",
+        "popular": "Most Popular",
+        "users": "101-300 users",
+        "feature1": "All Starter+",
+        "feature2": "Trend Reports",
+        "feature3": "Inventory Sync",
+        "feature4": "Priority Support"
+      },
+      "professional": {
+        "name": "Professional",
+        "users": "301-500 users",
+        "feature1": "All Growth+",
+        "feature2": "Multi-location",
+        "feature3": "White-label UI",
+        "feature4": "Custom Integrations"
+      },
+      "business": {
+        "name": "Business",
+        "users": "501-2000 users",
+        "feature1": "All Pro+",
+        "feature2": "API Access",
+        "feature3": "Custom Reports",
+        "feature4": "Webhooks"
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "users": "2001-5000 users",
+        "feature1": "All Business+",
+        "feature2": "Dedicated Infrastructure",
+        "feature3": "Advanced Analytics",
+        "feature4": "Account Manager"
+      },
+      "flagship": {
+        "name": "Flagship",
+        "users": "5000+ users",
+        "feature1": "All Enterprise+",
+        "feature2": "Custom SLA",
+        "feature3": "Custom Development",
+        "feature4": "Dedicated Team"
+      },
+      "month": "/month",
+      "startTrial": "Start Free Trial",
+      "contactSales": "Contact Sales",
+      "includes": "💡 All plans include:",
+      "include1": "• Unlimited scans",
+      "include2": "• Product recommendation engine with customization",
+      "include3": "• Customer profiles & historical records",
+      "include4": "• Mobile app for staff (iOS/Android)"
+    },
+    "cta": {
+      "title": "Ready to Elevate Your Business?",
+      "subtitle": "Start your 14-day free trial now, no credit card required, cancel anytime",
+      "startTrial": "Start Free Trial",
+      "bookDemo": "Book Product Demo"
+    }
+  },
+  "implementation": {
+    "badge": "Implementation Timeline",
+    "title": "From Inquiry to Launch: Your Lushair Journey",
+    "subtitle": "Transparent process, clear timeline, predictable delivery",
+    "overview": {
+      "title": "Complete Implementation Cycle",
+      "weeks": "12-16 weeks",
+      "months": "(approximately 3-4 months)"
+    },
+    "steps": {
+      "step1": {
+        "title": "Partnership Discussion",
+        "duration": "1-2 weeks",
+        "task1": "Initial consultation call",
+        "task2": "NDA signing",
+        "task3": "Requirements gathering",
+        "cta": "💬 Schedule Consultation"
+      },
+      "step2": {
+        "title": "Technical Validation",
+        "duration": "1 week",
+        "task1": "Factory tour (optional, virtual/in-person)",
+        "task2": "Sample device testing",
+        "task3": "API integration proof-of-concept",
+        "cta": "🏭 Book Factory Visit"
+      },
+      "step3": {
+        "title": "Quote & Contract",
+        "duration": "1 week",
+        "task1": "Final pricing based on volume",
+        "task2": "Customization options selected",
+        "task3": "Contract signing & deposit (30%)"
+      },
+      "step4": {
+        "title": "Production Kickoff",
+        "duration": "1-2 weeks",
+        "task1": "Branding assets finalized (logo, colors)",
+        "task2": "Sample units produced",
+        "task3": "Software/API configuration"
+      },
+      "step5": {
+        "title": "Testing & QA",
+        "duration": "1-2 weeks",
+        "task1": "Hardware sample approval",
+        "task2": "Software integration testing",
+        "task3": "End-to-end workflow validation"
+      },
+      "step6": {
+        "title": "Mass Production & Delivery",
+        "duration": "6-8 weeks",
+        "task1": "Production (4-6 weeks)",
+        "task2": "Quality inspection",
+        "task3": "Logistics & shipping (2-4 weeks)",
+        "task4": "Final payment (70%) before shipment"
+      }
+    },
+    "gantt": {
+      "title": "Interactive Gantt Chart",
+      "step": "Step",
+      "downloadPdf": "📥 Download Detailed Roadmap PDF"
+    },
+    "decision": {
+      "title": "Which Solution Is Right for You?",
+      "subtitle": "Choose the most suitable solution based on your needs",
+      "question1": "Do you have an existing app?",
+      "yes": "Yes",
+      "no": "No",
+      "question2": "Do you have hardware already?",
+      "question3": "Do you plan to order 1000+ units?",
+      "apiService": "API Only",
+      "apiPrice": "$1,999+/year",
+      "apiDesc": "Only API interface needed to integrate AI analysis",
+      "bundle": "Hardware + API Bundle",
+      "bundlePrice": "Volume Discount",
+      "bundleDesc": "Package discount available",
+      "fullPackage": "Full Package FREE",
+      "fullPrice": "Free",
+      "fullItem1": "• White-label hardware",
+      "fullItem2": "• Branded app",
+      "fullItem3": "• API integration",
+      "fullItem4": "• SDK provided",
+      "basicPackage": "Basic Package",
+      "basicPrice": "$10,000",
+      "basicItem1": "• White-label hardware",
+      "basicItem2": "• Branded app",
+      "basicNote": "⚠️ Refunded if 1000+ units ordered by year-end!",
+      "best": "Best",
+      "contactSales": "💬 Contact Sales for Custom Solution"
+    },
+    "cases": {
+      "title": "Success Stories",
+      "case1": {
+        "company": "Beauty Chain Salon",
+        "type": "Chain Hair Salon",
+        "locations": "50 locations",
+        "timeline": "Implemented in 3 months",
+        "result1": "Customer satisfaction +35%",
+        "result2": "Product sales +120%",
+        "result3": "Repurchase rate +40%"
+      },
+      "case2": {
+        "company": "Wellness Medical Clinic",
+        "type": "Medical Aesthetics",
+        "locations": "5 clinics",
+        "timeline": "Implemented in 2.5 months",
+        "result1": "New customers +80%",
+        "result2": "Service efficiency +50%",
+        "result3": "Revenue +150%"
+      },
+      "case3": {
+        "company": "Beauty E-commerce Platform",
+        "type": "E-commerce",
+        "locations": "API Integration",
+        "timeline": "Integrated in 1 month",
+        "result1": "User retention +60%",
+        "result2": "Conversion rate +85%",
+        "result3": "Average order value +45%"
+      },
+      "keyResults": "Key Results:"
+    }
+  },
+  "dashboard": {
+    "accountType": "Account",
+    "consumer": "Personal",
+    "business": "Business",
+    "businessWelcome": "Business workspace",
+    "businessSubtitle": "API, SaaS, and hardware programs for your organization.",
+    "businessCardApi": "API services & keys",
+    "businessCardSaas": "SaaS dashboard",
+    "businessCardHardware": "White-label hardware",
+    "businessCardContact": "Book a call with us",
+    "businessRep": "Account manager: coming soon",
+    "welcome": "Welcome back, Ms. Zhang! 👋",
+    "lastScan": "Last scan: 3 days ago",
+    "newScan": "New Scan",
+    "tabs": {
+      "overview": "Overview",
+      "history": "History",
+      "ingredients": "Ingredients"
+    },
+    "overview": {
+      "totalScore": "Overall Health Score",
+      "improved": "+4 from last month",
+      "trend": "Trend (Last 5 times)",
+      "hairDensity": "Hair Density",
+      "scalpHealth": "Scalp Health",
+      "oilLevel": "Oil Level",
+      "hairDamage": "Hair Damage",
+      "stable": "Stable",
+      "aiInsights": "AI Smart Analysis",
+      "insight1": {
+        "title": "Hair Density Improvement",
+        "desc": "Your hair density continues to improve, which may be related to the nutritional hair mask you've been using recently. Recommend continuing your current care routine."
+      },
+      "insight2": {
+        "title": "Scalp Health Needs Attention",
+        "desc": "Detected decrease in scalp health score. Recommend reducing frequency of heat tool use and increasing scalp moisturizing care."
+      },
+      "insight3": {
+        "title": "Care Recommendations",
+        "desc": "Based on your hair type and current condition, recommend 2-3 deep treatments per week using gentle hair care products."
+      }
+    },
+    "history": {
+      "title": "Scan History",
+      "healthScore": "Health Score",
+      "improved": "Improved",
+      "baseline": "Baseline"
+    },
+    "ingredients": {
+      "title": "Ingredient recommendations",
+      "basedOn": "Based on your hair and scalp profile",
+      "match": "fit",
+      "card1": "Supports barrier function and visible oil balance—common in leave-on scalp serums and tonics.",
+      "card2": "Humectant and soothing—helps dry or stressed scalps retain moisture without heavy residue.",
+      "card3": "Helps clarify buildup when used sparingly; ideal for oily or flaky-prone areas when tolerated.",
+      "whyThese": "Why these ingredients?",
+      "reason1": "• Your readings suggest balancing scalp oil—niacinamide and gentle surfactants support that without stripping.",
+      "reason2": "• Mild inflammation signals benefit from soothing actives such as panthenol and allantoin in leave-on care.",
+      "reason3": "• For buildup and flakes, low-percentage salicylic acid can help—introduce slowly and patch test."
+    }
+  },
+  "appIntro": {
+    "badge": "Mobile app",
+    "title": "Lushair app",
+    "subtitle": "The companion app for scalp and hair AI—track progress, get reminders, and turn your first web analysis into a long-term care plan.",
+    "feature1Title": "Smart tracking",
+    "feature1Desc": "See trends over time with automatic scan comparisons and clear charts.",
+    "feature2Title": "AI assistant",
+    "feature2Desc": "Ask routine and care questions grounded in your profile and scan history.",
+    "feature3Title": "Sync with analysis",
+    "feature3Desc": "Continue from your free web report—nothing is lost when you open the app.",
+    "extraLead": "What you get with Lushair",
+    "extra1": "Fast scalp capture with guided photo flow and instant AI readouts aligned with our clinical models.",
+    "extra2": "Personalized care suggestions based on your metrics—not generic tips—so you know what to do next.",
+    "extra3": "Works with our analyzers and web tools so salons, clinics, and individuals stay on one consistent journey.",
+    "storesNote": "App Store and Google Play links will appear here when published.",
+    "tryWeb": "Run a free web analysis first",
+    "backHome": "Back to home"
+  },
+  "notFound": {
+    "title": "Page Not Found",
+    "subtitle": "Sorry, the page you are looking for does not exist or has been removed",
+    "backHome": "Back to Home",
+    "tryFree": "Try Free",
+    "mightWant": "You might want to visit:",
+    "hardware": "White Label Hardware",
+    "api": "API Services",
+    "saas": "SaaS Platform",
+    "implementation": "Implementation",
+    "dashboard": "My Account"
+  },
+  "common": {
+    "language": "Language",
+    "learnMore": "Learn More",
+    "getStarted": "Get Started",
+    "contactUs": "Contact Us",
+    "bookDemo": "Book Demo",
+    "startTrial": "Start Trial",
+    "viewPricing": "View Pricing"
+  },
+  "shop": {
+    "badge": "Consumer Products Store",
+    "title": "Lushair Hair Analyzers",
+    "subtitle": "Professional AI-powered hair analysis devices for personal and professional use",
+    "categories": {
+      "all": "All Products",
+      "devices": "Hair Analyzers",
+      "haircare": "Hair Care",
+      "accessories": "Accessories"
+    },
+    "products": {
+      "lushairOne": {
+        "name": "Lushair One",
+        "desc": "Wireless scalp analyzer with AI: complete a scan in seconds and get 16+ hair and scalp metrics with personalized care tips. Compact and portable—connect via Wi‑Fi, capture guided photos, and review results anywhere (aligned with lushair.ai Lushair Scalp Explorer)."
+      },
+      "lushairPro": {
+        "name": "Lushair Pro",
+        "desc": "Tri-spectral auto-focus (coming soon). Join the waitlist—ideal for deeper scalp insight when we launch."
+      },
+      "lushairStudioWifiScreen": {
+        "name": "Lushair Studio (Wi‑Fi screen)",
+        "desc": "Three-spectrum, auto focus, optional 200X LED. Wi‑Fi with integrated screen for professional workflows."
+      },
+      "lushairStudioPlugIn": {
+        "name": "Lushair Studio (wired screen)",
+        "desc": "Professional grade with plug-in (wired) screen. Three-spectrum analysis with optional high magnification for clinics and salons."
+      },
+      "lushairStudioMirror": {
+        "name": "Lushair Studio (Wi‑Fi mirror)",
+        "desc": "Premium mirror design with Wi‑Fi display. Three-spectrum analysis with salon-grade aesthetics."
+      }
+    },
+    "mostPopular": "Most Popular",
+    "premium": "Premium",
+    "lowStock": "Low Stock",
+    "popular": "Popular",
+    "inStock": "In Stock",
+    "addToCart": "Add to Cart",
+    "freeShipping": "Free Shipping",
+    "warranty": "1 Year Warranty",
+    "noProducts": "No products found",
+    "studio": {
+      "title": "Lushair Studio Customization Options",
+      "subtitle": "Professional-grade device with flexible configuration options for clinics, salons, and retail environments",
+      "option1": "Connection Options",
+      "option1Desc": "Wired to phone, wireless WiFi, or integrated screen",
+      "option2": "200X LED Camera",
+      "option2Desc": "Optional microscopic lens for detailed scalp analysis",
+      "option3": "Custom Enclosure",
+      "option3Desc": "1000+ unit minimum, additional molding fee applies",
+      "customNote": "💡 Contact our sales team for bulk orders and custom enclosure designs"
+    },
+    "banner": {
+      "title": "Shop with Confidence",
+      "subtitle": "All products backed by our satisfaction guarantee and professional support",
+      "feature1": "Free Shipping",
+      "feature2": "30-Day Returns",
+      "feature3": "1 Year Warranty"
+    },
+    "comingSoon": "Coming soon",
+    "flatShipping": "Flat-rate shipping: $20",
+    "bookCall": "Book a call",
+    "bookCallSubtitle": "Configure WiFi, screen, mirror, and plug-in Studio options with our team.",
+    "otherStudioModels": "Also in the Studio line",
+    "notifyMe": "Notify me"
+  },
+  "cart": {
+    "title": "Shopping Cart",
+    "items": "items",
+    "empty": "Your cart is empty",
+    "continueShopping": "Continue Shopping",
+    "subtotal": "Subtotal",
+    "shipping": "Shipping",
+    "shippingFlat": "$20",
+    "freeShipping": "$20",
+    "total": "Total",
+    "checkout": "Proceed to Checkout"
+  },
+  "checkout": {
+    "title": "Checkout",
+    "backToShop": "Back to Shop",
+    "emptyCart": "Your cart is empty",
+    "shippingInfo": "Shipping Information",
+    "paymentMethod": "Payment Method",
+    "orderSummary": "Order Summary",
+    "continueToPayment": "Continue to Payment",
+    "placeOrder": "Place Order",
+    "back": "Back",
+    "quantity": "Qty",
+    "subtotal": "Subtotal",
+    "shipping": "Shipping",
+    "total": "Total",
+    "free": "FREE",
+    "shippingAmount": "$20",
+    "form": {
+      "fullName": "Full Name",
+      "fullNamePlaceholder": "John Doe",
+      "phone": "Phone Number",
+      "phonePlaceholder": "+1 (555) 123-4567",
+      "email": "Email Address",
+      "emailPlaceholder": "john@example.com",
+      "address": "Street Address",
+      "addressPlaceholder": "123 Main St, Apt 4",
+      "city": "City",
+      "cityPlaceholder": "New York",
+      "postalCode": "Postal Code",
+      "postalCodePlaceholder": "10001"
+    },
+    "payment": {
+      "card": "Credit/Debit Card",
+      "alipay": "Alipay",
+      "wechat": "WeChat Pay"
+    },
+    "success": {
+      "title": "Order Placed Successfully!",
+      "message": "Thank you for your purchase. Your order has been received and is being processed.",
+      "orderNumber": "Order Number",
+      "emailSent": "A confirmation email has been sent to your inbox",
+      "continueShopping": "Continue Shopping",
+      "viewOrders": "View Orders"
+    }
+  }
+}

@@ -1,0 +1,821 @@
+{
+  "nav": {
+    "home": "首页",
+    "shop": "商城",
+    "tryFree": "免费体验",
+    "business": "企业服务",
+    "hardware": "白标硬件",
+    "api": "API服务",
+    "saas": "SaaS平台",
+    "implementation": "实施流程",
+    "dashboard": "我的账户",
+    "getStarted": "立即体验"
+  },
+  "home": {
+    "hero": {
+      "badge": "AI驱动的头发与头皮智能分析",
+      "title": "您的专属",
+      "titleHighlight": "AI头发健康专家",
+      "titleSerif": "您的头发健康，",
+      "titleSans": "由 AI 解读",
+      "subtitle": "医疗级AI分析技术，实时追踪头发健康变化，\n为您提供个性化的护理方案",
+      "subtitleShort": "医疗级头发与头皮分析。精密硬件结合临床级智能。",
+      "valueTag": "随时可分析",
+      "valueBody": "先用浏览器自拍快速开始——深度扫描与追踪在 Lushair App 中延续。",
+      "tryFree": "免费AI分析",
+      "forBusiness": "企业B2B方案",
+      "shopDevices": "选购设备",
+      "webBased": "↓ 无需下载，立即上传自拍照即可获得AI分析报告",
+      "instant": "上传自拍 → 即时AI报告"
+    },
+    "hud": {
+      "scanning": "扫描中",
+      "metricDensity": "毛囊密度",
+      "metricDensityVal": "142/cm²",
+      "metricHealth": "健康评分",
+      "metricHealthVal": "87.4%"
+    },
+    "precision": {
+      "title": "临床级精准",
+      "subtitle": "AI 诊断的三大支柱：医学准确度与实时洞察兼顾。",
+      "card1Title": "毛囊密度映射",
+      "card1Desc": "在头皮区域精准呈现生长分布与趋势。",
+      "card2Title": "头皮状态信号",
+      "card2Desc": "从表面与纹理识别油脂、刺激与炎症风险。",
+      "card3Title": "发丝级测量",
+      "card3Desc": "微米级线索评估粗细与损伤——可执行，而非泛泛建议。"
+    },
+    "floatingStats": {
+      "analysisComplete": "分析完成",
+      "healthScore": "头发健康评分: 85/100",
+      "improving": "持续改善中",
+      "monthlyGain": "较上月提升 +12%"
+    },
+    "tabs": {
+      "title": "为谁而设计?",
+      "subtitle": "无论您是个人用户还是企业客户，我们都有完美的解决方案",
+      "consumers": "个人消费者",
+      "consumersHint": "个人设备、App 与网页分析",
+      "business": "企业客户",
+      "businessRibbon": "B2B",
+      "businessHint": "硬件 · API · SaaS",
+      "businessChipHardware": "硬件",
+      "businessChipApi": "API",
+      "businessChipSaas": "SaaS"
+    },
+    "consumers": {
+      "ctas": {
+        "downloadApp": "下载 App",
+        "buyDevices": "购买设备",
+        "freeAnalysis": "免费 AI 分析"
+      },
+      "medical": {
+        "title": "医疗级家庭分析",
+        "desc": "先用网页免费分析，无需下载 App。完整报告与后续护理可同步至 Lushair 手机应用。",
+        "note": "建议先在网页完成分析；查看报告后再下载 App，便于追踪与提醒。",
+        "cta": "立即体验"
+      },
+      "tracking": {
+        "title": "AI智能追踪",
+        "desc": "长期趋势、提醒与深度解读集中在 Lushair 手机应用中，适合日常头发健康管理。",
+        "cta": "App 介绍"
+      },
+      "personalized": {
+        "title": "个性化产品推荐",
+        "desc": "自拍分析建立基线；应用内 AI 助手进一步推荐并解答护理问题。",
+        "cta": "从自拍分析开始"
+      }
+    },
+    "business": {
+      "hardware": {
+        "title": "白标硬件方案",
+        "desc": "与商城同款产品线：Lushair One $99 起，Pro $199 起，Studio $1,699 起（美元）；另提供品牌定制与批量方案。",
+        "cta": "查看定价"
+      },
+      "api": {
+        "badge": "开发者 API",
+        "title": "API集成服务",
+        "desc": "从 $1,999/年起（美元），灵活 API，快速集成到您的平台",
+        "cta": "进入 API 服务"
+      },
+      "saas": {
+        "badge": "一体化 SaaS",
+        "title": "完整SaaS平台",
+        "desc": "为诊所、沙龙打造的完整管理系统，客户管理、分析报告一站式解决",
+        "cta": "了解 SaaS 平台"
+      },
+      "apiSaasStrip": {
+        "title": "集成路径一目了然",
+        "apiTitle": "头发分析 API",
+        "apiBlurb": "REST 接口、密钥与医疗级模型——嵌入您自有产品。",
+        "apiCta": "查看 API 与定价",
+        "saasTitle": "沙龙与诊所 SaaS",
+        "saasBlurb": "客户、检测、员工端与数据看板，统一在品牌工作区内。",
+        "saasCta": "查看 SaaS 功能"
+      }
+    },
+    "stats": {
+      "title": "值得信赖的合作伙伴",
+      "subtitle": "全球超过50,000+用户和1,000+企业的选择",
+      "users": "活跃用户",
+      "businesses": "企业客户",
+      "satisfaction": "满意度",
+      "analyses": "分析次数"
+    },
+    "testimonials": {
+      "user1": {
+        "name": "张女士",
+        "role": "个人用户",
+        "content": "使用 Lushair 三个月后，我的头发健康状况明显改善。AI分析非常准确，推荐的产品也很有效！"
+      },
+      "user2": {
+        "name": "Dr. 李",
+        "role": "医美诊所负责人",
+        "content": "API集成非常顺利，客户对我们的头发分析服务满意度大幅提升。技术支持团队也很专业。"
+      },
+      "user3": {
+        "name": "王总",
+        "role": "连锁美发沙龙",
+        "content": "SaaS平台帮助我们提升了客户体验和产品销售。现在我们可以为每位客户提供科学的护发方案。"
+      }
+    },
+    "cta": {
+      "title": "准备好开始您的头发健康之旅了吗？",
+      "subtitle": "立即体验AI分析，获取您的专属头发健康报告",
+      "tryFree": "免费开始体验",
+      "learnBusiness": "了解企业方案"
+    }
+  },
+  "tryFree": {
+    "title": "免费AI头发分析",
+    "subtitle": "上传您的照片，获取专业的头发健康报告",
+    "backHome": "返回首页",
+    "steps": {
+      "upload": "上传照片",
+      "questionnaire": "填写信息",
+      "analyzing": "AI分析",
+      "results": "查看报告"
+    },
+    "upload": {
+      "title": "上传您的自拍照",
+      "dragDrop": "拖放文件或点击上传",
+      "formats": "支持 JPG, PNG 格式",
+      "tip1": "正面拍摄效果最佳",
+      "tip2": "确保光线充足",
+      "tip3": "头发完全露出"
+    },
+    "questionnaire": {
+      "title": "告诉我们更多信息",
+      "age": "年龄段",
+      "selectAge": "请选择",
+      "gender": "性别",
+      "selectGender": "请选择",
+      "female": "女性",
+      "male": "男性",
+      "other": "其他",
+      "concerns": "您的头发问题 (可多选)",
+      "hairLoss": "脱发",
+      "dandruff": "头皮屑",
+      "oily": "油性头皮",
+      "dry": "头皮干燥",
+      "thinning": "头发稀疏",
+      "damage": "头发损伤",
+      "previous": "上一步",
+      "analyze": "开始分析"
+    },
+    "analyzing": {
+      "title": "AI正在分析中...",
+      "detecting": "✓ 检测头皮区域...",
+      "density": "✓ 分析头发密度...",
+      "oil": "✓ 检测油脂水平...",
+      "generating": "✓ 生成个性化报告..."
+    },
+    "results": {
+      "complete": "分析完成！",
+      "yourScore": "您的头发健康评分",
+      "healthStatus": "健康状况：良好",
+      "sebum": "头皮油脂水平",
+      "high": "偏高",
+      "density": "头发密度",
+      "normal": "正常",
+      "scalp": "头皮健康",
+      "mild": "轻度发红",
+      "findings": "主要发现：",
+      "finding1": "检测到高油脂水平，建议使用控油洗发水",
+      "finding2": "头发密度正常，继续保持良好护理习惯",
+      "finding3": "头顶区域检测到轻度发红，可能需要舒缓护理",
+      "detailedReport": "详细分析报告",
+      "getFullReport": "获取完整报告 + 个性化方案",
+      "downloadApp": "下载 LushAir App",
+      "haveAccount": "已有账户?",
+      "signIn": "登录",
+      "emailResults": "或通过邮箱接收结果:",
+      "emailPlaceholder": "your@email.com",
+      "send": "发送",
+      "apiFailed": "无法从浏览器完成实时 API 调用（网络、CORS 或服务端限制）。下方为示例分数。",
+      "apiMetricsTitle": "分析指标",
+      "apiDocs": "头发/头皮 API 参考文档",
+      "apiSelfieHint": "本页将图片 POST 到 /file/selfieApi（可通过 VITE_LUSHAIR_API_BASE 覆盖 API 主机）。",
+      "apiTrichoscopeHint": "交互式 JSON 分析（图片 URL + 签名请求）使用 POST /file/trichoscopeApi，详见文档。",
+      "apiFieldHint": "返回可能包含毛囊计数、密度、半径、终毛/毳毛比例、泛红、油脂、角质细胞信号、头屑、白发比例等——以文档为准。"
+    }
+  },
+  "hardware": {
+    "badge": "白标硬件解决方案",
+    "title": "Lushair 白标硬件定价",
+    "subtitle": "专业的头发分析硬件，支持品牌定制，灵活的阶梯定价，快速交付",
+    "banner": {
+      "tier1to50": "1–50 台（入门档）",
+      "volumeNote": "采购量越高，单台价格越低——详见下方阶梯表与计算器。"
+    },
+    "gen1": "Lushair One 系列 · 现货",
+    "gen2": "Lushair Pro / Studio · 高端定制",
+    "products": {
+      "single": {
+        "title": "Lushair One",
+        "subtitle": "单光谱 · 基础分析",
+        "whiteLight": "白光照明",
+        "sensor": "20MP高清传感器",
+        "bluetooth": "蓝牙连接",
+        "appRequired": "需配合APP使用"
+      },
+      "tri": {
+        "title": "Lushair Pro",
+        "subtitle": "三光谱 · 高级 AI 分析",
+        "popular": "热门",
+        "uva": "UV-A紫外光",
+        "polarized": "偏振光"
+      },
+      "triScreen": {
+        "title": "Lushair Studio",
+        "subtitle": "三光谱 + 屏幕 · 高端独立设备",
+        "oled": "2.4\" OLED屏幕",
+        "standalone": "独立运行模式",
+        "optional": "蓝牙连接(可选)",
+        "noApp": "无需APP"
+      }
+    },
+    "pricing": {
+      "title": "阶梯定价",
+      "starting": "起/台",
+      "perUnitAbbrev": "/台",
+      "perUnitWord": "每台",
+      "units": "台",
+      "freeBranding": "+ 免费品牌定制 🎁"
+    },
+    "calculator": {
+      "title": "定价计算器",
+      "quantity": "预估订购数量",
+      "unitPrice": "单价:",
+      "totalCost": "总成本:",
+      "delivery": "交付时间:",
+      "requestQuote": "💬 申请定制报价",
+      "scheduleCall": "📞 预约通话"
+    },
+    "timeline": {
+      "title": "交付时间线",
+      "gen1Stock": "Lushair One 系列 · 现货方案",
+      "gen2Custom": "Lushair Pro / Studio · 定制生产",
+      "tooling": "开模",
+      "production": "生产",
+      "shipping": "物流",
+      "total": "总计: 约75-90天 (2.5-3个月)",
+      "noTooling": "⚡ 无需开模可节省15-30天!",
+      "month": "个月",
+      "months": "个月",
+      "days": "天",
+      "about": "约"
+    }
+  },
+  "api": {
+    "badge": "AI分析API服务",
+    "title": "LUSHAIR 头发分析 API",
+    "subtitle": "将医疗级AI分析技术集成到您的平台，灵活订阅，快速接入",
+    "plans": {
+      "basic": {
+        "name": "基础版",
+        "perMetric": "每个指标/年",
+        "qps": "QPS",
+        "calls": "10万 次调用/月",
+        "support": "邮件支持",
+        "sla": "7天响应"
+      },
+      "standard": {
+        "name": "标准版",
+        "recommended": "推荐",
+        "calls": "50万 次调用/月",
+        "support": "优先支持",
+        "sla": "24小时响应"
+      },
+      "professional": {
+        "name": "专业版",
+        "calls": "300万 次调用/月",
+        "support": "专属客户经理",
+        "sla": "4小时响应"
+      },
+      "selected": "已选择",
+      "select": "选择方案"
+    },
+    "metrics": {
+      "title": "可用分析指标",
+      "subtitle": "选择您需要的分析指标（每个指标单独计费）",
+      "hairDensity": "头发密度分析",
+      "scalpHealth": "头皮健康评分",
+      "sebum": "油脂水平检测",
+      "follicle": "毛囊直径测量",
+      "hairLoss": "脱发阶段分类",
+      "dandruff": "头皮屑/头皮状况检测",
+      "damage": "头发损伤评估",
+      "recommendations": "个性化产品推荐",
+      "selected": "已选择 {count} 个指标",
+      "totalPrice": "总计: ${price}/年（美元）",
+      "startTrial": "开始14天免费试用",
+      "trialNote": "💡 14天试用，无需信用卡"
+    },
+    "docs": {
+      "title": "API 文档预览",
+      "authentication": "身份认证",
+      "authComment": "// 在请求头中添加API Key",
+      "endpoint": "POST /v1/analyze",
+      "endpointDesc": "分析头发和头皮图像",
+      "responseExample": "响应示例",
+      "viewFullDocs": "📖 查看完整文档",
+      "getApiKey": "🔑 获取API密钥"
+    },
+    "playground": {
+      "title": "交互式 API 测试",
+      "subtitle": "直接在浏览器中测试API调用",
+      "apiKey": "API密钥",
+      "uploadImage": "上传图片",
+      "selectMetrics": "选择指标",
+      "hairDensity": "头发密度",
+      "scalpHealth": "头皮健康",
+      "sendRequest": "发送请求",
+      "responseComment": "// 响应结果"
+    },
+    "keys": {
+      "title": "我的 API 密钥",
+      "createNew": "创建新密钥",
+      "production": "生产环境",
+      "testing": "测试环境",
+      "created": "创建时间",
+      "lastUsed": "最后使用",
+      "requestsToday": "今日请求",
+      "neverUsed": "从未使用",
+      "testLimit": "⚠️ 测试密钥限制100次请求/天"
+    }
+  },
+  "saas": {
+    "badge": "门店管理SaaS系统",
+    "title": "为沙龙和诊所打造的完整管理平台",
+    "subtitle": "客户管理、分析报告、产品推荐、营收追踪一站式解决方案",
+    "demo": {
+      "title": "交互式演示体验",
+      "subtitle": "点击下方查看实际运行的管理系统",
+      "header": "LushAir 门店管理系统",
+      "demoAccount": "演示账户",
+      "customerManagement": "客户管理",
+      "analytics": "数据分析",
+      "lastVisit": "最后访问",
+      "healthTrend": "头发健康趋势:",
+      "recommendedProducts": "推荐产品:",
+      "viewReport": "查看完整报告",
+      "scheduleFollowup": "预约复诊",
+      "todayStats": "今日统计:",
+      "scansPerformed": "次扫描",
+      "recommendations": "推荐金额",
+      "conversionRate": "转化率",
+      "newCustomers": "新客户",
+      "topProducts": "热销产品排行",
+      "launchDemo": "▶ 启动完整演示"
+    },
+    "features": {
+      "customer": {
+        "title": "客户档案管理",
+        "desc": "完整的客户信息、历史记录、偏好追踪"
+      },
+      "analytics": {
+        "title": "智能数据分析",
+        "desc": "实时营收统计、产品销售分析、趋势预测"
+      },
+      "recommendations": {
+        "title": "产品推荐引擎",
+        "desc": "AI驱动的个性化产品推荐，提升销售转化"
+      },
+      "appointments": {
+        "title": "预约管理",
+        "desc": "在线预约、自动提醒、日程安排"
+      },
+      "tracking": {
+        "title": "健康追踪",
+        "desc": "长期头发健康趋势分析，可视化展示"
+      },
+      "inventory": {
+        "title": "库存管理",
+        "desc": "产品库存同步、低库存预警、采购建议"
+      }
+    },
+    "pricing": {
+      "title": "灵活的订阅方案",
+      "subtitle": "选择最适合您业务规模的方案",
+      "starter": {
+        "name": "入门版",
+        "users": "1-100 用户",
+        "feature1": "客户数据库",
+        "feature2": "扫描历史记录",
+        "feature3": "产品推荐",
+        "feature4": "邮件支持"
+      },
+      "growth": {
+        "name": "成长版",
+        "popular": "最受欢迎",
+        "users": "101-300 用户",
+        "feature1": "入门版全部功能",
+        "feature2": "趋势报告",
+        "feature3": "库存同步",
+        "feature4": "优先支持"
+      },
+      "professional": {
+        "name": "专业版",
+        "users": "301-500 用户",
+        "feature1": "成长版全部功能",
+        "feature2": "多门店管理",
+        "feature3": "白标UI",
+        "feature4": "自定义集成"
+      },
+      "business": {
+        "name": "商业版",
+        "users": "501-2000 用户",
+        "feature1": "专业版全部功能",
+        "feature2": "API访问",
+        "feature3": "自定义报告",
+        "feature4": "Webhooks"
+      },
+      "enterprise": {
+        "name": "企业版",
+        "users": "2001-5000 用户",
+        "feature1": "商业版全部功能",
+        "feature2": "独立基础设施",
+        "feature3": "高级分析",
+        "feature4": "客户经理"
+      },
+      "flagship": {
+        "name": "旗舰版",
+        "users": "5000+ 用户",
+        "feature1": "企业版全部功能",
+        "feature2": "自定义SLA",
+        "feature3": "定制开发",
+        "feature4": "专属团队"
+      },
+      "month": "/月",
+      "startTrial": "开始免费试用",
+      "contactSales": "联系销售",
+      "includes": "💡 所有方案包含:",
+      "include1": "• 无限次扫描",
+      "include2": "• 产品推荐引擎",
+      "include3": "• 客户档案管理",
+      "include4": "• 移动端APP (iOS/Android)"
+    },
+    "cta": {
+      "title": "准备好提升您的业务了吗?",
+      "subtitle": "立即开始14天免费试用，无需信用卡，随时可以取消",
+      "startTrial": "开始免费试用",
+      "bookDemo": "预约产品演示"
+    }
+  },
+  "implementation": {
+    "badge": "实施流程时间线",
+    "title": "从咨询到交付：您的 LUSHAIR 旅程",
+    "subtitle": "透明的流程、清晰的时间线、可预期的交付",
+    "overview": {
+      "title": "完整实施周期",
+      "weeks": "12-16周",
+      "months": "(约3-4个月)"
+    },
+    "steps": {
+      "step1": {
+        "title": "合作洽谈",
+        "duration": "1-2周",
+        "task1": "初步咨询电话",
+        "task2": "签署保密协议(NDA)",
+        "task3": "需求收集与评估",
+        "cta": "💬 预约咨询"
+      },
+      "step2": {
+        "title": "技术验证",
+        "duration": "1周",
+        "task1": "工厂参观(线上/线下)",
+        "task2": "样品设备测试",
+        "task3": "API集成概念验证",
+        "cta": "🏭 预约工厂参观"
+      },
+      "step3": {
+        "title": "报价与合同",
+        "duration": "1周",
+        "task1": "基于订购量的最终报价",
+        "task2": "定制选项确认",
+        "task3": "合同签署 + 定金支付(30%)"
+      },
+      "step4": {
+        "title": "生产启动",
+        "duration": "1-2周",
+        "task1": "品牌资产定稿(Logo、配色)",
+        "task2": "样品单元生产",
+        "task3": "软件/API配置"
+      },
+      "step5": {
+        "title": "测试与QA",
+        "duration": "1-2周",
+        "task1": "硬件样品审批",
+        "task2": "软件集成测试",
+        "task3": "端到端工作流验证"
+      },
+      "step6": {
+        "title": "量产与交付",
+        "duration": "6-8周",
+        "task1": "大规模生产(4-6周)",
+        "task2": "质量检验",
+        "task3": "物流与发货(2-4周)",
+        "task4": "尾款支付(70%) 发货前"
+      }
+    },
+    "gantt": {
+      "title": "交互式甘特图",
+      "step": "步骤",
+      "downloadPdf": "📥 下载详细实施路线图 PDF"
+    },
+    "decision": {
+      "title": "哪种方案适合您?",
+      "subtitle": "根据您的需求选择最合适的解决方案",
+      "question1": "您是否有现成的应用?",
+      "yes": "是",
+      "no": "否",
+      "question2": "您是否已有硬件设备?",
+      "question3": "您计划订购1000+台设备吗?",
+      "apiService": "API服务",
+      "apiPrice": "$1,999+/年",
+      "apiDesc": "仅需API接口即可集成AI分析能力",
+      "bundle": "硬件 + API套餐",
+      "bundlePrice": "量大优惠",
+      "bundleDesc": "打包享受折扣",
+      "fullPackage": "全套免费方案",
+      "fullPrice": "免费",
+      "fullItem1": "• 白标硬件",
+      "fullItem2": "• 品牌定制APP",
+      "fullItem3": "• API集成",
+      "fullItem4": "• SDK提供",
+      "basicPackage": "基础套餐",
+      "basicPrice": "$10,000",
+      "basicItem1": "• 白标硬件",
+      "basicItem2": "• 品牌定制APP",
+      "basicNote": "⚠️ 年底订购满1000台可退款!",
+      "best": "最佳",
+      "contactSales": "💬 联系销售获取定制方案"
+    },
+    "cases": {
+      "title": "成功案例",
+      "case1": {
+        "company": "美丽连锁沙龙",
+        "type": "连锁美发",
+        "locations": "50家门店",
+        "timeline": "3个月完成实施",
+        "result1": "客户满意度提升 35%",
+        "result2": "产品销售增长 120%",
+        "result3": "复购率提升 40%"
+      },
+      "case2": {
+        "company": "康美医疗诊所",
+        "type": "医美诊所",
+        "locations": "5家诊所",
+        "timeline": "2.5个月完成实施",
+        "result1": "新客户增长 80%",
+        "result2": "服务效率提升 50%",
+        "result3": "营收增长 150%"
+      },
+      "case3": {
+        "company": "丽人电商平台",
+        "type": "电商平台",
+        "locations": "API集成",
+        "timeline": "1个月完成集成",
+        "result1": "用户留存提升 60%",
+        "result2": "转化率提升 85%",
+        "result3": "客单价提升 45%"
+      },
+      "keyResults": "关键成果:"
+    }
+  },
+  "appIntro": {
+    "badge": "移动应用",
+    "title": "Lushair App",
+    "subtitle": "头皮与头发 AI 的随身伴侣：追踪进度、接收提醒，并把首次网页分析延展成长期护理计划。",
+    "feature1Title": "智能追踪",
+    "feature1Desc": "自动对比多次扫描，用清晰图表呈现长期趋势。",
+    "feature2Title": "AI 助手",
+    "feature2Desc": "结合档案与历史记录，回答护理与作息问题。",
+    "feature3Title": "与网页分析衔接",
+    "feature3Desc": "从免费网页报告无缝继续，打开 App 不丢数据。",
+    "extraLead": "Lushair 能为你做什么",
+    "extra1": "引导式拍照与快速 AI 解读，与临床级模型对齐，适合日常自查。",
+    "extra2": "基于真实指标给出可执行的护理建议，而不是泛泛的通用提示。",
+    "extra3": "与分析仪和网页工具协同，让沙龙、诊所与个人用户在同一路径上管理头发健康。",
+    "storesNote": "应用上架后，将在此提供 App Store 与 Google Play 链接。",
+    "tryWeb": "先做免费网页分析",
+    "backHome": "返回首页"
+  },
+  "dashboard": {
+    "accountType": "账户类型",
+    "consumer": "个人版",
+    "business": "企业版",
+    "businessWelcome": "企业工作台",
+    "businessSubtitle": "面向机构的 API、SaaS 与白标硬件入口。",
+    "businessCardApi": "API 服务与密钥",
+    "businessCardSaas": "SaaS 管理后台",
+    "businessCardHardware": "白标硬件方案",
+    "businessCardContact": "预约顾问通话",
+    "businessRep": "客户经理：即将开通",
+    "welcome": "欢迎回来，张女士！ 👋",
+    "lastScan": "最后扫描: 3天前",
+    "newScan": "新建扫描",
+    "tabs": {
+      "overview": "概览",
+      "history": "历史记录",
+      "ingredients": "成分建议"
+    },
+    "overview": {
+      "totalScore": "总体健康评分",
+      "improved": "较上月提升 +4",
+      "trend": "趋势图 (最近5次)",
+      "hairDensity": "头发密度",
+      "scalpHealth": "头皮健康",
+      "oilLevel": "油脂水平",
+      "hairDamage": "头发损伤",
+      "stable": "持平",
+      "aiInsights": "AI 智能分析",
+      "insight1": {
+        "title": "头发密度改善",
+        "desc": "您的头发密度持续提升，这可能与您最近使用的营养发膜有关。建议继续坚持当前护理方案。"
+      },
+      "insight2": {
+        "title": "头皮健康需关注",
+        "desc": "检测到头皮健康评分下降。建议减少使用加热工具的频率，并增加头皮保湿护理。"
+      },
+      "insight3": {
+        "title": "护理建议",
+        "desc": "基于您的头发类型和当前状况，建议每周进行2-3次深层护理，使用温和的洗发产品。"
+      }
+    },
+    "history": {
+      "title": "扫描历史",
+      "healthScore": "健康评分",
+      "improved": "改善",
+      "baseline": "首次"
+    },
+    "ingredients": {
+      "title": "成分建议",
+      "basedOn": "基于您的头发与头皮画像",
+      "match": "契合度",
+      "card1": "有助于屏障与油脂平衡，常见于头皮精华与调理水。",
+      "card2": "保湿舒缓，适合偏干或受刺激的头皮。",
+      "card3": "低浓度可帮助应对油脂与角质堆积；需逐步建立耐受并做好局部测试。",
+      "whyThese": "为什么关注这些成分？",
+      "reason1": "• 当前读数提示需要平衡油脂——烟酰胺与温和表活有助于清洁而不伤屏障。",
+      "reason2": "• 轻度刺激信号可从泛醇、尿囊素等舒缓活性中受益。",
+      "reason3": "• 针对角质与头屑，低浓度水杨酸可能有效——请循序渐进并观察反应。"
+    }
+  },
+  "notFound": {
+    "title": "页面未找到",
+    "subtitle": "抱歉，您访问的页面不存在或已被移除",
+    "backHome": "返回首页",
+    "tryFree": "免费体验",
+    "mightWant": "您可能想访问:",
+    "hardware": "白标硬件",
+    "api": "API服务",
+    "saas": "SaaS平台",
+    "implementation": "实施流程",
+    "dashboard": "我的账户"
+  },
+  "common": {
+    "language": "语言",
+    "learnMore": "了解更多",
+    "getStarted": "立即开始",
+    "contactUs": "联系我们",
+    "bookDemo": "预约演示",
+    "startTrial": "开始试用",
+    "viewPricing": "查看定价"
+  },
+  "shop": {
+    "badge": "官方商城",
+    "title": "Lushair 头发分析仪",
+    "subtitle": "面向个人与专业场景的 AI 头发分析设备",
+    "products": {
+      "lushairOne": {
+        "name": "Lushair One",
+        "desc": "无线头皮分析仪，AI 可在数秒内完成扫描并输出 16+ 项头发与头皮指标与护理建议。小巧便携，Wi‑Fi 连接、引导拍摄，随时随地查看结果（与 lushair.ai Lushair Scalp Explorer 信息一致）。"
+      },
+      "lushairPro": {
+        "name": "Lushair Pro",
+        "desc": "三光谱自动对焦（即将推出）。适合需要更深入头皮洞察的用户，敬请期待。"
+      },
+      "lushairStudioWifiScreen": {
+        "name": "Lushair Studio（Wi‑Fi 屏）",
+        "desc": "三光谱、自动对焦，可选 200X LED；Wi‑Fi 一体屏，适合门店与诊所。"
+      },
+      "lushairStudioPlugIn": {
+        "name": "Lushair Studio（有线屏）",
+        "desc": "专业级有线插屏方案，三光谱与 200X 可选，适合诊所与沙龙。"
+      },
+      "lushairStudioMirror": {
+        "name": "Lushair Studio（Wi‑Fi 镜面）",
+        "desc": "镜面 Wi‑Fi 显示，三光谱分析，兼顾高端空间美学。"
+      }
+    },
+    "inStock": "库存",
+    "addToCart": "加入购物车",
+    "comingSoon": "即将推出",
+    "bookCall": "预约沟通",
+    "bookCallSubtitle": "与团队确认 WiFi、屏幕、镜面、插屏等 Studio 配置。",
+    "otherStudioModels": "Studio 系列其它型号",
+    "notifyMe": "到货通知",
+    "studio": {
+      "title": "Lushair Studio 定制选项",
+      "subtitle": "面向诊所、沙龙与零售场景的专业配置",
+      "option1": "连接方式",
+      "option1Desc": "有线连手机、无线 WiFi 或自带屏幕",
+      "option2": "200X LED 镜头",
+      "option2Desc": "可选显微镜头，细节级头皮分析",
+      "option3": "外观定制",
+      "option3Desc": "1000 台起订，另计开模费用",
+      "customNote": "批量与定制外观请联系销售团队"
+    },
+    "banner": {
+      "title": "放心选购",
+      "subtitle": "正品保障与专业支持",
+      "feature1": "包邮",
+      "feature2": "30 天退换",
+      "feature3": "一年质保"
+    },
+    "comingSoon": "即将推出",
+    "flatShipping": "统一运费：$20",
+    "bookCall": "预约沟通",
+    "bookCallSubtitle": "与团队确认 WiFi、屏幕、镜面、插屏等 Studio 配置。",
+    "otherStudioModels": "Studio 系列其它型号",
+    "notifyMe": "到货通知"
+  },
+  "cart": {
+    "title": "购物车",
+    "items": "件商品",
+    "empty": "购物车是空的",
+    "continueShopping": "继续购物",
+    "subtotal": "小计",
+    "shipping": "运费",
+    "shippingFlat": "$20",
+    "freeShipping": "$20",
+    "total": "合计",
+    "checkout": "去结算"
+  },
+  "checkout": {
+    "title": "结算",
+    "backToShop": "返回商城",
+    "emptyCart": "购物车是空的",
+    "shippingInfo": "收货信息",
+    "paymentMethod": "支付方式",
+    "orderSummary": "订单摘要",
+    "continueToPayment": "继续付款",
+    "placeOrder": "提交订单",
+    "back": "返回",
+    "quantity": "数量",
+    "subtotal": "小计",
+    "shipping": "运费",
+    "total": "合计",
+    "free": "免费",
+    "shippingAmount": "$20",
+    "form": {
+      "fullName": "姓名",
+      "fullNamePlaceholder": "张三",
+      "phone": "手机号",
+      "phonePlaceholder": "+86 138 0000 0000",
+      "email": "邮箱",
+      "emailPlaceholder": "you@example.com",
+      "address": "详细地址",
+      "addressPlaceholder": "街道、门牌号",
+      "city": "城市",
+      "cityPlaceholder": "上海",
+      "postalCode": "邮编",
+      "postalCodePlaceholder": "200000"
+    },
+    "payment": {
+      "card": "银行卡",
+      "alipay": "支付宝",
+      "wechat": "微信支付"
+    },
+    "success": {
+      "title": "下单成功！",
+      "message": "感谢您的购买，我们已收到订单并正在处理。",
+      "orderNumber": "订单号",
+      "emailSent": "确认邮件已发送至您的邮箱",
+      "continueShopping": "继续购物",
+      "viewOrders": "查看订单"
+    }
+  }
+}

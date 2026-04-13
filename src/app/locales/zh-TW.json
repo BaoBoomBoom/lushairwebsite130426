@@ -1,0 +1,640 @@
+{
+  "nav": {
+    "home": "首頁",
+    "tryFree": "免費體驗",
+    "business": "企業服務",
+    "hardware": "白標硬體",
+    "api": "API服務",
+    "saas": "SaaS平台",
+    "implementation": "實施流程",
+    "dashboard": "我的帳戶",
+    "getStarted": "立即體驗"
+  },
+  "home": {
+    "hero": {
+      "badge": "AI驅動的頭髮與頭皮智能分析",
+      "title": "您的專屬",
+      "titleHighlight": "AI頭髮健康專家",
+      "subtitle": "醫療級AI分析技術，即時追蹤頭髮健康變化，\n為您提供個人化的護理方案",
+      "titleSerif": "Your Hair Health,",
+      "titleSans": "Decoded by AI",
+      "subtitleShort": "Medical-grade diagnostics for hair and scalp. Precision hardware meets clinical intelligence.",
+      "valueTag": "Analysis-ready",
+      "valueBody": "Start in the browser with a selfie—deeper scans and tracking continue in the Lushair app.",
+      "tryFree": "免費AI分析",
+      "forBusiness": "企業B2B方案",
+      "shopDevices": "Shop analyzers",
+      "webBased": "↓ 無需下載，立即上傳自拍照即可獲得AI分析報告",
+      "instant": "上傳自拍 → 即時AI報告"
+    },
+    "hud": {
+      "scanning": "Scanning active",
+      "metricDensity": "Follicle density",
+      "metricDensityVal": "142/cm²",
+      "metricHealth": "Health score",
+      "metricHealthVal": "87.4%"
+    },
+    "precision": {
+      "title": "Clinical-grade precision",
+      "subtitle": "Three pillars of AI-powered diagnostics. Medical accuracy meets real-time insight.",
+      "card1Title": "Follicle density mapping",
+      "card1Desc": "Precision mapping of growth patterns across scalp regions.",
+      "card2Title": "Scalp condition signals",
+      "card2Desc": "Surface and texture cues to spot stress, oil, and inflammation risk.",
+      "card3Title": "Strand-level measurement",
+      "card3Desc": "Micron-level cues for thickness and damage—actionable, not generic."
+    },
+    "tabs": {
+      "title": "為誰而設計?",
+      "subtitle": "無論您是個人用戶還是企業客戶，我們都有完美的解決方案",
+      "consumers": "個人消費者",
+      "consumersHint": "個人設備、App 與網頁分析",
+      "business": "企業客戶",
+      "businessRibbon": "B2B",
+      "businessHint": "硬體 · API · SaaS",
+      "businessChipHardware": "硬體",
+      "businessChipApi": "API",
+      "businessChipSaas": "SaaS"
+    },
+    "consumers": {
+      "medical": {
+        "title": "醫療級家庭分析",
+        "desc": "$699 專業設備，醫療級AI分析技術，在家即可完成專業檢測",
+        "cta": "立即體驗"
+      },
+      "tracking": {
+        "title": "AI智能追蹤",
+        "desc": "持續追蹤頭髮健康變化，AI助手提供即時分析和個人化建議",
+        "cta": "了解更多"
+      },
+      "personalized": {
+        "title": "個人化產品推薦",
+        "desc": "基於AI分析結果，為您推薦最適合的護髮產品和護理方案",
+        "cta": "開始分析"
+      }
+    },
+    "business": {
+      "hardware": {
+        "title": "白標硬體方案",
+        "desc": "與商店同款：Lushair One $99 起、Pro $299 起、Studio $1,290 起（美元）；並提供品牌與批量方案。",
+        "cta": "查看定價"
+      },
+      "api": {
+        "title": "API集成服務",
+        "desc": "從$13,999/年起，靈活的API介面，快速集成到您的平台",
+        "cta": "API文件"
+      },
+      "saas": {
+        "title": "完整SaaS平台",
+        "desc": "為診所、沙龍打造的完整管理系統，客戶管理、分析報告一站式解決",
+        "cta": "預約示範"
+      }
+    },
+    "stats": {
+      "title": "值得信賴的合作夥伴",
+      "subtitle": "全球超過50,000+用戶和1,000+企業的選擇",
+      "users": "活躍用戶",
+      "businesses": "企業客戶",
+      "satisfaction": "滿意度",
+      "analyses": "分析次數"
+    },
+    "testimonials": {
+      "user1": {
+        "name": "張女士",
+        "role": "個人用戶",
+        "content": "使用Lushair三個月後，我的頭髮健康狀況明顯改善。AI分析非常準確，推薦的產品也很有效！"
+      },
+      "user2": {
+        "name": "Dr. 李",
+        "role": "醫美診所負責人",
+        "content": "API集成非常順利，客戶對我們的頭髮分析服務滿意度大幅提升。技術支援團隊也很專業。"
+      },
+      "user3": {
+        "name": "王總",
+        "role": "連鎖美髮沙龍",
+        "content": "SaaS平台幫助我們提升了客戶體驗和產品銷售。現在我們可以為每位客戶提供科學的護髮方案。"
+      }
+    },
+    "cta": {
+      "title": "準備好開始您的頭髮健康之旅了嗎？",
+      "subtitle": "立即體驗AI分析，獲取您的專屬頭髮健康報告",
+      "tryFree": "免費開始體驗",
+      "learnBusiness": "了解企業方案"
+    }
+  },
+  "tryFree": {
+    "title": "免費AI頭髮分析",
+    "subtitle": "上傳您的照片，獲取專業的頭髮健康報告",
+    "backHome": "返回首頁",
+    "steps": {
+      "upload": "上傳照片",
+      "questionnaire": "填寫資訊",
+      "analyzing": "AI分析",
+      "results": "查看報告"
+    },
+    "upload": {
+      "title": "上傳您的自拍照",
+      "dragDrop": "拖放或點擊上傳",
+      "formats": "支援JPG、PNG格式",
+      "tip1": "正面效果最佳",
+      "tip2": "光線充足",
+      "tip3": "頭髮完全可見"
+    },
+    "questionnaire": {
+      "title": "告訴我們更多",
+      "age": "年齡範圍",
+      "selectAge": "請選擇",
+      "gender": "性別",
+      "selectGender": "請選擇",
+      "female": "女性",
+      "male": "男性",
+      "other": "其他",
+      "concerns": "您的頭髮問題（多選）",
+      "hairLoss": "脫髮",
+      "dandruff": "頭皮屑",
+      "oily": "油性頭皮",
+      "dry": "乾燥頭皮",
+      "thinning": "頭髮稀疏",
+      "damage": "頭髮損傷",
+      "previous": "上一步",
+      "analyze": "開始分析"
+    },
+    "analyzing": {
+      "title": "AI分析中...",
+      "detecting": "✓ 偵測頭皮區域...",
+      "density": "✓ 分析頭髮密度...",
+      "oil": "✓ 檢查油脂水平...",
+      "generating": "✓ 生成個人化報告..."
+    },
+    "results": {
+      "complete": "分析完成！",
+      "yourScore": "您的頭髮健康評分",
+      "healthStatus": "健康狀態：良好",
+      "sebum": "頭皮皮脂水平",
+      "high": "偏高",
+      "density": "頭髮密度",
+      "normal": "正常",
+      "scalp": "頭皮健康",
+      "mild": "輕微泛紅",
+      "findings": "主要發現：",
+      "finding1": "檢測到皮脂水平偏高，建議使用控油洗髮精",
+      "finding2": "頭髮密度正常，繼續保持良好的護理習慣",
+      "finding3": "頭頂區域檢測到輕微泛紅，可能需要舒緩護理",
+      "detailedReport": "詳細分析報告",
+      "getFullReport": "獲取完整報告 + 個人化計畫",
+      "downloadApp": "下載Lushair應用程式",
+      "haveAccount": "已有帳戶？",
+      "signIn": "登入",
+      "emailResults": "或通過電子郵件發送結果：",
+      "emailPlaceholder": "your@email.com",
+      "send": "發送"
+    }
+  },
+  "hardware": {
+    "badge": "白標硬體解決方案",
+    "title": "Lushair白標硬體定價",
+    "subtitle": "專業頭髮分析硬體，品牌客製化，靈活的階梯定價，快速交付",
+    "gen1": "第一代（現貨）",
+    "gen2": "第二代（高級版）",
+    "products": {
+      "single": {
+        "title": "單光譜",
+        "subtitle": "基礎分析",
+        "whiteLight": "白光",
+        "sensor": "20MP感測器",
+        "bluetooth": "藍牙",
+        "appRequired": "需要應用程式"
+      },
+      "tri": {
+        "title": "三光譜",
+        "subtitle": "進階AI",
+        "popular": "熱門",
+        "uva": "UV-A光",
+        "polarized": "偏振光"
+      },
+      "triScreen": {
+        "title": "三光譜 + 螢幕",
+        "subtitle": "高級獨立版",
+        "oled": "2.4吋OLED螢幕",
+        "standalone": "獨立模式",
+        "optional": "可選應用程式",
+        "noApp": "無需應用程式"
+      }
+    },
+    "pricing": {
+      "title": "批量定價",
+      "starting": "起/台",
+      "units": "台",
+      "freeBranding": "+ 免費品牌客製化 🎁"
+    },
+    "calculator": {
+      "title": "定價計算器",
+      "quantity": "預估訂購數量",
+      "unitPrice": "單價：",
+      "totalCost": "總成本：",
+      "delivery": "交付：",
+      "requestQuote": "💬 申請客製化報價",
+      "scheduleCall": "📞 預約通話"
+    },
+    "timeline": {
+      "title": "交付時間表",
+      "gen1Stock": "第一代（現貨）",
+      "gen2Custom": "第二代（客製化製造）",
+      "tooling": "開模",
+      "production": "生產",
+      "shipping": "運輸",
+      "total": "總計：約75-90天（2.5-3個月）",
+      "noTooling": "⚡ 無需開模？節省15-30天！",
+      "month": "個月",
+      "months": "個月",
+      "days": "天",
+      "about": "約"
+    }
+  },
+  "api": {
+    "badge": "AI分析API服務",
+    "title": "Lushair頭髮分析API",
+    "subtitle": "將醫療級AI分析集成到您的平台，靈活訂閱，快速集成",
+    "plans": {
+      "basic": {
+        "name": "基礎版",
+        "perMetric": "每指標/年",
+        "qps": "QPS",
+        "calls": "10萬次呼叫/月",
+        "support": "電子郵件支援",
+        "sla": "7天SLA"
+      },
+      "standard": {
+        "name": "標準版",
+        "recommended": "推薦",
+        "calls": "50萬次呼叫/月",
+        "support": "優先支援",
+        "sla": "24小時SLA"
+      },
+      "professional": {
+        "name": "專業版",
+        "calls": "300萬次呼叫/月",
+        "support": "專屬客戶經理",
+        "sla": "4小時SLA"
+      },
+      "selected": "已選擇",
+      "select": "選擇方案"
+    },
+    "metrics": {
+      "title": "可用指標",
+      "subtitle": "選擇您需要的分析指標（每個指標單獨計費）",
+      "hairDensity": "頭髮密度分析",
+      "scalpHealth": "頭皮健康評分",
+      "sebum": "皮脂水平檢測",
+      "follicle": "毛囊直徑測量",
+      "hairLoss": "脫髮階段分類",
+      "dandruff": "頭皮屑/頭皮狀況檢測",
+      "damage": "頭髮損傷評估",
+      "recommendations": "個人化產品推薦",
+      "selected": "已選擇 {count} 個指標",
+      "totalPrice": "總計：${price}/年",
+      "startTrial": "開始14天免費試用",
+      "trialNote": "💡 14天試用，無需信用卡"
+    },
+    "docs": {
+      "title": "API文件預覽",
+      "authentication": "身份驗證",
+      "authComment": "// 在請求標頭中添加API金鑰",
+      "endpoint": "POST /v1/analyze",
+      "endpointDesc": "從圖片分析頭髮和頭皮",
+      "responseExample": "回應範例",
+      "viewFullDocs": "📖 查看完整文件",
+      "getApiKey": "🔑 獲取API金鑰"
+    },
+    "playground": {
+      "title": "互動式API測試",
+      "subtitle": "直接在瀏覽器中測試API呼叫",
+      "apiKey": "API金鑰",
+      "uploadImage": "上傳圖片",
+      "selectMetrics": "選擇指標",
+      "hairDensity": "頭髮密度",
+      "scalpHealth": "頭皮健康",
+      "sendRequest": "發送請求",
+      "responseComment": "// 回應結果"
+    },
+    "keys": {
+      "title": "我的API金鑰",
+      "createNew": "建立新金鑰",
+      "production": "生產環境",
+      "testing": "測試環境",
+      "created": "建立時間",
+      "lastUsed": "最後使用",
+      "requestsToday": "今日請求",
+      "neverUsed": "從未使用",
+      "testLimit": "⚠️ 測試金鑰限制為100次請求/天"
+    }
+  },
+  "saas": {
+    "badge": "店面管理SaaS系統",
+    "title": "沙龍和診所的完整管理平台",
+    "subtitle": "客戶管理、分析報告、產品推薦、收入追蹤 - 一站式解決方案",
+    "demo": {
+      "title": "互動式示範體驗",
+      "subtitle": "點擊下方查看管理系統實際運作",
+      "header": "Lushair店面管理系統",
+      "demoAccount": "示範帳戶",
+      "customerManagement": "客戶管理",
+      "analytics": "數據分析",
+      "lastVisit": "最後訪問",
+      "healthTrend": "頭髮健康趨勢：",
+      "recommendedProducts": "推薦產品：",
+      "viewReport": "查看完整報告",
+      "scheduleFollowup": "安排追蹤",
+      "todayStats": "今日統計：",
+      "scansPerformed": "次掃描",
+      "recommendations": "產品推薦",
+      "conversionRate": "轉換率",
+      "newCustomers": "新客戶",
+      "topProducts": "熱銷產品",
+      "launchDemo": "▶ 啟動完整示範"
+    },
+    "features": {
+      "customer": {
+        "title": "客戶檔案管理",
+        "desc": "完整的客戶資訊、歷史記錄、偏好追蹤"
+      },
+      "analytics": {
+        "title": "智能數據分析",
+        "desc": "即時收入統計、產品銷售分析、趨勢預測"
+      },
+      "recommendations": {
+        "title": "產品推薦引擎",
+        "desc": "AI驅動的個人化產品推薦，提升銷售轉換"
+      },
+      "appointments": {
+        "title": "預約管理",
+        "desc": "線上預約、自動提醒、排程安排"
+      },
+      "tracking": {
+        "title": "健康追蹤",
+        "desc": "長期頭髮健康趨勢分析，視覺化顯示"
+      },
+      "inventory": {
+        "title": "庫存管理",
+        "desc": "產品庫存同步、低庫存警報、採購建議"
+      }
+    },
+    "pricing": {
+      "title": "靈活的訂閱方案",
+      "subtitle": "選擇最適合您企業規模的方案",
+      "starter": {
+        "name": "入門版",
+        "users": "1-100位用戶",
+        "feature1": "客戶資料庫",
+        "feature2": "掃描歷史",
+        "feature3": "產品推薦",
+        "feature4": "電子郵件支援"
+      },
+      "growth": {
+        "name": "成長版",
+        "popular": "最受歡迎",
+        "users": "101-300位用戶",
+        "feature1": "所有入門版+",
+        "feature2": "趨勢報告",
+        "feature3": "庫存同步",
+        "feature4": "優先支援"
+      },
+      "professional": {
+        "name": "專業版",
+        "users": "301-500位用戶",
+        "feature1": "所有成長版+",
+        "feature2": "多地點",
+        "feature3": "白標UI",
+        "feature4": "客製化集成"
+      },
+      "business": {
+        "name": "商業版",
+        "users": "501-2000位用戶",
+        "feature1": "所有專業版+",
+        "feature2": "API存取",
+        "feature3": "客製化報告",
+        "feature4": "Webhooks"
+      },
+      "enterprise": {
+        "name": "企業版",
+        "users": "2001-5000位用戶",
+        "feature1": "所有商業版+",
+        "feature2": "專屬基礎設施",
+        "feature3": "進階分析",
+        "feature4": "客戶經理"
+      },
+      "flagship": {
+        "name": "旗艦版",
+        "users": "5000+位用戶",
+        "feature1": "所有企業版+",
+        "feature2": "客製化SLA",
+        "feature3": "客製化開發",
+        "feature4": "專屬團隊"
+      },
+      "month": "/月",
+      "startTrial": "開始免費試用",
+      "contactSales": "聯絡銷售",
+      "includes": "💡 所有方案包含：",
+      "include1": "• 無限次掃描",
+      "include2": "• 可客製化的產品推薦引擎",
+      "include3": "• 客戶檔案和歷史記錄",
+      "include4": "• 員工行動應用程式（iOS/Android）"
+    },
+    "cta": {
+      "title": "準備好提升您的業務了嗎？",
+      "subtitle": "立即開始14天免費試用，無需信用卡，隨時取消",
+      "startTrial": "開始免費試用",
+      "bookDemo": "預約產品示範"
+    }
+  },
+  "implementation": {
+    "badge": "實施時間表",
+    "title": "從諮詢到上線：您的Lushair之旅",
+    "subtitle": "透明流程，明確時間表，可預測的交付",
+    "overview": {
+      "title": "完整實施週期",
+      "weeks": "12-16週",
+      "months": "（約3-4個月）"
+    },
+    "steps": {
+      "step1": {
+        "title": "合作討論",
+        "duration": "1-2週",
+        "task1": "初步諮詢電話",
+        "task2": "簽署保密協議",
+        "task3": "需求收集",
+        "cta": "💬 安排諮詢"
+      },
+      "step2": {
+        "title": "技術驗證",
+        "duration": "1週",
+        "task1": "工廠參觀（可選，虛擬/實地）",
+        "task2": "樣品設備測試",
+        "task3": "API集成概念驗證",
+        "cta": "🏭 預約工廠參觀"
+      },
+      "step3": {
+        "title": "報價與合約",
+        "duration": "1週",
+        "task1": "基於數量的最終定價",
+        "task2": "選擇客製化選項",
+        "task3": "簽署合約並支付訂金（30%）"
+      },
+      "step4": {
+        "title": "生產啟動",
+        "duration": "1-2週",
+        "task1": "完成品牌資產（標誌、顏色）",
+        "task2": "生產樣品",
+        "task3": "軟體/API配置"
+      },
+      "step5": {
+        "title": "測試與品質保證",
+        "duration": "1-2週",
+        "task1": "硬體樣品審批",
+        "task2": "軟體集成測試",
+        "task3": "端到端工作流程驗證"
+      },
+      "step6": {
+        "title": "量產與交付",
+        "duration": "6-8週",
+        "task1": "生產（4-6週）",
+        "task2": "品質檢查",
+        "task3": "物流與運輸（2-4週）",
+        "task4": "出貨前最終付款（70%）"
+      }
+    },
+    "gantt": {
+      "title": "互動式甘特圖",
+      "step": "步驟",
+      "downloadPdf": "📥 下載詳細路線圖PDF"
+    },
+    "decision": {
+      "title": "哪種解決方案適合您？",
+      "subtitle": "根據您的需求選擇最合適的解決方案",
+      "question1": "您有現有的應用程式嗎？",
+      "yes": "是",
+      "no": "否",
+      "question2": "您已經有硬體了嗎？",
+      "question3": "您計劃訂購1000+台嗎？",
+      "apiService": "僅API",
+      "apiPrice": "$13,999+/年",
+      "apiDesc": "只需API介面即可集成AI分析",
+      "bundle": "硬體 + API套裝",
+      "bundlePrice": "批量折扣",
+      "bundleDesc": "提供套裝折扣",
+      "fullPackage": "完整套裝免費",
+      "fullPrice": "免費",
+      "fullItem1": "• 白標硬體",
+      "fullItem2": "• 品牌應用程式",
+      "fullItem3": "• API集成",
+      "fullItem4": "• 提供SDK",
+      "basicPackage": "基礎套裝",
+      "basicPrice": "$70,000",
+      "basicItem1": "• 白標硬體",
+      "basicItem2": "• 品牌應用程式",
+      "basicNote": "⚠️ 如年底訂購1000+台可退款！",
+      "best": "最佳",
+      "contactSales": "💬 聯絡銷售以獲取客製化解決方案"
+    },
+    "cases": {
+      "title": "成功案例",
+      "case1": {
+        "company": "美麗連鎖沙龍",
+        "type": "連鎖美髮沙龍",
+        "locations": "50個地點",
+        "timeline": "3個月內實施",
+        "result1": "客戶滿意度 +35%",
+        "result2": "產品銷售 +120%",
+        "result3": "回購率 +40%"
+      },
+      "case2": {
+        "company": "健康醫療診所",
+        "type": "醫學美容",
+        "locations": "5家診所",
+        "timeline": "2.5個月內實施",
+        "result1": "新客戶 +80%",
+        "result2": "服務效率 +50%",
+        "result3": "收入 +150%"
+      },
+      "case3": {
+        "company": "美妝電商平台",
+        "type": "電子商務",
+        "locations": "API集成",
+        "timeline": "1個月內集成",
+        "result1": "用戶留存 +60%",
+        "result2": "轉換率 +85%",
+        "result3": "平均訂單價值 +45%"
+      },
+      "keyResults": "關鍵成果："
+    }
+  },
+  "dashboard": {
+    "welcome": "歡迎回來，張女士！👋",
+    "lastScan": "最後掃描：3天前",
+    "newScan": "新掃描",
+    "tabs": {
+      "overview": "概覽",
+      "history": "歷史",
+      "recommendations": "推薦"
+    },
+    "overview": {
+      "totalScore": "整體健康評分",
+      "improved": "較上月 +4",
+      "trend": "趨勢（最近5次）",
+      "hairDensity": "頭髮密度",
+      "scalpHealth": "頭皮健康",
+      "oilLevel": "油脂水平",
+      "hairDamage": "頭髮損傷",
+      "stable": "穩定",
+      "aiInsights": "AI智能分析",
+      "insight1": {
+        "title": "頭髮密度改善",
+        "desc": "您的頭髮密度持續改善，這可能與您最近使用的營養髮膜有關。建議繼續目前的護理方式。"
+      },
+      "insight2": {
+        "title": "頭皮健康需注意",
+        "desc": "檢測到頭皮健康評分下降。建議減少熱工具的使用頻率，並增加頭皮保濕護理。"
+      },
+      "insight3": {
+        "title": "護理建議",
+        "desc": "根據您的頭髮類型和當前狀況，建議每週進行2-3次深層護理，使用溫和的護髮產品。"
+      }
+    },
+    "history": {
+      "title": "掃描歷史",
+      "healthScore": "健康評分",
+      "improved": "改善",
+      "baseline": "基準"
+    },
+    "recommendations": {
+      "title": "為您推薦",
+      "basedOn": "根據您的頭髮狀況",
+      "match": "匹配",
+      "buy": "購買",
+      "whyThese": "為什麼推薦這些產品？",
+      "reason1": "• 根據您目前的高皮脂水平，控油洗髮精最為合適",
+      "reason2": "• 頭皮精華液可以幫助改善輕微炎症",
+      "reason3": "• 營養髮膜有助於持續改善頭髮密度"
+    }
+  },
+  "notFound": {
+    "title": "頁面未找到",
+    "subtitle": "抱歉，您尋找的頁面不存在或已被移除",
+    "backHome": "返回首頁",
+    "tryFree": "免費體驗",
+    "mightWant": "您可能想訪問：",
+    "hardware": "白標硬體",
+    "api": "API服務",
+    "saas": "SaaS平台",
+    "implementation": "實施流程",
+    "dashboard": "我的帳戶"
+  },
+  "common": {
+    "learnMore": "了解更多",
+    "getStarted": "立即開始",
+    "contactUs": "聯絡我們",
+    "bookDemo": "預約示範",
+    "startTrial": "開始試用",
+    "viewPricing": "查看定價"
+  }
+}

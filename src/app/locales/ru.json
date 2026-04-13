@@ -1,0 +1,133 @@
+{
+  "nav": {
+    "home": "Главная",
+    "tryFree": "Попробовать бесплатно",
+    "business": "Для бизнеса",
+    "hardware": "White Label Оборудование",
+    "api": "API Сервисы",
+    "saas": "SaaS Платформа",
+    "implementation": "Внедрение",
+    "dashboard": "Мой аккаунт",
+    "getStarted": "Начать"
+  },
+  "home": {
+    "hero": {
+      "badge": "Интеллектуальный анализ волос и кожи головы на основе ИИ",
+      "title": "Ваш личный",
+      "titleHighlight": "ИИ эксперт по здоровью волос",
+      "subtitle": "Технология анализа ИИ медицинского уровня, отслеживание здоровья волос в реальном времени,\nперсонализированные решения по уходу",
+      "titleSerif": "Your Hair Health,",
+      "titleSans": "Decoded by AI",
+      "subtitleShort": "Medical-grade diagnostics for hair and scalp. Precision hardware meets clinical intelligence.",
+      "valueTag": "Analysis-ready",
+      "valueBody": "Start in the browser with a selfie—deeper scans and tracking continue in the Lushair app.",
+      "tryFree": "Бесплатный ИИ анализ",
+      "forBusiness": "Корпоративные B2B решения",
+      "shopDevices": "Shop analyzers",
+      "webBased": "↓ Веб-платформа, загрузка не требуется",
+      "instant": "Загрузить селфи → Мгновенный ИИ отчет"
+    },
+    "hud": {
+      "scanning": "Scanning active",
+      "metricDensity": "Follicle density",
+      "metricDensityVal": "142/cm²",
+      "metricHealth": "Health score",
+      "metricHealthVal": "87.4%"
+    },
+    "precision": {
+      "title": "Clinical-grade precision",
+      "subtitle": "Three pillars of AI-powered diagnostics. Medical accuracy meets real-time insight.",
+      "card1Title": "Follicle density mapping",
+      "card1Desc": "Precision mapping of growth patterns across scalp regions.",
+      "card2Title": "Scalp condition signals",
+      "card2Desc": "Surface and texture cues to spot stress, oil, and inflammation risk.",
+      "card3Title": "Strand-level measurement",
+      "card3Desc": "Micron-level cues for thickness and damage—actionable, not generic."
+    },
+    "tabs": {
+      "title": "Для кого это?",
+      "subtitle": "Независимо от того, частное лицо вы или компания, у нас есть идеальное решение",
+      "consumers": "Для потребителей",
+      "consumersHint": "Личные устройства, приложение и веб-анализ",
+      "business": "Для бизнеса",
+      "businessRibbon": "B2B",
+      "businessHint": "Hardware · API · SaaS",
+      "businessChipHardware": "Hardware",
+      "businessChipApi": "API",
+      "businessChipSaas": "SaaS"
+    },
+    "consumers": {
+      "medical": {
+        "title": "Домашний анализ медицинского уровня",
+        "desc": "Профессиональное устройство $699, технология ИИ анализа медицинского уровня, профессиональное тестирование дома",
+        "cta": "Попробовать сейчас"
+      },
+      "tracking": {
+        "title": "Умное отслеживание ИИ",
+        "desc": "Непрерывный мониторинг здоровья волос, ИИ помощник предоставляет анализ в реальном времени и персонализированные рекомендации",
+        "cta": "Узнать больше"
+      },
+      "personalized": {
+        "title": "Персонализированные рекомендации продуктов",
+        "desc": "На основе результатов ИИ анализа рекомендует наиболее подходящие средства для ухода за волосами и планы ухода",
+        "cta": "Начать анализ"
+      }
+    },
+    "business": {
+      "hardware": {
+        "title": "White Label Оборудование",
+        "desc": "Как в магазине: Lushair One от $99, Pro от $299, Studio от $1,290 — плюс white-label и объёмы.",
+        "cta": "Посмотреть цены"
+      },
+      "api": {
+        "title": "Интеграция API",
+        "desc": "От $13,999/год, гибкая интеграция API на вашу платформу",
+        "cta": "Документация API"
+      },
+      "saas": {
+        "title": "Полная SaaS платформа",
+        "desc": "Полная система управления для клиник и салонов, комплексное решение для управления клиентами и аналитических отчетов",
+        "cta": "Забронировать демо"
+      }
+    },
+    "stats": {
+      "title": "Надежные партнеры",
+      "subtitle": "Выбор более 50 000 пользователей и 1 000 компаний по всему миру",
+      "users": "Активные пользователи",
+      "businesses": "Бизнес-клиенты",
+      "satisfaction": "Удовлетворенность",
+      "analyses": "Анализы"
+    },
+    "testimonials": {
+      "user1": {
+        "name": "Г-жа Чжан",
+        "role": "Индивидуальный пользователь",
+        "content": "После трех месяцев использования Lushair мое здоровье волос значительно улучшилось. ИИ анализ очень точный, а рекомендованные продукты отлично работают!"
+      },
+      "user2": {
+        "name": "Доктор Ли",
+        "role": "Директор клиники медицинской эстетики",
+        "content": "Интеграция API прошла очень гладко, и удовлетворенность клиентов нашими услугами анализа волос значительно возросла. Команда технической поддержки также очень профессиональна."
+      },
+      "user3": {
+        "name": "Менеджер Ван",
+        "role": "Сеть салонов красоты",
+        "content": "SaaS платформа помогла нам улучшить клиентский опыт и продажи продуктов. Теперь мы можем предоставить научные решения по уходу за волосами для каждого клиента."
+      }
+    },
+    "cta": {
+      "title": "Готовы начать свое путешествие к здоровью волос?",
+      "subtitle": "Попробуйте ИИ анализ сейчас и получите свой персонализированный отчет о здоровье волос",
+      "tryFree": "Начать бесплатную пробную версию",
+      "learnBusiness": "Узнать о корпоративных решениях"
+    }
+  },
+  "common": {
+    "learnMore": "Узнать больше",
+    "getStarted": "Начать",
+    "contactUs": "Связаться с нами",
+    "bookDemo": "Забронировать демо",
+    "startTrial": "Начать пробную версию",
+    "viewPricing": "Посмотреть цены"
+  }
+}

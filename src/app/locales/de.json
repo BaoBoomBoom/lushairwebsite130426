@@ -1,0 +1,133 @@
+{
+  "nav": {
+    "home": "Startseite",
+    "tryFree": "Kostenlos testen",
+    "business": "Für Unternehmen",
+    "hardware": "White-Label-Hardware",
+    "api": "API-Dienste",
+    "saas": "SaaS-Plattform",
+    "implementation": "Implementierung",
+    "dashboard": "Mein Konto",
+    "getStarted": "Loslegen"
+  },
+  "home": {
+    "hero": {
+      "badge": "KI-gestützte Haar- und Kopfhaut-Intelligenz",
+      "title": "Ihr persönlicher",
+      "titleHighlight": "KI-Haargesundheitsexperte",
+      "subtitle": "KI-Analysetechnologie in medizinischer Qualität, Echtzeit-Tracking der Haargesundheit,\npersonalisierte Pflegelösungen",
+      "titleSerif": "Your Hair Health,",
+      "titleSans": "Decoded by AI",
+      "subtitleShort": "Medical-grade diagnostics for hair and scalp. Precision hardware meets clinical intelligence.",
+      "valueTag": "Analysis-ready",
+      "valueBody": "Start in the browser with a selfie—deeper scans and tracking continue in the Lushair app.",
+      "tryFree": "Kostenlose KI-Analyse",
+      "forBusiness": "Unternehmens-B2B-Lösungen",
+      "shopDevices": "Shop analyzers",
+      "webBased": "↓ Webbasiert, kein Download erforderlich",
+      "instant": "Selfie hochladen → Sofortiger KI-Bericht"
+    },
+    "hud": {
+      "scanning": "Scanning active",
+      "metricDensity": "Follicle density",
+      "metricDensityVal": "142/cm²",
+      "metricHealth": "Health score",
+      "metricHealthVal": "87.4%"
+    },
+    "precision": {
+      "title": "Clinical-grade precision",
+      "subtitle": "Three pillars of AI-powered diagnostics. Medical accuracy meets real-time insight.",
+      "card1Title": "Follicle density mapping",
+      "card1Desc": "Precision mapping of growth patterns across scalp regions.",
+      "card2Title": "Scalp condition signals",
+      "card2Desc": "Surface and texture cues to spot stress, oil, and inflammation risk.",
+      "card3Title": "Strand-level measurement",
+      "card3Desc": "Micron-level cues for thickness and damage—actionable, not generic."
+    },
+    "tabs": {
+      "title": "Für wen ist es?",
+      "subtitle": "Ob Sie Privatperson oder Unternehmen sind, wir haben die perfekte Lösung",
+      "consumers": "Für Verbraucher",
+      "consumersHint": "Persönliche Geräte, App & Web-Analyse",
+      "business": "Für Unternehmen",
+      "businessRibbon": "B2B",
+      "businessHint": "Hardware · API · SaaS",
+      "businessChipHardware": "Hardware",
+      "businessChipApi": "API",
+      "businessChipSaas": "SaaS"
+    },
+    "consumers": {
+      "medical": {
+        "title": "Heimanalyse in medizinischer Qualität",
+        "desc": "Professionelles Gerät $699, KI-Analysetechnologie in medizinischer Qualität, professionelle Tests zu Hause",
+        "cta": "Jetzt testen"
+      },
+      "tracking": {
+        "title": "Intelligentes KI-Tracking",
+        "desc": "Kontinuierliche Überwachung der Haargesundheit, KI-Assistent bietet Echtzeitanalyse und personalisierte Empfehlungen",
+        "cta": "Mehr erfahren"
+      },
+      "personalized": {
+        "title": "Personalisierte Produktempfehlungen",
+        "desc": "Basierend auf KI-Analyseergebnissen empfiehlt es die am besten geeigneten Haarpflegeprodukte und Pflegepläne",
+        "cta": "Analyse starten"
+      }
+    },
+    "business": {
+      "hardware": {
+        "title": "White-Label-Hardware",
+        "desc": "Gleiche Preise wie im Shop: Lushair One ab $99, Pro ab $299, Studio ab $1,290 — plus White-Label und Mengenkonditionen.",
+        "cta": "Preise ansehen"
+      },
+      "api": {
+        "title": "API-Integration",
+        "desc": "Ab $13,999/Jahr, flexible API-Integration in Ihre Plattform",
+        "cta": "API-Dokumentation"
+      },
+      "saas": {
+        "title": "Vollständige SaaS-Plattform",
+        "desc": "Vollständiges Verwaltungssystem für Kliniken und Salons, Komplettlösung für Kundenverwaltung und Analyseberichte",
+        "cta": "Demo buchen"
+      }
+    },
+    "stats": {
+      "title": "Vertrauenswürdige Partner",
+      "subtitle": "Von über 50.000 Benutzern und 1.000 Unternehmen weltweit gewählt",
+      "users": "Aktive Benutzer",
+      "businesses": "Geschäftskunden",
+      "satisfaction": "Zufriedenheit",
+      "analyses": "Analysen"
+    },
+    "testimonials": {
+      "user1": {
+        "name": "Frau Zhang",
+        "role": "Einzelbenutzer",
+        "content": "Nach drei Monaten Nutzung von Lushair hat sich meine Haargesundheit deutlich verbessert. Die KI-Analyse ist sehr genau und die empfohlenen Produkte funktionieren großartig!"
+      },
+      "user2": {
+        "name": "Dr. Li",
+        "role": "Direktor der medizinischen Ästhetikklinik",
+        "content": "Die API-Integration verlief sehr reibungslos und die Kundenzufriedenheit mit unseren Haaranalysediensten ist deutlich gestiegen. Das technische Support-Team ist auch sehr professionell."
+      },
+      "user3": {
+        "name": "Manager Wang",
+        "role": "Friseursalon-Kette",
+        "content": "Die SaaS-Plattform hat uns geholfen, das Kundenerlebnis und den Produktverkauf zu verbessern. Jetzt können wir jedem Kunden wissenschaftliche Haarpflegelösungen anbieten."
+      }
+    },
+    "cta": {
+      "title": "Bereit, Ihre Haargesundheitsreise zu beginnen?",
+      "subtitle": "Probieren Sie jetzt die KI-Analyse aus und erhalten Sie Ihren personalisierten Haargesundheitsbericht",
+      "tryFree": "Kostenlose Testversion starten",
+      "learnBusiness": "Mehr über Unternehmenslösungen erfahren"
+    }
+  },
+  "common": {
+    "learnMore": "Mehr erfahren",
+    "getStarted": "Loslegen",
+    "contactUs": "Kontaktieren Sie uns",
+    "bookDemo": "Demo buchen",
+    "startTrial": "Testversion starten",
+    "viewPricing": "Preise ansehen"
+  }
+}

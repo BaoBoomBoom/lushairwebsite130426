@@ -1,0 +1,133 @@
+{
+  "nav": {
+    "home": "홈",
+    "tryFree": "무료 체험",
+    "business": "기업 서비스",
+    "hardware": "화이트 라벨 하드웨어",
+    "api": "API 서비스",
+    "saas": "SaaS 플랫폼",
+    "implementation": "구현 프로세스",
+    "dashboard": "내 계정",
+    "getStarted": "시작하기"
+  },
+  "home": {
+    "hero": {
+      "badge": "AI 기반 모발 및 두피 인텔리전스",
+      "title": "당신만의",
+      "titleHighlight": "AI 모발 건강 전문가",
+      "subtitle": "의료급 AI 분석 기술, 실시간 모발 건강 추적,\n맞춤형 케어 솔루션",
+      "titleSerif": "Your Hair Health,",
+      "titleSans": "Decoded by AI",
+      "subtitleShort": "Medical-grade diagnostics for hair and scalp. Precision hardware meets clinical intelligence.",
+      "valueTag": "Analysis-ready",
+      "valueBody": "Start in the browser with a selfie—deeper scans and tracking continue in the Lushair app.",
+      "tryFree": "무료 AI 분석",
+      "forBusiness": "기업 B2B 솔루션",
+      "shopDevices": "Shop analyzers",
+      "webBased": "↓ 웹 기반, 다운로드 불필요",
+      "instant": "셀카 업로드 → 즉시 AI 리포트"
+    },
+    "hud": {
+      "scanning": "Scanning active",
+      "metricDensity": "Follicle density",
+      "metricDensityVal": "142/cm²",
+      "metricHealth": "Health score",
+      "metricHealthVal": "87.4%"
+    },
+    "precision": {
+      "title": "Clinical-grade precision",
+      "subtitle": "Three pillars of AI-powered diagnostics. Medical accuracy meets real-time insight.",
+      "card1Title": "Follicle density mapping",
+      "card1Desc": "Precision mapping of growth patterns across scalp regions.",
+      "card2Title": "Scalp condition signals",
+      "card2Desc": "Surface and texture cues to spot stress, oil, and inflammation risk.",
+      "card3Title": "Strand-level measurement",
+      "card3Desc": "Micron-level cues for thickness and damage—actionable, not generic."
+    },
+    "tabs": {
+      "title": "누구를 위한 것인가요?",
+      "subtitle": "개인 사용자든 기업 고객이든, 완벽한 솔루션을 제공합니다",
+      "consumers": "개인 소비자",
+      "consumersHint": "개인 기기, 앱 및 웹 분석",
+      "business": "기업 고객",
+      "businessRibbon": "B2B",
+      "businessHint": "하드웨어 · API · SaaS",
+      "businessChipHardware": "하드웨어",
+      "businessChipApi": "API",
+      "businessChipSaas": "SaaS"
+    },
+    "consumers": {
+      "medical": {
+        "title": "의료급 홈 분석",
+        "desc": "$699 전문 장비, 의료급 AI 분석 기술, 집에서 전문 테스트",
+        "cta": "지금 체험"
+      },
+      "tracking": {
+        "title": "AI 스마트 추적",
+        "desc": "지속적인 모발 건강 모니터링, AI 어시스턴트가 실시간 분석 및 맞춤형 추천 제공",
+        "cta": "자세히 알아보기"
+      },
+      "personalized": {
+        "title": "맞춤형 제품 추천",
+        "desc": "AI 분석 결과를 기반으로 가장 적합한 헤어 케어 제품과 케어 플랜 추천",
+        "cta": "분석 시작"
+      }
+    },
+    "business": {
+      "hardware": {
+        "title": "화이트 라벨 하드웨어",
+        "desc": "스토어와 동일 라인업: Lushair One $99~, Pro $299~, Studio $1,290~. 화이트라벨·대량 도입 가능.",
+        "cta": "가격 보기"
+      },
+      "api": {
+        "title": "API 통합",
+        "desc": "$13,999/년부터, 플랫폼에 유연한 API 통합",
+        "cta": "API 문서"
+      },
+      "saas": {
+        "title": "완전한 SaaS 플랫폼",
+        "desc": "클리닉 및 살롱을 위한 완전한 관리 시스템, 고객 관리 및 분석 보고서 원스톱 솔루션",
+        "cta": "데모 예약"
+      }
+    },
+    "stats": {
+      "title": "신뢰할 수 있는 파트너",
+      "subtitle": "전 세계 50,000명 이상의 사용자와 1,000개 이상의 기업이 선택",
+      "users": "활성 사용자",
+      "businesses": "비즈니스 클라이언트",
+      "satisfaction": "만족도",
+      "analyses": "분석"
+    },
+    "testimonials": {
+      "user1": {
+        "name": "장 여사",
+        "role": "개인 사용자",
+        "content": "Lushair를 3개월 동안 사용한 후 모발 건강이 크게 개선되었습니다. AI 분석이 매우 정확하고 추천 제품도 효과적입니다!"
+      },
+      "user2": {
+        "name": "이 박사",
+        "role": "의료 미용 클리닉 디렉터",
+        "content": "API 통합이 매우 원활했고, 모발 분석 서비스에 대한 고객 만족도가 크게 증가했습니다. 기술 지원 팀도 매우 전문적입니다."
+      },
+      "user3": {
+        "name": "왕 매니저",
+        "role": "체인 헤어 살롱",
+        "content": "SaaS 플랫폼은 고객 경험과 제품 판매를 개선하는 데 도움이 되었습니다. 이제 모든 고객에게 과학적인 헤어 케어 솔루션을 제공할 수 있습니다."
+      }
+    },
+    "cta": {
+      "title": "모발 건강 여정을 시작할 준비가 되셨나요?",
+      "subtitle": "지금 AI 분석을 시도하고 맞춤형 모발 건강 리포트를 받아보세요",
+      "tryFree": "무료 체험 시작",
+      "learnBusiness": "기업 솔루션 알아보기"
+    }
+  },
+  "common": {
+    "learnMore": "자세히 알아보기",
+    "getStarted": "시작하기",
+    "contactUs": "문의하기",
+    "bookDemo": "데모 예약",
+    "startTrial": "체험 시작",
+    "viewPricing": "가격 보기"
+  }
+}
