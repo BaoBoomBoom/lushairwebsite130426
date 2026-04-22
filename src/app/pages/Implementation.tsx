@@ -2,6 +2,8 @@ import { motion } from 'motion/react';
 import { Check, Clock, FileText, Factory, TestTube, Package, ArrowRight } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 
+const CALENDLY_URL = 'https://calendly.com/wendyhair/30min';
+
 export default function Implementation() {
   const { t } = useLanguage();
 
@@ -211,7 +213,14 @@ export default function Implementation() {
             </div>
           </div>
           <div className="text-center mt-8">
-            <button className="px-8 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors font-semibold">{t('implementation.decision.contactSales')}</button>
+            <a
+              href={CALENDLY_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block px-8 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors font-semibold"
+            >
+              {t('implementation.decision.contactSales')}
+            </a>
           </div>
         </div>
 

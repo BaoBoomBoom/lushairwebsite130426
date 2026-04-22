@@ -4,19 +4,11 @@ import { Calculator, Check, Clock, Package, Star, TrendingUp } from 'lucide-reac
 import { useLanguage } from '../contexts/LanguageContext';
 
 type ProductTier = 'single' | 'tri' | 'tri-screen';
-type Generation = 'gen1' | 'gen2';
 
 const pricingData = {
-  gen1: {
-    single: [89, 79, 69, 59, 49],
-    tri: [129, 119, 109, 89, 79],
-    'tri-screen': [1290, 1190, 1090, 890, 790],
-  },
-  gen2: {
-    single: [89, 79, 69, 59, 49],
-    tri: [129, 119, 109, 89, 79],
-    'tri-screen': [1290, 1190, 1090, 890, 790],
-  },
+  single: [89, 79, 69, 59, 49],
+  tri: [129, 119, 109, 89, 79],
+  'tri-screen': [1290, 1190, 1090, 890, 790],
 };
 
 const volumeTiers = [
@@ -29,7 +21,7 @@ const volumeTiers = [
 
 export default function WhiteLabelHardware() {
   const [selectedProduct, setSelectedProduct] = useState<ProductTier>('tri');
-  const [selectedGen, setSelectedGen] = useState<Generation>('gen1');
+  const [privateMold, setPrivateMold] = useState(true);
   const [quantity, setQuantity] = useState(500);
   const { t } = useLanguage();
 
@@ -40,32 +32,59 @@ export default function WhiteLabelHardware() {
     return idx >= 0 ? idx : volumeTiers.length - 1;
   }, [quantity]);
 
-  const calculatePrice = () => {
-    const unitPrice = pricingData[selectedGen][selectedProduct][resolvedTierIndex] || 0;
-    return { unitPrice, total: unitPrice * quantity };
+  const getUnitPrice = (tier: ProductTier) => {
+    if (!privateMold && quantity <= 9) {
+      if (tier === 'single') return 99;
+      if (tier === 'tri') return 169;
+      return 1690;
+    }
+    return pricingData[tier][resolvedTierIndex] || 0;
   };
 
-  const { unitPrice, total } = calculatePrice();
+  const calculatePrice = () => {
+    const unitPrice = getUnitPrice(selectedProduct);
+    const productTotal = unitPrice * quantity;
+    const toolingFee = privateMold ? 10000 : 0;
+    return { unitPrice, productTotal, toolingFee, total: productTotal + toolingFee };
+  };
 
-  const priceAtTier = (tier: ProductTier) =>
-    pricingData[selectedGen][tier][resolvedTierIndex] ?? 0;
+  const { unitPrice, productTotal, toolingFee, total } = calculatePrice();
 
-  const entryTierPrices = useMemo(
-    () => ({
-      single: pricingData[selectedGen].single[0],
-      tri: pricingData[selectedGen].tri[0],
-      triScreen: pricingData[selectedGen]['tri-screen'][0],
-    }),
-    [selectedGen]
-  );
+  const priceAtTier = (tier: ProductTier) => getUnitPrice(tier);
+  const minPriceMap: Record<ProductTier, number> = {
+    single: 49,
+    tri: 79,
+    'tri-screen': 790,
+  };
 
   const estimatedDelivery = () => {
-    if (selectedGen === 'gen1') {
-      return quantity <= 500 ? `~1 ${t('hardware.timeline.month')}` : `~2 ${t('hardware.timeline.months')}`;
-    } else {
-      return t('hardware.timeline.total');
-    }
+    return quantity <= 500 ? `~1 ${t('hardware.timeline.month')}` : `~2 ${t('hardware.timeline.months')}`;
   };
+
+  const selectedProductLabel =
+    selectedProduct === 'single'
+      ? t('hardware.products.single.title')
+      : selectedProduct === 'tri'
+      ? t('hardware.products.tri.title')
+      : t('hardware.products.triScreen.title');
+  const moldLabel = privateMold ? t('hardware.mold.private') : t('hardware.mold.noMold');
+  const quoteBody = [
+    'Hello Lushair team,',
+    '',
+    'I would like a custom quote for white-label hardware.',
+    '',
+    `Product: ${selectedProductLabel}`,
+    `Mold option: ${moldLabel}`,
+    `Quantity: ${quantity}`,
+    `Unit price: $${unitPrice}`,
+    `Product subtotal: $${productTotal.toLocaleString()}`,
+    `Tooling fee: $${toolingFee.toLocaleString()}`,
+    `Total estimate: $${total.toLocaleString()}`,
+  ].join('\n');
+  const requestQuoteHref = `mailto:support@lushair.ai?subject=${encodeURIComponent(
+    `Custom Quote Request - ${selectedProductLabel}`
+  )}&body=${encodeURIComponent(quoteBody)}`;
+  const scheduleCallHref = 'https://calendly.com/wendyhair/30min';
 
   return (
     <div className="pt-16 min-h-screen bg-gradient-to-br from-gray-50 to-white">
@@ -87,67 +106,9 @@ export default function WhiteLabelHardware() {
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               {t('hardware.subtitle')}
             </p>
-            {/* Entry-tier pricing banner */}
-            <div className="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-4xl mx-auto text-left">
-              <div className="rounded-2xl border border-purple-100 bg-gradient-to-br from-white to-purple-50/60 px-5 py-4 shadow-sm">
-                <div className="text-xs font-semibold uppercase tracking-wide text-purple-600 mb-1">
-                  {t('hardware.products.single.title')}
-                </div>
-                <div className="text-2xl font-bold text-gray-900">
-                  ${entryTierPrices.single}
-                  <span className="text-base font-semibold text-gray-500">{t('hardware.pricing.perUnitAbbrev')}</span>
-                </div>
-                <div className="text-xs text-gray-500 mt-1">{t('hardware.banner.tier1to50')}</div>
-              </div>
-              <div className="rounded-2xl border border-purple-100 bg-gradient-to-br from-white to-violet-50/60 px-5 py-4 shadow-sm">
-                <div className="text-xs font-semibold uppercase tracking-wide text-violet-600 mb-1">
-                  {t('hardware.products.tri.title')}
-                </div>
-                <div className="text-2xl font-bold text-gray-900">
-                  ${entryTierPrices.tri}
-                  <span className="text-base font-semibold text-gray-500">{t('hardware.pricing.perUnitAbbrev')}</span>
-                </div>
-                <div className="text-xs text-gray-500 mt-1">{t('hardware.banner.tier1to50')}</div>
-              </div>
-              <div className="rounded-2xl border border-indigo-100 bg-gradient-to-br from-white to-indigo-50/60 px-5 py-4 shadow-sm">
-                <div className="text-xs font-semibold uppercase tracking-wide text-indigo-600 mb-1">
-                  {t('hardware.products.triScreen.title')}
-                </div>
-                <div className="text-2xl font-bold text-gray-900">
-                  ${entryTierPrices.triScreen.toLocaleString()}
-                  <span className="text-base font-semibold text-gray-500">{t('hardware.pricing.perUnitAbbrev')}</span>
-                </div>
-                <div className="text-xs text-gray-500 mt-1">{t('hardware.banner.tier1to50')}</div>
-              </div>
-            </div>
             <p className="mt-4 text-sm text-gray-500 max-w-2xl mx-auto">{t('hardware.banner.volumeNote')}</p>
+            <p className="mt-2 text-sm text-purple-700 font-medium">{t('hardware.banner.privateMoldNote')}</p>
           </motion.div>
-        </div>
-
-        {/* Generation Selector */}
-        <div className="flex justify-center mb-12">
-          <div className="inline-flex bg-white rounded-xl shadow-md p-1 border border-gray-200">
-            <button
-              onClick={() => setSelectedGen('gen1')}
-              className={`px-6 py-3 rounded-lg font-semibold transition-all ${
-                selectedGen === 'gen1'
-                  ? 'bg-purple-600 text-white'
-                  : 'text-gray-700 hover:text-gray-900'
-              }`}
-            >
-              {t('hardware.gen1')}
-            </button>
-            <button
-              onClick={() => setSelectedGen('gen2')}
-              className={`px-6 py-3 rounded-lg font-semibold transition-all ${
-                selectedGen === 'gen2'
-                  ? 'bg-purple-600 text-white'
-                  : 'text-gray-700 hover:text-gray-900'
-              }`}
-            >
-              {t('hardware.gen2')}
-            </button>
-          </div>
         </div>
 
         {/* Product Comparison */}
@@ -174,9 +135,9 @@ export default function WhiteLabelHardware() {
               <li className="flex items-start space-x-2"><Check className="text-green-600 flex-shrink-0 mt-0.5" size={18} /><span className="text-sm text-gray-700">{t('hardware.products.single.appRequired')}</span></li>
             </ul>
             <div className="text-center pt-4 border-t border-gray-200">
-              <div className="text-3xl font-bold text-purple-600">${priceAtTier('single')}</div>
+              <div className="text-3xl font-bold text-purple-600">${minPriceMap.single}</div>
               <div className="text-sm text-gray-500">
-                {volumeLabels[resolvedTierIndex]} · {t('hardware.pricing.perUnitWord')}
+                from · {t('hardware.pricing.perUnitWord')} · 1000+
               </div>
             </div>
           </motion.div>
@@ -208,9 +169,9 @@ export default function WhiteLabelHardware() {
               <li className="flex items-start space-x-2"><Check className="text-green-600 flex-shrink-0 mt-0.5" size={18} /><span className="text-sm text-gray-700">{t('hardware.products.single.bluetooth')}</span></li>
             </ul>
             <div className="text-center pt-4 border-t border-gray-200">
-              <div className="text-3xl font-bold text-purple-600">${priceAtTier('tri')}</div>
+              <div className="text-3xl font-bold text-purple-600">${minPriceMap.tri}</div>
               <div className="text-sm text-gray-500">
-                {volumeLabels[resolvedTierIndex]} · {t('hardware.pricing.perUnitWord')}
+                from · {t('hardware.pricing.perUnitWord')} · 1000+
               </div>
             </div>
           </motion.div>
@@ -238,10 +199,10 @@ export default function WhiteLabelHardware() {
             </ul>
             <div className="text-center pt-4 border-t border-gray-200">
               <div className="text-3xl font-bold text-purple-600">
-                ${priceAtTier('tri-screen').toLocaleString()}
+                ${minPriceMap['tri-screen'].toLocaleString()}
               </div>
               <div className="text-sm text-gray-500">
-                {volumeLabels[resolvedTierIndex]} · {t('hardware.pricing.perUnitWord')}
+                from · {t('hardware.pricing.perUnitWord')} · 1000+
               </div>
             </div>
           </motion.div>
@@ -264,18 +225,27 @@ export default function WhiteLabelHardware() {
                 {volumeLabels.map((label, index) => (
                   <tr key={index} className="border-b border-gray-100 hover:bg-purple-50 transition-colors">
                     <td className="py-4 px-4 font-medium text-gray-900">{label}</td>
-                    <td className="py-4 px-4 text-center text-gray-700">${pricingData[selectedGen].single[index]}</td>
-                    <td className="py-4 px-4 text-center text-gray-700">${pricingData[selectedGen].tri[index]}</td>
+                    <td className="py-4 px-4 text-center text-gray-700">${pricingData.single[index]}</td>
+                    <td className="py-4 px-4 text-center text-gray-700">${pricingData.tri[index]}</td>
                     <td className="py-4 px-4 text-center text-gray-700">
-                      ${pricingData[selectedGen]['tri-screen'][index]}
+                      ${pricingData['tri-screen'][index]}
                       {index === 4 && (
                         <div className="text-xs text-green-600 font-semibold mt-1">{t('hardware.pricing.freeBranding')}</div>
                       )}
                     </td>
                   </tr>
                 ))}
+                <tr className="bg-amber-50 border-b border-amber-100">
+                  <td className="py-4 px-4 font-medium text-amber-900">{t('hardware.pricing.noMold1to9Label')}</td>
+                  <td className="py-4 px-4 text-center text-amber-900">$99</td>
+                  <td className="py-4 px-4 text-center text-amber-900">$169</td>
+                  <td className="py-4 px-4 text-center text-amber-900">$1,690</td>
+                </tr>
               </tbody>
             </table>
+          </div>
+          <div className="mt-4 text-sm text-gray-600">
+            {t('hardware.pricing.noMold1to9')}
           </div>
         </div>
 
@@ -284,6 +254,26 @@ export default function WhiteLabelHardware() {
           <div className="flex items-center space-x-2 mb-6">
             <Calculator className="text-purple-600" size={28} />
             <h2 className="text-2xl font-bold text-gray-900">{t('hardware.calculator.title')}</h2>
+          </div>
+          <div className="mb-6">
+            <div className="inline-flex bg-white rounded-xl shadow-sm p-1 border border-gray-200">
+              <button
+                onClick={() => setPrivateMold(true)}
+                className={`px-5 py-2 rounded-lg text-sm font-semibold transition-all ${
+                  privateMold ? 'bg-purple-600 text-white' : 'text-gray-700 hover:text-gray-900'
+                }`}
+              >
+                {t('hardware.mold.private')}
+              </button>
+              <button
+                onClick={() => setPrivateMold(false)}
+                className={`px-5 py-2 rounded-lg text-sm font-semibold transition-all ${
+                  !privateMold ? 'bg-purple-600 text-white' : 'text-gray-700 hover:text-gray-900'
+                }`}
+              >
+                {t('hardware.mold.noMold')}
+              </button>
+            </div>
           </div>
           <div className="grid md:grid-cols-2 gap-8">
             <div>
@@ -303,6 +293,14 @@ export default function WhiteLabelHardware() {
                   <span className="text-2xl font-bold text-purple-600">${unitPrice}</span>
                 </div>
                 <div className="flex justify-between items-center pb-4 border-b border-gray-200">
+                  <span className="text-gray-700">{t('hardware.calculator.productSubtotal')}</span>
+                  <span className="text-xl font-bold text-gray-900">${productTotal.toLocaleString()}</span>
+                </div>
+                <div className="flex justify-between items-center pb-4 border-b border-gray-200">
+                  <span className="text-gray-700">{t('hardware.calculator.toolingFee')}</span>
+                  <span className="text-xl font-bold text-gray-900">${toolingFee.toLocaleString()}</span>
+                </div>
+                <div className="flex justify-between items-center pb-4 border-b border-gray-200">
                   <span className="text-gray-700">{t('hardware.calculator.totalCost')}</span>
                   <span className="text-3xl font-bold text-gray-900">${total.toLocaleString()}</span>
                 </div>
@@ -314,8 +312,20 @@ export default function WhiteLabelHardware() {
             </div>
           </div>
           <div className="mt-8 flex gap-4">
-            <button className="flex-1 px-6 py-4 bg-purple-600 text-white rounded-xl hover:bg-purple-700 transition-colors font-semibold">{t('hardware.calculator.requestQuote')}</button>
-            <button className="flex-1 px-6 py-4 bg-white text-purple-600 border-2 border-purple-600 rounded-xl hover:bg-purple-50 transition-colors font-semibold">{t('hardware.calculator.scheduleCall')}</button>
+            <a
+              href={requestQuoteHref}
+              className="flex-1 px-6 py-4 bg-purple-600 text-white rounded-xl hover:bg-purple-700 transition-colors font-semibold text-center"
+            >
+              {t('hardware.calculator.requestQuote')}
+            </a>
+            <a
+              href={scheduleCallHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex-1 px-6 py-4 bg-white text-purple-600 border-2 border-purple-600 rounded-xl hover:bg-purple-50 transition-colors font-semibold text-center"
+            >
+              {t('hardware.calculator.scheduleCall')}
+            </a>
           </div>
         </div>
 

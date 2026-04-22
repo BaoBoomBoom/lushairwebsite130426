@@ -180,6 +180,10 @@
       "dry": "头皮干燥",
       "thinning": "头发稀疏",
       "damage": "头发损伤",
+      "quickAssessment": "快速自评（用于六边形图）",
+      "scalpHealth": "头皮健康",
+      "hairDensityScore": "发量密度",
+      "follicleHealth": "毛囊健康",
       "previous": "上一步",
       "analyze": "开始分析"
     },
@@ -215,9 +219,18 @@
       "apiFailed": "无法从浏览器完成实时 API 调用（网络、CORS 或服务端限制）。下方为示例分数。",
       "apiMetricsTitle": "分析指标",
       "apiDocs": "头发/头皮 API 参考文档",
-      "apiSelfieHint": "本页将图片 POST 到 /file/selfieApi（可通过 VITE_LUSHAIR_API_BASE 覆盖 API 主机）。",
+      "apiSelfieHint": "本页先调用 /api/file/uploadSelfieNet（携带默认 userId + file），再调用 /api/file/selfieNetApi（携带默认 userId、customer、gender（男1女2）、imageUrl、sign；sign 为 gender+imageUrl+key+customer 的 MD5）。",
       "apiTrichoscopeHint": "交互式 JSON 分析（图片 URL + 签名请求）使用 POST /file/trichoscopeApi，详见文档。",
-      "apiFieldHint": "返回可能包含毛囊计数、密度、半径、终毛/毳毛比例、泛红、油脂、角质细胞信号、头屑、白发比例等——以文档为准。"
+      "apiFieldHint": "返回可能包含毛囊计数、密度、半径、终毛/毳毛比例、泛红、油脂、角质细胞信号、头屑、白发比例等——以文档为准。",
+      "hairLossPosition": "脱发位置",
+      "hairLossStage": "脱发阶段",
+      "pendingApiResult": "等待接口返回",
+      "radarScalpHealth": "头皮健康",
+      "radarHairDensity": "发量密度",
+      "radarFollicleHealth": "毛囊健康",
+      "radarSebumBalance": "油脂平衡",
+      "radarRednessControl": "泛红控制",
+      "radarKeratinSignal": "角质信号"
     }
   },
   "hardware": {
@@ -226,7 +239,12 @@
     "subtitle": "专业的头发分析硬件，支持品牌定制，灵活的阶梯定价，快速交付",
     "banner": {
       "tier1to50": "1–50 台（入门档）",
-      "volumeNote": "采购量越高，单台价格越低——详见下方阶梯表与计算器。"
+      "volumeNote": "采购量越高，单台价格越低——详见下方阶梯表与计算器。",
+      "privateMoldNote": "私模方案需额外一次性开模费用：$10,000。"
+    },
+    "mold": {
+      "private": "开私模",
+      "noMold": "不开私模"
     },
     "gen1": "Lushair One 系列 · 现货",
     "gen2": "Lushair Pro / Studio · 高端定制",
@@ -261,12 +279,16 @@
       "perUnitAbbrev": "/台",
       "perUnitWord": "每台",
       "units": "台",
-      "freeBranding": "+ 免费品牌定制 🎁"
+      "freeBranding": "+ 免费品牌定制 🎁",
+      "noMold1to9Label": "不开私模（1-9 台）",
+      "noMold1to9": "如不开私模，1–9 台单价为：Lushair One $99，Lushair Pro $169，Lushair Studio $1690。"
     },
     "calculator": {
       "title": "定价计算器",
       "quantity": "预估订购数量",
       "unitPrice": "单价:",
+      "productSubtotal": "产品小计:",
+      "toolingFee": "开模费用:",
       "totalCost": "总成本:",
       "delivery": "交付时间:",
       "requestQuote": "💬 申请定制报价",
@@ -327,10 +349,16 @@
       "dandruff": "头皮屑/头皮状况检测",
       "damage": "头发损伤评估",
       "recommendations": "个性化产品推荐",
+      "redness": "头皮泛红检测",
+      "terminalVellusRatio": "终毛/毳毛比例",
+      "whiteHairRatio": "白发比例",
+      "keratinocyteSignal": "角质细胞信号",
       "selected": "已选择 {count} 个指标",
       "totalPrice": "总计: ${price}/年（美元）",
       "startTrial": "开始14天免费试用",
-      "trialNote": "💡 14天试用，无需信用卡"
+      "trialNote": "💡 14天试用，无需信用卡",
+      "bundleTitle": "按指标数量打包价（同等折扣比例适用于全部套餐）",
+      "termDiscounts": "长期签约折扣：连签 2 年 9 折；连签 3 年 85 折。"
     },
     "docs": {
       "title": "API 文档预览",
@@ -618,7 +646,7 @@
     "extra1": "引导式拍照与快速 AI 解读，与临床级模型对齐，适合日常自查。",
     "extra2": "基于真实指标给出可执行的护理建议，而不是泛泛的通用提示。",
     "extra3": "与分析仪和网页工具协同，让沙龙、诊所与个人用户在同一路径上管理头发健康。",
-    "storesNote": "应用上架后，将在此提供 App Store 与 Google Play 链接。",
+    "storesNote": "可直接前往 App Store 或 Google Play 下载 Lushair。",
     "tryWeb": "先做免费网页分析",
     "backHome": "返回首页"
   },

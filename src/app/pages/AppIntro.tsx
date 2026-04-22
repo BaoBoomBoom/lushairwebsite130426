@@ -3,6 +3,11 @@ import { motion } from 'motion/react';
 import { Smartphone, MessageCircle, RefreshCw, ArrowLeft, Sparkles } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 
+const IOS_APP_URL =
+  'https://apps.apple.com/us/app/lushair-hair-care-assistant/id6499344143';
+const ANDROID_APP_URL =
+  'https://play.google.com/store/apps/details?id=com.lushair.jh_camera&pcampaignid=web_share';
+
 export default function AppIntro() {
   const { t } = useLanguage();
 
@@ -60,6 +65,22 @@ export default function AppIntro() {
           <div className="rounded-2xl border-2 border-dashed border-gray-300 bg-white/80 p-8 text-center">
             <p className="text-sm text-gray-500 mb-6">{t('appIntro.storesNote')}</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href={IOS_APP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center px-8 py-3 rounded-xl bg-black text-white font-semibold hover:bg-gray-900 transition-colors"
+              >
+                iOS (App Store)
+              </a>
+              <a
+                href={ANDROID_APP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center px-8 py-3 rounded-xl bg-green-600 text-white font-semibold hover:bg-green-700 transition-colors"
+              >
+                Android (Google Play)
+              </a>
               <Link
                 to="/try-free"
                 className="inline-flex items-center justify-center px-8 py-3 rounded-xl bg-purple-600 text-white font-semibold hover:bg-purple-700 transition-colors"

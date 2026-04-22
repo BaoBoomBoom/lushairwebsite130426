@@ -180,6 +180,10 @@
       "dry": "Dry Scalp",
       "thinning": "Thinning Hair",
       "damage": "Hair Damage",
+      "quickAssessment": "Quick self-assessment (for hexagon chart)",
+      "scalpHealth": "Scalp health",
+      "hairDensityScore": "Hair density",
+      "follicleHealth": "Follicle health",
       "previous": "Previous",
       "analyze": "Start Analysis"
     },
@@ -215,9 +219,18 @@
       "apiFailed": "We could not complete the live API call from your browser (network, CORS, or server rules). Sample scores are shown below.",
       "apiMetricsTitle": "Analysis metrics",
       "apiDocs": "Hair & scalp API reference",
-      "apiSelfieHint": "This page POSTs your image to /file/selfieApi on your API host (override with VITE_LUSHAIR_API_BASE).",
+      "apiSelfieHint": "This page uploads to /api/file/uploadSelfieNet with default userId + file, then calls /api/file/selfieNetApi with default userId, customer, gender (1 male / 2 female), imageUrl, and sign (MD5 of gender + imageUrl + key + customer).",
       "apiTrichoscopeHint": "The interactive JSON hair/scalp API (image URL + signed request) uses POST /file/trichoscopeApi—see the documentation link below.",
-      "apiFieldHint": "Responses may include follicle count, density, radii, terminal/vellus ratios, redness, oiliness, keratinocyte signal, dandruff, white-hair ratio, and more—see the docs."
+      "apiFieldHint": "Responses may include follicle count, density, radii, terminal/vellus ratios, redness, oiliness, keratinocyte signal, dandruff, white-hair ratio, and more—see the docs.",
+      "hairLossPosition": "Hair Loss Position",
+      "hairLossStage": "Hair Loss Stage",
+      "pendingApiResult": "Pending API result",
+      "radarScalpHealth": "Scalp health",
+      "radarHairDensity": "Hair density",
+      "radarFollicleHealth": "Follicle health",
+      "radarSebumBalance": "Sebum balance",
+      "radarRednessControl": "Redness control",
+      "radarKeratinSignal": "Keratin signal"
     }
   },
   "hardware": {
@@ -226,7 +239,12 @@
     "subtitle": "Professional hair analysis hardware, brand customization, flexible tiered pricing, fast delivery",
     "banner": {
       "tier1to50": "1–50 units (entry tier)",
-      "volumeNote": "Higher volumes unlock lower per-unit pricing—see the volume table and calculator below."
+      "volumeNote": "Higher volumes unlock lower per-unit pricing—see the volume table and calculator below.",
+      "privateMoldNote": "Private mold mode adds a one-time tooling fee: $10,000."
+    },
+    "mold": {
+      "private": "Private mold",
+      "noMold": "No private mold"
     },
     "gen1": "Lushair One line · In stock",
     "gen2": "Lushair Pro & Studio · Premium custom",
@@ -261,12 +279,16 @@
       "perUnitAbbrev": "/unit",
       "perUnitWord": "per unit",
       "units": "units",
-      "freeBranding": "+ FREE Branding 🎁"
+      "freeBranding": "+ FREE Branding 🎁",
+      "noMold1to9Label": "No mold (1-9 units)",
+      "noMold1to9": "If no private mold is needed, 1–9 units are priced at: Lushair One $99, Lushair Pro $169, Lushair Studio $1,690."
     },
     "calculator": {
       "title": "Pricing Calculator",
       "quantity": "Estimated Order Quantity",
       "unitPrice": "Unit Price:",
+      "productSubtotal": "Product Subtotal:",
+      "toolingFee": "Tooling Fee:",
       "totalCost": "Total Cost:",
       "delivery": "Delivery:",
       "requestQuote": "💬 Request Custom Quote",
@@ -327,10 +349,16 @@
       "dandruff": "Dandruff/Scalp Condition Detection",
       "damage": "Hair Damage Assessment",
       "recommendations": "Personalized Product Recommendations",
+      "redness": "Scalp Redness Detection",
+      "terminalVellusRatio": "Terminal/Vellus Ratio",
+      "whiteHairRatio": "White Hair Ratio",
+      "keratinocyteSignal": "Keratinocyte Signal",
       "selected": "Selected {count} metrics",
       "totalPrice": "Total: ${price}/year",
       "startTrial": "Start 14-Day Free Trial",
-      "trialNote": "💡 14-day trial, no credit card required"
+      "trialNote": "💡 14-day trial, no credit card required",
+      "bundleTitle": "Bundle pricing by metric count (same discount ratio applies to all plans)",
+      "termDiscounts": "Long-term terms: 2-year contract gets 10% off; 3-year contract gets 15% off."
     },
     "docs": {
       "title": "API Documentation Preview",
@@ -679,7 +707,7 @@
     "extra1": "Fast scalp capture with guided photo flow and instant AI readouts aligned with our clinical models.",
     "extra2": "Personalized care suggestions based on your metrics—not generic tips—so you know what to do next.",
     "extra3": "Works with our analyzers and web tools so salons, clinics, and individuals stay on one consistent journey.",
-    "storesNote": "App Store and Google Play links will appear here when published.",
+    "storesNote": "Download Lushair directly from App Store or Google Play.",
     "tryWeb": "Run a free web analysis first",
     "backHome": "Back to home"
   },

@@ -3,35 +3,212 @@ import { motion } from 'motion/react';
 import { Upload, Check, Loader2, Mail, Download, ArrowLeft, ExternalLink } from 'lucide-react';
 import { Link } from 'react-router';
 import { useLanguage } from '../contexts/LanguageContext';
-import { postSelfieAnalysis, pickAnalysisPayload } from '../../lib/postSelfieAnalysis';
-import { HAIR_ANALYSIS_API_DOCS, selfieApiUrl, trichoscopeApiUrl } from '../../config/api';
+import {
+  postSelfieByImageUrl,
+  uploadSelfieAndGetUrl,
+  pickAnalysisPayload,
+} from '../../lib/postSelfieAnalysis';
+import {
+  HAIR_ANALYSIS_API_DOCS,
+} from '../../config/api';
+
+const IOS_APP_URL =
+  'https://apps.apple.com/us/app/lushair-hair-care-assistant/id6499344143';
+const ANDROID_APP_URL =
+  'https://play.google.com/store/apps/details?id=com.lushair.jh_camera&pcampaignid=web_share';
 
 type AnalysisStep = 'upload' | 'questionnaire' | 'analyzing' | 'results';
+type UploadSlot = 'front' | 'right' | 'left' | 'top';
+
+type UploadState = {
+  file: File | null;
+  preview: string | null;
+  uploadedUrl: string | null;
+  uploading: boolean;
+  error: string | null;
+};
+
+const uploadRequirements: Array<{ key: UploadSlot; title: string; hint: string }> = [
+  {
+    key: 'front',
+    title: 'Front selfie (head tilting down 30°)',
+    hint: 'Required for analysis API',
+  },
+  {
+    key: 'right',
+    title: 'Right-side selfie (head tilting down 30°)',
+    hint: 'Required upload',
+  },
+  {
+    key: 'left',
+    title: 'Left-side selfie (head tilting down 30°)',
+    hint: 'Required upload',
+  },
+  {
+    key: 'top',
+    title: 'Top of head (fully tilting down)',
+    hint: 'Required upload',
+  },
+];
+
+const emptyUploadState = (): UploadState => ({
+  file: null,
+  preview: null,
+  uploadedUrl: null,
+  uploading: false,
+  error: null,
+});
+
+function asNumber(value: unknown): number | null {
+  if (typeof value === 'number' && Number.isFinite(value)) return value;
+  if (typeof value === 'string') {
+    const parsed = Number(value);
+    if (Number.isFinite(parsed)) return parsed;
+  }
+  return null;
+}
+
+function pickFromPayload(payload: Record<string, unknown> | null, keys: string[]): unknown {
+  if (!payload) return null;
+  for (const key of keys) {
+    if (key in payload) return payload[key];
+  }
+  return null;
+}
+
+function toDisplayText(value: unknown, fallback: string): string {
+  if (typeof value === 'string' && value.trim()) return value;
+  const n = asNumber(value);
+  if (n !== null) return String(n);
+  return fallback;
+}
+
+function translatePositionToEnglish(value: string): string {
+  const v = value.trim();
+  if (!v) return v;
+  const lower = v.toLowerCase();
+  if (lower.includes('frontal') || lower.includes('temple') || /前额|额角|m区/.test(v)) {
+    return 'Frontal / Temples';
+  }
+  if (lower.includes('crown') || lower.includes('vertex') || /头顶|顶部|冠部/.test(v)) {
+    return 'Crown (Vertex)';
+  }
+  if (lower.includes('mid') || /中部|中区/.test(v)) {
+    return 'Mid-scalp';
+  }
+  if (lower.includes('diffuse') || /弥漫|整体/.test(v)) {
+    return 'Diffuse';
+  }
+  if (/后枕|后部/.test(v)) return 'Occipital';
+  return v;
+}
+
+function translateStageToEnglish(value: string): string {
+  const v = value.trim();
+  if (!v) return v;
+  const lower = v.toLowerCase();
+  const romanMap: Record<string, string> = {
+    i: 'I',
+    ii: 'II',
+    iii: 'III',
+    iv: 'IV',
+    v: 'V',
+    vi: 'VI',
+    vii: 'VII',
+  };
+  const romanMatch = lower.match(/\b(vii|vi|iv|v|iii|ii|i)\b/);
+  if (romanMatch) return `Norwood ${romanMap[romanMatch[1]]}`;
+  const numMatch = lower.match(/\b([1-7])\b/);
+  if (numMatch) return `Norwood ${numMatch[1]}`;
+  const cnMap: Record<string, string> = {
+    一: '1',
+    二: '2',
+    三: '3',
+    四: '4',
+    五: '5',
+    六: '6',
+    七: '7',
+  };
+  const cnMatch = v.match(/[一二三四五六七]/);
+  if (cnMatch) return `Norwood ${cnMap[cnMatch[0]]}`;
+  if (/早期|轻度/.test(v)) return 'Early stage';
+  if (/中期|中度/.test(v)) return 'Moderate stage';
+  if (/晚期|重度/.test(v)) return 'Advanced stage';
+  return v;
+}
+
+function getHealthStatusByScore(score: number): string {
+  if (score > 80) return 'Good';
+  if (score >= 65) return 'Fair';
+  if (score >= 50) return 'Needs Attention';
+  return 'Poor';
+}
+
+function buildHexPoints(scores: number[], center: number, radius: number): string {
+  return scores
+    .map((score, i) => {
+      const angle = -Math.PI / 2 + (i * Math.PI) / 3;
+      const r = (Math.max(0, Math.min(100, score)) / 100) * radius;
+      const x = center + Math.cos(angle) * r;
+      const y = center + Math.sin(angle) * r;
+      return `${x},${y}`;
+    })
+    .join(' ');
+}
 
 export default function TryFreeAnalysis() {
   const { t } = useLanguage();
   const [currentStep, setCurrentStep] = useState<AnalysisStep>('upload');
-  const [uploadedImage, setUploadedImage] = useState<string | null>(null);
+  const [uploads, setUploads] = useState<Record<UploadSlot, UploadState>>({
+    front: emptyUploadState(),
+    right: emptyUploadState(),
+    left: emptyUploadState(),
+    top: emptyUploadState(),
+  });
   const [formData, setFormData] = useState({
     age: '',
     gender: '',
     concerns: [] as string[],
+    scalpHealthSurvey: 3,
+    hairDensitySurvey: 3,
+    follicleHealthSurvey: 3,
     email: '',
   });
   const [progress, setProgress] = useState(0);
   const [apiPayload, setApiPayload] = useState<Record<string, unknown> | null>(null);
   const [apiError, setApiError] = useState<string | null>(null);
 
-  const handleImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const isUploadStepComplete = uploadRequirements.every((item) => Boolean(uploads[item.key].uploadedUrl));
+  const isAnyUploading = uploadRequirements.some((item) => uploads[item.key].uploading);
+  const frontPreview = uploads.front.preview;
+  const frontImageUrl = uploads.front.uploadedUrl;
+
+  const handleImageUpload = async (slot: UploadSlot, e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
-    if (file) {
-      const reader = new FileReader();
-      reader.onload = (e) => {
-        setUploadedImage(e.target?.result as string);
-        setCurrentStep('questionnaire');
-      };
-      reader.readAsDataURL(file);
-    }
+    if (!file) return;
+    const previewUrl = URL.createObjectURL(file);
+    setApiError(null);
+    setUploads((prev) => ({
+      ...prev,
+      [slot]: {
+        file,
+        preview: previewUrl,
+        uploadedUrl: null,
+        uploading: true,
+        error: null,
+      },
+    }));
+
+    const uploadResult = await uploadSelfieAndGetUrl(file);
+    setUploads((prev) => ({
+      ...prev,
+      [slot]: {
+        ...prev[slot],
+        uploading: false,
+        uploadedUrl: uploadResult.ok && uploadResult.imageUrl ? uploadResult.imageUrl : null,
+        error: uploadResult.ok && uploadResult.imageUrl ? null : uploadResult.error || t('tryFree.results.apiFailed'),
+      },
+    }));
   };
 
   const handleConcernToggle = (concern: string) => {
@@ -44,20 +221,27 @@ export default function TryFreeAnalysis() {
   };
 
   const startAnalysis = async () => {
-    if (!uploadedImage) return;
+    if (!isUploadStepComplete) {
+      setApiError('Please upload all 4 required images before starting analysis.');
+      return;
+    }
+    setApiError(null);
+    if (!frontImageUrl) {
+      setApiError(
+        'Front selfie upload is missing. Please upload the front selfie (head tilting down 30°).'
+      );
+      return;
+    }
     setCurrentStep('analyzing');
     setProgress(10);
-    setApiError(null);
     setApiPayload(null);
 
     const tick = setInterval(() => {
       setProgress((p) => (p < 92 ? p + Math.random() * 12 : p));
     }, 280);
 
-    const result = await postSelfieAnalysis(uploadedImage, {
-      age: formData.age,
-      gender: formData.gender,
-    });
+    // Upload all 4 images first, but selfieNetApi uses front selfie URL only.
+    const result = await postSelfieByImageUrl(frontImageUrl, formData.gender);
 
     clearInterval(tick);
     setProgress(100);
@@ -82,6 +266,80 @@ export default function TryFreeAnalysis() {
     { key: 'thinning', label: t('tryFree.questionnaire.thinning') },
     { key: 'damage', label: t('tryFree.questionnaire.damage') },
   ];
+
+  const surveyScoreOptions = [1, 2, 3, 4, 5];
+  const surveyToPercent = (v: number) => Math.round((v / 5) * 100);
+
+  const apiScalpScore = asNumber(
+    pickFromPayload(apiPayload, ['scalpHealthScore', 'scalp_health_score', 'scalpScore'])
+  );
+  const apiDensityScore = asNumber(
+    pickFromPayload(apiPayload, ['hairDensityScore', 'hair_density_score', 'densityScore'])
+  );
+  const apiFollicleScore = asNumber(
+    pickFromPayload(apiPayload, ['follicleHealthScore', 'follicle_health_score', 'follicleScore'])
+  );
+  const apiSebumScore = asNumber(pickFromPayload(apiPayload, ['sebumScore', 'sebum_score', 'oilScore']));
+  const apiRednessScore = asNumber(
+    pickFromPayload(apiPayload, ['rednessScore', 'redness_score', 'inflammationScore'])
+  );
+  const apiKeratinScore = asNumber(
+    pickFromPayload(apiPayload, ['keratinocyteScore', 'keratinocyte_score', 'dandruffScore'])
+  );
+
+  const radarScores = [
+    apiScalpScore ?? surveyToPercent(formData.scalpHealthSurvey),
+    apiDensityScore ?? surveyToPercent(formData.hairDensitySurvey),
+    apiFollicleScore ?? surveyToPercent(formData.follicleHealthSurvey),
+    apiSebumScore ?? 72,
+    apiRednessScore ?? 65,
+    apiKeratinScore ?? 68,
+  ];
+
+  const radarLabels = [
+    t('tryFree.results.radarScalpHealth'),
+    t('tryFree.results.radarHairDensity'),
+    t('tryFree.results.radarFollicleHealth'),
+    t('tryFree.results.radarSebumBalance'),
+    t('tryFree.results.radarRednessControl'),
+    t('tryFree.results.radarKeratinSignal'),
+  ];
+  const radarCenter = 110;
+  const radarRadius = 82;
+  const radarPolygon = buildHexPoints(radarScores, radarCenter, radarRadius);
+  const overallScore = Math.round(radarScores.reduce((sum, score) => sum + score, 0) / radarScores.length);
+
+  const hairLossPosition = toDisplayText(
+    pickFromPayload(apiPayload, [
+      'POSITION',
+      'hairLossPosition',
+      'hair_loss_position',
+      'lossPosition',
+      'baldingArea',
+      '脱发位置',
+    ]),
+    t('tryFree.results.pendingApiResult')
+  );
+  const hairLossStage = toDisplayText(
+    pickFromPayload(apiPayload, [
+      'STAGE',
+      'hairLossStage',
+      'hair_loss_stage',
+      'stage',
+      'alopeciaStage',
+      '脱发阶段',
+    ]),
+    t('tryFree.results.pendingApiResult')
+  );
+  const hairLossPositionEn =
+    hairLossPosition === t('tryFree.results.pendingApiResult')
+      ? hairLossPosition
+      : translatePositionToEnglish(hairLossPosition);
+  const hairLossStageEn =
+    hairLossStage === t('tryFree.results.pendingApiResult')
+      ? hairLossStage
+      : translateStageToEnglish(hairLossStage);
+  const healthStatus = getHealthStatusByScore(overallScore);
 
   return (
     <div className="pt-16 min-h-screen bg-gradient-to-br from-purple-50 via-blue-50 to-white">
@@ -150,21 +408,43 @@ export default function TryFreeAnalysis() {
           {currentStep === 'upload' && (
             <div>
               <h2 className="text-2xl font-bold text-gray-900 mb-6">{t('tryFree.upload.title')}</h2>
-              <div className="border-2 border-dashed border-gray-300 rounded-xl p-12 text-center hover:border-purple-400 transition-colors cursor-pointer">
-                <input
-                  type="file"
-                  accept="image/*"
-                  onChange={handleImageUpload}
-                  className="hidden"
-                  id="image-upload"
-                />
-                <label htmlFor="image-upload" className="cursor-pointer">
-                  <Upload className="mx-auto mb-4 text-gray-400" size={48} />
-                  <p className="text-lg font-semibold text-gray-900 mb-2">
-                    {t('tryFree.upload.dragDrop')}
-                  </p>
-                  <p className="text-sm text-gray-500">{t('tryFree.upload.formats')}</p>
-                </label>
+              <div className="grid gap-4 md:grid-cols-2">
+                {uploadRequirements.map((item) => {
+                  const slot = uploads[item.key];
+                  const inputId = `image-upload-${item.key}`;
+                  return (
+                    <div key={item.key} className="border-2 border-dashed border-gray-300 rounded-xl p-5 hover:border-purple-400 transition-colors">
+                      <input
+                        type="file"
+                        accept="image/*"
+                        onChange={(e) => handleImageUpload(item.key, e)}
+                        className="hidden"
+                        id={inputId}
+                      />
+                      <label htmlFor={inputId} className="cursor-pointer block">
+                        {slot.preview ? (
+                          <img src={slot.preview} alt={item.title} className="w-full h-36 rounded-lg object-cover mb-3" />
+                        ) : (
+                          <div className="h-36 rounded-lg bg-gray-50 flex items-center justify-center mb-3">
+                            <Upload className="text-gray-400" size={36} />
+                          </div>
+                        )}
+                        <p className="text-sm font-semibold text-gray-900">{item.title}</p>
+                        <p className="text-xs text-gray-500 mt-1">{item.hint}</p>
+                        <div className="mt-2 text-xs">
+                          {slot.uploading && <span className="text-purple-700">Uploading...</span>}
+                          {!slot.uploading && slot.uploadedUrl && (
+                            <span className="text-green-700 inline-flex items-center gap-1">
+                              <Check size={14} />
+                              Uploaded
+                            </span>
+                          )}
+                          {!slot.uploading && slot.error && <span className="text-amber-700">{slot.error}</span>}
+                        </div>
+                      </label>
+                    </div>
+                  );
+                })}
               </div>
 
               <div className="mt-6 grid grid-cols-3 gap-4">
@@ -181,6 +461,16 @@ export default function TryFreeAnalysis() {
                   <span className="text-sm text-gray-600">{t('tryFree.upload.tip3')}</span>
                 </div>
               </div>
+
+              <div className="mt-8">
+                <button
+                  onClick={() => setCurrentStep('questionnaire')}
+                  disabled={!isUploadStepComplete || isAnyUploading}
+                  className="w-full px-6 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors font-semibold disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  Continue
+                </button>
+              </div>
             </div>
           )}
 
@@ -189,11 +479,11 @@ export default function TryFreeAnalysis() {
             <div>
               <h2 className="text-2xl font-bold text-gray-900 mb-6">{t('tryFree.questionnaire.title')}</h2>
 
-              {uploadedImage && (
+              {frontPreview && (
                 <div className="mb-6">
                   <img
-                    src={uploadedImage}
-                    alt="Uploaded"
+                    src={frontPreview}
+                    alt="Front uploaded"
                     className="w-32 h-32 rounded-lg object-cover mx-auto"
                   />
                 </div>
@@ -228,7 +518,6 @@ export default function TryFreeAnalysis() {
                     <option value="">{t('tryFree.questionnaire.selectGender')}</option>
                     <option value="female">{t('tryFree.questionnaire.female')}</option>
                     <option value="male">{t('tryFree.questionnaire.male')}</option>
-                    <option value="other">{t('tryFree.questionnaire.other')}</option>
                   </select>
                 </div>
 
@@ -252,6 +541,62 @@ export default function TryFreeAnalysis() {
                     ))}
                   </div>
                 </div>
+
+                <div className="rounded-xl border border-purple-200 bg-purple-50/40 p-4">
+                  <h3 className="text-sm font-semibold text-gray-800 mb-3">
+                    {t('tryFree.questionnaire.quickAssessment')}
+                  </h3>
+                  <div className="grid gap-4 md:grid-cols-3">
+                    <div>
+                      <label className="block text-xs font-medium text-gray-700 mb-2">{t('tryFree.questionnaire.scalpHealth')}</label>
+                      <select
+                        value={formData.scalpHealthSurvey}
+                        onChange={(e) =>
+                          setFormData({ ...formData, scalpHealthSurvey: Number(e.target.value) })
+                        }
+                        className="w-full px-3 py-2 rounded-lg border border-gray-300 text-sm"
+                      >
+                        {surveyScoreOptions.map((score) => (
+                          <option key={score} value={score}>
+                            {score} / 5
+                          </option>
+                        ))}
+                      </select>
+                    </div>
+                    <div>
+                      <label className="block text-xs font-medium text-gray-700 mb-2">{t('tryFree.questionnaire.hairDensityScore')}</label>
+                      <select
+                        value={formData.hairDensitySurvey}
+                        onChange={(e) =>
+                          setFormData({ ...formData, hairDensitySurvey: Number(e.target.value) })
+                        }
+                        className="w-full px-3 py-2 rounded-lg border border-gray-300 text-sm"
+                      >
+                        {surveyScoreOptions.map((score) => (
+                          <option key={score} value={score}>
+                            {score} / 5
+                          </option>
+                        ))}
+                      </select>
+                    </div>
+                    <div>
+                      <label className="block text-xs font-medium text-gray-700 mb-2">{t('tryFree.questionnaire.follicleHealth')}</label>
+                      <select
+                        value={formData.follicleHealthSurvey}
+                        onChange={(e) =>
+                          setFormData({ ...formData, follicleHealthSurvey: Number(e.target.value) })
+                        }
+                        className="w-full px-3 py-2 rounded-lg border border-gray-300 text-sm"
+                      >
+                        {surveyScoreOptions.map((score) => (
+                          <option key={score} value={score}>
+                            {score} / 5
+                          </option>
+                        ))}
+                      </select>
+                    </div>
+                  </div>
+                </div>
               </div>
 
               <div className="mt-8 flex space-x-4">
@@ -263,12 +608,18 @@ export default function TryFreeAnalysis() {
                 </button>
                 <button
                   onClick={startAnalysis}
-                  disabled={!formData.age || !formData.gender}
+                  disabled={!formData.age || !formData.gender || isAnyUploading || !isUploadStepComplete}
                   className="flex-1 px-6 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors font-semibold disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  {t('tryFree.questionnaire.analyze')}
+                  {isAnyUploading ? 'Uploading images...' : t('tryFree.questionnaire.analyze')}
                 </button>
               </div>
+
+              {apiError && (
+                <div className="mt-4 rounded-xl border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-900">
+                  {apiError}
+                </div>
+              )}
             </div>
           )}
 
@@ -324,87 +675,98 @@ export default function TryFreeAnalysis() {
                 <p className="text-gray-600">{t('tryFree.results.yourScore')}</p>
               </div>
 
-              {/* Score Display */}
+              <div className="rounded-2xl border border-slate-200 bg-white p-4 mb-6">
+                <div className="grid gap-4 sm:grid-cols-2 mb-3">
+                  <div className="rounded-xl border border-indigo-100 bg-indigo-50/60 p-4">
+                    <div className="text-xs font-semibold text-indigo-600 uppercase tracking-wide mb-1">
+                      {t('tryFree.results.hairLossPosition')}
+                    </div>
+                    <div className="text-lg font-bold text-gray-900">{hairLossPositionEn}</div>
+                  </div>
+                  <div className="rounded-xl border border-fuchsia-100 bg-fuchsia-50/60 p-4">
+                    <div className="text-xs font-semibold text-fuchsia-600 uppercase tracking-wide mb-1">
+                      {t('tryFree.results.hairLossStage')}
+                    </div>
+                    <div className="text-lg font-bold text-gray-900">{hairLossStageEn}</div>
+                  </div>
+                </div>
+                <div className="flex items-end justify-between">
+                  <a
+                    href={HAIR_ANALYSIS_API_DOCS}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 text-purple-700 text-sm font-semibold hover:underline"
+                  >
+                    {t('tryFree.results.apiDocs')}
+                    <ExternalLink size={14} />
+                  </a>
+                  <span className="text-xs text-gray-500">based on the Norwood Scale</span>
+                </div>
+              </div>
+
               <div className="bg-gradient-to-br from-purple-50 to-blue-50 rounded-2xl p-8 mb-8">
                 <div className="text-center mb-6">
-                  <div className="text-6xl font-bold text-purple-600 mb-2">72/100</div>
-                  <div className="text-lg text-gray-700">{t('tryFree.results.healthStatus')}</div>
+                  <div className="text-6xl font-bold text-purple-600 mb-2">{overallScore}/100</div>
+                  <div className="text-lg text-gray-700">Hair Health Status: {healthStatus}</div>
                 </div>
 
-                {/* Score Breakdown */}
-                <div className="space-y-4">
-                  <div>
-                    <div className="flex justify-between text-sm mb-2">
-                      <span className="text-gray-700">{t('tryFree.results.sebum')}</span>
-                      <span className="font-semibold text-orange-600">{t('tryFree.results.high')}</span>
-                    </div>
-                    <div className="w-full bg-gray-200 rounded-full h-2">
-                      <div className="w-[75%] h-full bg-orange-500 rounded-full" />
-                    </div>
+                <div className="grid gap-6 lg:grid-cols-[260px_1fr] items-center">
+                  <div className="mx-auto">
+                    <svg width="220" height="220" viewBox="0 0 220 220" role="img" aria-label="Hair health radar chart">
+                      {[1, 2, 3, 4].map((level) => {
+                        const r = (radarRadius / 4) * level;
+                        const grid = buildHexPoints([100, 100, 100, 100, 100, 100], radarCenter, r);
+                        return (
+                          <polygon
+                            key={level}
+                            points={grid}
+                            fill="none"
+                            stroke="#d8b4fe"
+                            strokeWidth="1"
+                            opacity={0.7}
+                          />
+                        );
+                      })}
+                      {radarLabels.map((_, i) => {
+                        const angle = -Math.PI / 2 + (i * Math.PI) / 3;
+                        const x = radarCenter + Math.cos(angle) * radarRadius;
+                        const y = radarCenter + Math.sin(angle) * radarRadius;
+                        return (
+                          <line
+                            key={i}
+                            x1={radarCenter}
+                            y1={radarCenter}
+                            x2={x}
+                            y2={y}
+                            stroke="#c4b5fd"
+                            strokeWidth="1"
+                          />
+                        );
+                      })}
+                      <polygon
+                        points={radarPolygon}
+                        fill="rgba(118,34,255,0.35)"
+                        stroke="#7622ff"
+                        strokeWidth="2"
+                      />
+                    </svg>
                   </div>
 
-                  <div>
-                    <div className="flex justify-between text-sm mb-2">
-                      <span className="text-gray-700">{t('tryFree.results.density')}</span>
-                      <span className="font-semibold text-green-600">{t('tryFree.results.normal')}</span>
-                    </div>
-                    <div className="w-full bg-gray-200 rounded-full h-2">
-                      <div className="w-[80%] h-full bg-green-500 rounded-full" />
-                    </div>
-                  </div>
-
-                  <div>
-                    <div className="flex justify-between text-sm mb-2">
-                      <span className="text-gray-700">{t('tryFree.results.scalp')}</span>
-                      <span className="font-semibold text-yellow-600">{t('tryFree.results.mild')}</span>
-                    </div>
-                    <div className="w-full bg-gray-200 rounded-full h-2">
-                      <div className="w-[65%] h-full bg-yellow-500 rounded-full" />
-                    </div>
+                  <div className="grid gap-2 sm:grid-cols-2">
+                    {radarLabels.map((label, idx) => (
+                      <div key={label} className="rounded-lg border border-white/80 bg-white/70 px-3 py-2">
+                        <div className="text-xs text-gray-500">{label}</div>
+                        <div className="text-sm font-semibold text-gray-900">{radarScores[idx]}/100</div>
+                      </div>
+                    ))}
                   </div>
                 </div>
+                <div className="mt-4 text-right text-xs text-gray-500">based on the Norwood Scale</div>
               </div>
 
               {apiError && (
                 <div className="mb-6 rounded-xl border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-900">
                   {apiError}
-                </div>
-              )}
-
-              <div className="mb-6 rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-xs text-slate-700 leading-relaxed">
-                <p className="mb-2">{t('tryFree.results.apiSelfieHint')}</p>
-                <p className="mb-2">{t('tryFree.results.apiTrichoscopeHint')}</p>
-                <p className="mb-2">{t('tryFree.results.apiFieldHint')}</p>
-                <div className="flex flex-wrap gap-x-4 gap-y-1 font-mono text-[11px] text-slate-600">
-                  <span>POST {selfieApiUrl()}</span>
-                  <span>POST {trichoscopeApiUrl()}</span>
-                </div>
-                <a
-                  href={HAIR_ANALYSIS_API_DOCS}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-3 inline-flex items-center gap-1 text-purple-700 font-semibold hover:underline"
-                >
-                  {t('tryFree.results.apiDocs')}
-                  <ExternalLink size={14} />
-                </a>
-              </div>
-
-              {apiPayload && Object.keys(apiPayload).length > 0 && (
-                <div className="bg-white border border-purple-200 rounded-xl p-6 mb-8">
-                  <h3 className="font-bold text-gray-900 mb-4">{t('tryFree.results.apiMetricsTitle')}</h3>
-                  <dl className="grid sm:grid-cols-2 gap-3 text-sm">
-                    {Object.entries(apiPayload).map(([key, val]) => (
-                      <div key={key} className="flex justify-between gap-4 border-b border-gray-100 pb-2">
-                        <dt className="text-gray-600 capitalize">
-                          {key.replace(/_/g, ' ')}
-                        </dt>
-                        <dd className="font-mono text-gray-900 text-right shrink-0">
-                          {typeof val === 'number' ? val.toLocaleString() : String(val)}
-                        </dd>
-                      </div>
-                    ))}
-                  </dl>
                 </div>
               )}
 
@@ -448,9 +810,24 @@ export default function TryFreeAnalysis() {
                       {t('tryFree.results.getFullReport')}
                     </h3>
 
-                    <button className="w-full px-6 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors font-semibold mb-3">
-                      {t('tryFree.results.downloadApp')}
-                    </button>
+                    <div className="mb-3 grid gap-2">
+                      <a
+                        href={IOS_APP_URL}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-full px-6 py-3 bg-black text-white rounded-lg hover:bg-gray-900 transition-colors font-semibold block"
+                      >
+                        {t('tryFree.results.downloadApp')} (iOS)
+                      </a>
+                      <a
+                        href={ANDROID_APP_URL}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-full px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors font-semibold block"
+                      >
+                        {t('tryFree.results.downloadApp')} (Android)
+                      </a>
+                    </div>
 
                     <div className="text-sm text-gray-600">{t('tryFree.results.haveAccount')} <Link to="/dashboard" className="text-purple-600 hover:underline">{t('tryFree.results.signIn')}</Link></div>
 

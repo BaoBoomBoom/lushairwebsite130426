@@ -4,6 +4,9 @@ import { Code, Key, Zap, Check, Copy, Eye, EyeOff, Send } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 
 type PricingTier = 'basic' | 'standard' | 'professional';
+const CALENDLY_URL = 'https://calendly.com/wendyhair/30min';
+const DOCS_URL = 'https://lushair.readme.io/docs/getting-started';
+const API_KEY_URL = 'https://organic-quail-11.clerk.accounts.dev';
 
 export default function ApiServices() {
   const [selectedTier, setSelectedTier] = useState<PricingTier>('standard');
@@ -18,10 +21,31 @@ export default function ApiServices() {
     professional: { name: t('api.plans.professional.name'), price: 12999, qps: 1000, calls: t('api.plans.professional.calls'), support: t('api.plans.professional.support'), sla: t('api.plans.professional.sla') },
   };
 
-  const metricKeys = ['hairDensity', 'scalpHealth', 'sebum', 'follicle', 'hairLoss', 'dandruff', 'damage', 'recommendations'];
+  const metricKeys = [
+    'hairDensity',
+    'scalpHealth',
+    'sebum',
+    'follicle',
+    'hairLoss',
+    'dandruff',
+    'damage',
+    'recommendations',
+    'redness',
+    'terminalVellusRatio',
+    'whiteHairRatio',
+    'keratinocyteSignal',
+  ];
+
+  const bundleTargets = [3, 6, 9, 12];
+  const basicBundlePrices: Record<number, number> = { 3: 4999, 6: 7999, 9: 10999, 12: 12999 };
 
   const calculateTotalPrice = () => {
     return pricingPlans[selectedTier].price * selectedMetrics.length;
+  };
+
+  const calculateBundlePrice = (count: number) => {
+    const multiplier = pricingPlans[selectedTier].price / pricingPlans.basic.price;
+    return Math.round((basicBundlePrices[count] || 0) * multiplier);
   };
 
   const handleMetricToggle = (metric: string) => {
@@ -114,9 +138,28 @@ export default function ApiServices() {
                 <div className="text-sm text-gray-600 mb-1">{t('api.metrics.selected').replace('{count}', String(selectedMetrics.length))}</div>
                 <div className="text-3xl font-bold text-gray-900">{t('api.metrics.totalPrice').replace('{price}', calculateTotalPrice().toLocaleString())}</div>
               </div>
-              <button className="px-8 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors font-semibold">{t('api.metrics.startTrial')}</button>
+              <a
+                href={CALENDLY_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-8 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors font-semibold"
+              >
+                {t('api.metrics.startTrial')}
+              </a>
             </div>
             <p className="text-sm text-gray-500 mt-4">{t('api.metrics.trialNote')}</p>
+            <div className="mt-4 rounded-lg bg-white/70 p-4">
+              <div className="text-sm font-semibold text-gray-800 mb-2">{t('api.metrics.bundleTitle')}</div>
+              <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-4 text-sm text-gray-700">
+                {bundleTargets.map((count) => (
+                  <div key={count} className="rounded border border-purple-100 px-3 py-2">
+                    <div>{count} metrics</div>
+                    <div className="font-semibold">${calculateBundlePrice(count).toLocaleString()}</div>
+                  </div>
+                ))}
+              </div>
+              <p className="mt-3 text-xs text-gray-600">{t('api.metrics.termDiscounts')}</p>
+            </div>
           </div>
         </div>
 
@@ -167,8 +210,22 @@ export default function ApiServices() {
             </div>
           </div>
           <div className="mt-8 flex gap-4">
-            <button className="px-6 py-3 bg-white text-gray-900 rounded-lg hover:bg-gray-100 transition-colors font-semibold">{t('api.docs.viewFullDocs')}</button>
-            <button className="px-6 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors font-semibold">{t('api.docs.getApiKey')}</button>
+            <a
+              href={DOCS_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-6 py-3 bg-white text-gray-900 rounded-lg hover:bg-gray-100 transition-colors font-semibold"
+            >
+              {t('api.docs.viewFullDocs')}
+            </a>
+            <a
+              href={API_KEY_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-6 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors font-semibold"
+            >
+              {t('api.docs.getApiKey')}
+            </a>
           </div>
         </div>
 

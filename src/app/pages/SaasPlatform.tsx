@@ -2,6 +2,8 @@ import { motion } from 'motion/react';
 import { Users, BarChart3, ShoppingCart, Calendar, TrendingUp, Check } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 
+const CALENDLY_URL = 'https://calendly.com/wendyhair/30min';
+
 export default function SaasPlatform() {
   const { t } = useLanguage();
 
@@ -189,9 +191,14 @@ export default function SaasPlatform() {
                     </li>
                   ))}
                 </ul>
-                <button className={`w-full py-3 rounded-lg font-semibold transition-colors ${key === 'growth' ? 'bg-purple-600 text-white hover:bg-purple-700' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}>
+                <a
+                  href={CALENDLY_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`block w-full py-3 rounded-lg font-semibold transition-colors text-center ${key === 'growth' ? 'bg-purple-600 text-white hover:bg-purple-700' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}
+                >
                   {index < 3 ? t('saas.pricing.startTrial') : t('saas.pricing.contactSales')}
-                </button>
+                </a>
               </motion.div>
             ))}
           </div>
@@ -211,8 +218,22 @@ export default function SaasPlatform() {
           <h2 className="text-3xl font-bold mb-4">{t('saas.cta.title')}</h2>
           <p className="text-xl text-purple-100 mb-8 max-w-2xl mx-auto">{t('saas.cta.subtitle')}</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="px-8 py-4 bg-white text-purple-600 rounded-lg hover:bg-gray-50 transition-colors font-semibold">{t('saas.cta.startTrial')}</button>
-            <button className="px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg hover:bg-white/10 transition-colors font-semibold">{t('saas.cta.bookDemo')}</button>
+            <a
+              href={CALENDLY_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-8 py-4 bg-white text-purple-600 rounded-lg hover:bg-gray-50 transition-colors font-semibold"
+            >
+              {t('saas.cta.startTrial')}
+            </a>
+            <a
+              href={CALENDLY_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg hover:bg-white/10 transition-colors font-semibold"
+            >
+              {t('saas.cta.bookDemo')}
+            </a>
           </div>
         </div>
       </div>
