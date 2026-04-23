@@ -1,5 +1,6 @@
 import { lazy } from 'react';
 import { createBrowserRouter } from 'react-router';
+import { Navigate } from 'react-router';
 import Root from './pages/Root';
 import ProtectedRoute from './components/ProtectedRoute';
 
@@ -39,6 +40,10 @@ export const router = createBrowserRouter([
             <Dashboard />
           </ProtectedRoute>
         ),
+      },
+      {
+        path: 'account',
+        element: <Navigate to="/dashboard" replace />,
       },
       { path: 'products/one', Component: ProductLushairOne },
       { path: 'products/pro', Component: ProductLushairPro },
