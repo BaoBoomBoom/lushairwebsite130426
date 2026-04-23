@@ -37,15 +37,35 @@ export default function ApiServices() {
   ];
 
   const bundleTargets = [3, 6, 9, 12];
-  const basicBundlePrices: Record<number, number> = { 3: 4999, 6: 7999, 9: 10999, 12: 12999 };
+  const bundlePricesByTier: Record<PricingTier, Record<number, number>> = {
+    basic: { 3: 4999, 6: 7999, 9: 10999, 12: 12999 },
+    standard: { 3: 11999, 6: 19999, 9: 26999, 12: 29999 },
+    professional: { 3: 29999, 6: 49999, 9: 69999, 12: 79999 },
+  };
+
+  const simpleMetricLabels: Record<string, string> = {
+    hairDensity: 'Hair density',
+    scalpHealth: 'Scalp health',
+    sebum: 'Oil level',
+    follicle: 'Follicle size',
+    hairLoss: 'Hair loss stage',
+    dandruff: 'Dandruff check',
+    damage: 'Damage level',
+    recommendations: 'Product picks',
+    redness: 'Scalp redness',
+    terminalVellusRatio: 'Terminal/Vellus ratio',
+    whiteHairRatio: 'White hair ratio',
+    keratinocyteSignal: 'Keratin signal',
+  };
 
   const calculateTotalPrice = () => {
+    const bundlePrice = bundlePricesByTier[selectedTier][selectedMetrics.length];
+    if (bundlePrice) return bundlePrice;
     return pricingPlans[selectedTier].price * selectedMetrics.length;
   };
 
   const calculateBundlePrice = (count: number) => {
-    const multiplier = pricingPlans[selectedTier].price / pricingPlans.basic.price;
-    return Math.round((basicBundlePrices[count] || 0) * multiplier);
+    return bundlePricesByTier[selectedTier][count] || 0;
   };
 
   const handleMetricToggle = (metric: string) => {
@@ -127,7 +147,7 @@ export default function ApiServices() {
                   selectedMetrics.includes(key) ? 'border-purple-600 bg-purple-50' : 'border-gray-200 hover:border-gray-300'
                 }`}
               >
-                <span className="font-medium text-gray-900">{t(`api.metrics.${key}`)}</span>
+                <span className="font-medium text-gray-900">{simpleMetricLabels[key] ?? t(`api.metrics.${key}`)}</span>
                 {selectedMetrics.includes(key) && <Check className="text-purple-600" size={20} />}
               </button>
             ))}

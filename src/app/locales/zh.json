@@ -210,7 +210,7 @@
       "finding3": "头顶区域检测到轻度发红，可能需要舒缓护理",
       "detailedReport": "详细分析报告",
       "getFullReport": "获取完整报告 + 个性化方案",
-      "downloadApp": "下载 LushAir App",
+      "downloadApp": "下载 Lushair App",
       "haveAccount": "已有账户?",
       "signIn": "登录",
       "emailResults": "或通过邮箱接收结果:",
@@ -311,7 +311,7 @@
   },
   "api": {
     "badge": "AI分析API服务",
-    "title": "LUSHAIR 头发分析 API",
+    "title": "Lushair 头发分析 API",
     "subtitle": "将医疗级AI分析技术集成到您的平台，灵活订阅，快速接入",
     "plans": {
       "basic": {
@@ -400,7 +400,7 @@
     "demo": {
       "title": "交互式演示体验",
       "subtitle": "点击下方查看实际运行的管理系统",
-      "header": "LushAir 门店管理系统",
+      "header": "Lushair 门店管理系统",
       "demoAccount": "演示账户",
       "customerManagement": "客户管理",
       "analytics": "数据分析",
@@ -513,7 +513,7 @@
   },
   "implementation": {
     "badge": "实施流程时间线",
-    "title": "从咨询到交付：您的 LUSHAIR 旅程",
+    "title": "从咨询到交付：您的 Lushair 旅程",
     "subtitle": "透明的流程、清晰的时间线、可预期的交付",
     "overview": {
       "title": "完整实施周期",

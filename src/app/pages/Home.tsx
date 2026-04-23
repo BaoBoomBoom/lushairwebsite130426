@@ -8,7 +8,6 @@ import {
   TrendingUp,
   ArrowRight,
   Star,
-  Code,
   Building2,
   ShoppingCart,
   Scan,
@@ -41,10 +40,32 @@ export default function Home() {
     { icon: Activity, titleKey: 'home.precision.card2Title', descKey: 'home.precision.card2Desc', color: 'text-rose-400' },
     { icon: Ruler, titleKey: 'home.precision.card3Title', descKey: 'home.precision.card3Desc', color: 'text-teal-400' },
   ] as const;
+  const heroFeaturePopups = [
+    {
+      icon: Scan,
+      label: t('home.hero.feature1'),
+      className: '-top-3 left-2 sm:-top-4 sm:left-4',
+    },
+    {
+      icon: Activity,
+      label: t('home.hero.feature2'),
+      className: 'top-16 -right-3 sm:top-20 sm:-right-6',
+    },
+    {
+      icon: Shield,
+      label: t('home.hero.feature4'),
+      className: 'bottom-24 -right-2 sm:bottom-28 sm:-right-5',
+    },
+    {
+      icon: TrendingUp,
+      label: t('home.hero.feature5'),
+      className: '-bottom-4 left-4 sm:-bottom-6 sm:left-8',
+    },
+  ] as const;
 
   return (
     <div className="pt-16">
-      {/* Hero — dark clinical + grid (balanced with light sections below) */}
+      {/* Hero — dark premium + grid (balanced with light sections below) */}
       <section className="relative overflow-hidden bg-[#0A0A0A] text-white">
         <div
           className="pointer-events-none absolute inset-0 opacity-[0.07]"
@@ -139,13 +160,34 @@ export default function Home() {
               transition={{ duration: 0.55, delay: 0.12 }}
               className="relative"
             >
-              <div className="relative overflow-hidden rounded-xl border border-white/10 bg-neutral-100 p-3 shadow-2xl shadow-black/40 sm:p-4">
-                <div className="absolute inset-0 bg-[#7622ff]/10 pointer-events-none" />
+              <div className="relative overflow-hidden rounded-xl shadow-2xl shadow-black/40">
                 <ImageWithFallback
                   src="https://images.unsplash.com/photo-1732203191374-6c8304b55d1a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3b21hbiUyMGJlYXV0aWZ1bCUyMGhhaXIlMjBzY2FscCUyMGhlYWx0aHxlbnwxfHx8fDE3NzU2MzIwMjh8MA&ixlib=rb-4.1.0&q=80&w=1080"
                   alt=""
-                  className="relative z-0 h-[min(420px,55vh)] w-full rounded-lg object-cover sm:h-[480px]"
+                  className="relative z-0 h-[min(420px,55vh)] w-full object-cover sm:h-[480px]"
                 />
+              </div>
+              <div className="pointer-events-none absolute inset-0 hidden sm:block">
+                {heroFeaturePopups.map((feature, index) => (
+                  <motion.div
+                    key={feature.label}
+                    initial={{ opacity: 0, y: 10, scale: 0.96 }}
+                    animate={{ opacity: [0.85, 1, 0.85], y: [0, -4, 0] }}
+                    transition={{
+                      duration: 3 + index * 0.12,
+                      delay: 0.2 + index * 0.2,
+                      repeat: Infinity,
+                      ease: 'easeInOut',
+                    }}
+                    whileHover={{ scale: 1.03, y: -6 }}
+                    className={`group absolute ${feature.className} max-w-[230px] rounded-md border border-white/20 bg-white/10 px-3.5 py-2.5 text-white/80 pointer-events-auto backdrop-blur-sm transition-all duration-200 hover:border-white/80 hover:bg-white hover:text-gray-900`}
+                  >
+                    <div className="flex items-start gap-2">
+                      <feature.icon size={15} className="mt-0.5 shrink-0 text-white/80 transition-colors duration-200 group-hover:text-gray-900" />
+                      <div className="text-sm font-medium leading-snug">{feature.label}</div>
+                    </div>
+                  </motion.div>
+                ))}
               </div>
             </motion.div>
           </div>
@@ -358,43 +400,6 @@ export default function Home() {
                   </div>
                 </div>
 
-                <div className="rounded-2xl border-2 border-dashed border-purple-200 bg-slate-50 p-6 md:p-8">
-                  <p className="text-center text-sm font-semibold text-gray-500 uppercase tracking-wide mb-4">
-                    {t('home.business.apiSaasStrip.title')}
-                  </p>
-                  <div className="grid md:grid-cols-2 gap-4">
-                    <Link
-                      to="/api"
-                      className="group flex items-start gap-4 rounded-xl bg-white border-2 border-blue-200 p-5 shadow-sm hover:border-blue-400 hover:shadow-md transition-all"
-                    >
-                      <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-blue-600 text-white">
-                        <Code size={22} />
-                      </div>
-                      <div className="text-left min-w-0">
-                        <div className="font-bold text-gray-900 text-lg">{t('home.business.apiSaas.apiTitle')}</div>
-                        <p className="text-sm text-gray-600 mt-1">{t('home.business.apiSaas.apiBlurb')}</p>
-                        <span className="mt-2 inline-flex items-center text-sm font-semibold text-blue-600 group-hover:underline">
-                          {t('home.business.apiSaas.apiCta')} <ArrowRight size={14} className="ml-1" />
-                        </span>
-                      </div>
-                    </Link>
-                    <Link
-                      to="/saas"
-                      className="group flex items-start gap-4 rounded-xl bg-white border-2 border-emerald-200 p-5 shadow-sm hover:border-emerald-400 hover:shadow-md transition-all"
-                    >
-                      <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-emerald-600 text-white">
-                        <Building2 size={22} />
-                      </div>
-                      <div className="text-left min-w-0">
-                        <div className="font-bold text-gray-900 text-lg">{t('home.business.apiSaas.saasTitle')}</div>
-                        <p className="text-sm text-gray-600 mt-1">{t('home.business.apiSaas.saasBlurb')}</p>
-                        <span className="mt-2 inline-flex items-center text-sm font-semibold text-emerald-700 group-hover:underline">
-                          {t('home.business.apiSaas.saasCta')} <ArrowRight size={14} className="ml-1" />
-                        </span>
-                      </div>
-                    </Link>
-                  </div>
-                </div>
               </div>
             )}
           </motion.div>

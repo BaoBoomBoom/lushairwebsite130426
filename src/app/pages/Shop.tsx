@@ -51,7 +51,7 @@ const products: (Product & {
     descKey: 'shop.products.lushairPro.desc',
     stock: 0,
     series: 'pro',
-    features: ['Tri-spectral imaging (White/UV/Polarised)', 'AI-powered auto-focus', 'Clinical-grade insights'],
+    features: ['Tri-spectral imaging (White/UV/Polarised)', 'AI-powered auto-focus', 'Clinical-level insights'],
     accentColor: 'blue',
     badgeText: 'Coming soon',
     detailPath: '/products/pro',

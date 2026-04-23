@@ -62,7 +62,7 @@ const features = [
   },
   {
     icon: Shield,
-    title: 'Clinical-Grade Insights',
+    title: 'Clinical-Level Insights',
     desc: 'Reports formatted for sharing directly with your dermatologist or trichologist.',
     color: 'violet',
   },
@@ -84,7 +84,7 @@ const specs = [
   { label: 'Spectrum', value: 'Tri-Spectral (White / UV / Polarised)' },
   { label: 'Focus', value: 'AI Auto-Focus' },
   { label: 'Sensor', value: '20MP Medical-Grade + HDR' },
-  { label: 'AI Models', value: '6 Clinical Analysis Modules' },
+  { label: 'AI Models', value: '6 Clinical-Level Analysis Modules' },
   { label: 'Connectivity', value: 'WiFi / Bluetooth 5.0' },
   { label: 'Compatibility', value: 'iOS & Android' },
   { label: 'Warranty', value: '18 Months' },
@@ -92,7 +92,7 @@ const specs = [
 ];
 
 const reviews = [
-  { name: 'Dr. Chen', rating: 5, text: 'As a trichologist I recommend Lushair Pro to all my patients. The UV spectrum findings are exceptionally accurate and save us hours of diagnostic work.' },
+  { name: 'Dr. Chen', rating: 5, text: 'As a trichologist I recommend Lushair Pro to all my patients. The UV spectrum findings are exceptionally accurate and save us hours of analysis work.' },
   { name: 'Rachel T.', rating: 5, text: 'Struggled with scalp issues for years. After 3 months using Pro, my dermatologist said my scalp health had improved dramatically. The tri-spectrum view is mind-blowing.' },
   { name: 'Marcus B.', rating: 5, text: 'Worth every cent of the upgrade from One. Auto-focus alone is a game changer, and the polarised light revealed things my consultant had never seen before.' },
 ];
@@ -179,7 +179,7 @@ export default function ProductLushairPro() {
           >
             {/* Tag */}
             <div className="inline-flex items-center px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-semibold mb-4">
-              Clinical-Grade Analysis
+              Clinical-Level Analysis
             </div>
 
             <h1 className="text-5xl lg:text-6xl font-black text-gray-900 mb-3 tracking-tight">
@@ -198,7 +198,7 @@ export default function ProductLushairPro() {
               {[
                 'Tri-spectral imaging (White / UV / Polarised)',
                 'AI-powered auto-focus',
-                'Clinical-grade insights & reports',
+                'Clinical-level insights & reports',
                 'Real-time analysis overlays',
               ].map((f) => (
                 <div key={f} className="flex items-center gap-3">
@@ -345,7 +345,7 @@ export default function ProductLushairPro() {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl font-black text-gray-900 mb-4">Technical specifications</h2>
-            <p className="text-gray-600 mb-10">Precision engineering. Clinical performance.</p>
+            <p className="text-gray-600 mb-10">Precision engineering. Clinical-level performance.</p>
             <div className="divide-y divide-gray-100">
               {specs.map((s) => (
                 <div key={s.label} className="flex justify-between py-4">
@@ -398,7 +398,7 @@ export default function ProductLushairPro() {
           >
             <h2 className="text-4xl font-black text-white mb-4">See the difference three spectrums make.</h2>
             <p className="text-blue-100 mb-8">
-              Clinical-grade insights, delivered with the elegance your hair care deserves.
+              Clinical-level insights, delivered with the elegance your hair care deserves.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button

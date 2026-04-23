@@ -9,7 +9,8 @@
     "saas": "SaaS Platform",
     "implementation": "Implementation",
     "dashboard": "My Account",
-    "getStarted": "Get Started"
+    "getStarted": "Get Started",
+    "signIn": "Sign In"
   },
   "home": {
     "hero": {
@@ -18,15 +19,22 @@
       "titleHighlight": "AI Hair Health Expert",
       "titleSerif": "Your Hair Health,",
       "titleSans": "Decoded by AI",
-      "subtitle": "Medical-grade AI analysis technology, real-time hair health tracking,\npersonalized care solutions",
-      "subtitleShort": "Medical-grade diagnostics for hair and scalp. Precision hardware meets clinical intelligence.",
+      "subtitle": "Medical-grade AI hair and scalp analysis with clear, personalized next steps.",
+      "subtitleShort": "Clinical-level hair and scalp analysis powered by AI.",
       "valueTag": "Analysis-ready",
       "valueBody": "Start in the browser with a selfie—deeper scans and tracking continue in the Lushair app.",
       "tryFree": "Free AI Analysis",
       "forBusiness": "Enterprise B2B Solutions",
       "shopDevices": "Shop analyzers",
       "webBased": "↓ Web-based, no download required",
-      "instant": "Upload selfie → Instant AI report"
+      "instant": "Upload selfie → Instant AI report",
+      "analysisFeaturesTitle": "AI analysis includes",
+      "feature1": "Hairline contour detection",
+      "feature2": "Scalp redness and irritation signals",
+      "feature3": "Strand thickness trend estimates",
+      "feature4": "Follicle health risk markers",
+      "feature5": "Density pattern mapping by zone",
+      "feature6": "Personalized care recommendations"
     },
     "hud": {
       "scanning": "Scanning active",
@@ -36,8 +44,8 @@
       "metricHealthVal": "87.4%"
     },
     "precision": {
-      "title": "Clinical-grade precision",
-      "subtitle": "Three pillars of AI-powered diagnostics. Medical accuracy meets real-time insight.",
+      "title": "Clinical-level precision",
+      "subtitle": "Three AI analysis pillars for fast, clear insight.",
       "card1Title": "Follicle density mapping",
       "card1Desc": "Precision mapping of growth patterns across scalp regions.",
       "card2Title": "Scalp condition signals",
@@ -53,7 +61,7 @@
     },
     "tabs": {
       "title": "Who Is It For?",
-      "subtitle": "Whether you're an individual or enterprise, we have the perfect solution",
+      "subtitle": "Choose the setup that fits you or your business.",
       "consumers": "For Consumers",
       "consumersHint": "Personal devices, app & web analysis",
       "business": "For Business",
@@ -71,37 +79,37 @@
       },
       "medical": {
         "title": "Medical-Grade Home Analysis",
-        "desc": "Start with a free web analysis—no app required. Your full report and ongoing care sync to the Lushair app when you are ready.",
-        "note": "Try on the web first; download the app after your report for tracking and reminders.",
+        "desc": "Start with a free web analysis. Sync your report to the Lushair app anytime.",
+        "note": "Try the web report first, then use the app for tracking.",
         "cta": "Try Now"
       },
       "tracking": {
         "title": "AI Smart Tracking",
-        "desc": "Long-term trends, reminders, and insights live in the Lushair mobile app—built for daily hair health.",
+        "desc": "Track trends, reminders, and daily insights in the Lushair app.",
         "cta": "App introduction"
       },
       "personalized": {
         "title": "Personalized Product Recommendations",
-        "desc": "Selfie analysis powers your baseline; the in-app AI assistant refines picks and answers follow-up questions.",
+        "desc": "Start from selfie results, then get smarter in-app product picks.",
         "cta": "Start with selfie analysis"
       }
     },
     "business": {
       "hardware": {
         "title": "White Label Hardware",
-        "desc": "Same family as our store: Lushair One from $99, Pro from $199, Studio from $1,699—plus branded & volume B2B programs.",
+        "desc": "Lushair One, Pro, and Studio with white-label and volume programs.",
         "cta": "View Pricing"
       },
       "api": {
         "badge": "Developer API",
         "title": "API Integration",
-        "desc": "Starting from $1,999/year, flexible API integration into your platform",
+        "desc": "API plans from $1,999/year with flexible integration.",
         "cta": "Open API services"
       },
       "saas": {
         "badge": "All-in-one SaaS",
         "title": "Complete SaaS Platform",
-        "desc": "Complete management system for clinics and salons, one-stop solution for customer management and analysis reports",
+        "desc": "All-in-one management for salons and clinics.",
         "cta": "Explore SaaS platform"
       },
       "apiSaasStrip": {
@@ -116,7 +124,7 @@
     },
     "stats": {
       "title": "Trusted Partners",
-      "subtitle": "Chosen by 50,000+ users and 1,000+ businesses worldwide",
+      "subtitle": "Trusted by 50,000+ users and 1,000+ businesses.",
       "users": "Active Users",
       "businesses": "Business Clients",
       "satisfaction": "Satisfaction",
@@ -130,7 +138,7 @@
       },
       "user2": {
         "name": "Dr. Li",
-        "role": "Medical Aesthetics Clinic Director",
+        "role": "Aesthetic Clinic Director",
         "content": "API integration was very smooth, and customer satisfaction with our hair analysis services has increased significantly. The technical support team is also very professional."
       },
       "user3": {
@@ -141,14 +149,14 @@
     },
     "cta": {
       "title": "Ready to Start Your Hair Health Journey?",
-      "subtitle": "Try AI analysis now and get your personalized hair health report",
+      "subtitle": "Run a free AI analysis and get your report in minutes.",
       "tryFree": "Start Free Trial",
       "learnBusiness": "Learn About Enterprise Solutions"
     }
   },
   "tryFree": {
     "title": "Free AI Hair Analysis",
-    "subtitle": "Upload your photo and get a professional hair health report",
+    "subtitle": "Upload a selfie and get your AI hair report.",
     "backHome": "Back to Home",
     "steps": {
       "upload": "Upload Photo",
@@ -205,9 +213,9 @@
       "scalp": "Scalp Health",
       "mild": "Mild Redness",
       "findings": "Key Findings:",
-      "finding1": "High sebum levels detected, recommend oil-control shampoo",
-      "finding2": "Normal hair density, continue good care habits",
-      "finding3": "Mild redness detected in crown area, may need soothing care",
+      "finding1": "Higher scalp oil detected; use oil-control cleansing.",
+      "finding2": "Hair density looks stable; keep your current routine.",
+      "finding3": "Mild crown redness detected; add soothing scalp care.",
       "detailedReport": "Detailed Analysis Report",
       "getFullReport": "Get Full Report + Personalized Plan",
       "downloadApp": "Download Lushair app",
@@ -216,12 +224,12 @@
       "emailResults": "Or email me the results:",
       "emailPlaceholder": "your@email.com",
       "send": "Send",
-      "apiFailed": "We could not complete the live API call from your browser (network, CORS, or server rules). Sample scores are shown below.",
+      "apiFailed": "Live API call failed in-browser (network/CORS/server). Showing sample scores below.",
       "apiMetricsTitle": "Analysis metrics",
       "apiDocs": "Hair & scalp API reference",
-      "apiSelfieHint": "This page uploads to /api/file/uploadSelfieNet with default userId + file, then calls /api/file/selfieNetApi with default userId, customer, gender (1 male / 2 female), imageUrl, and sign (MD5 of gender + imageUrl + key + customer).",
-      "apiTrichoscopeHint": "The interactive JSON hair/scalp API (image URL + signed request) uses POST /file/trichoscopeApi—see the documentation link below.",
-      "apiFieldHint": "Responses may include follicle count, density, radii, terminal/vellus ratios, redness, oiliness, keratinocyte signal, dandruff, white-hair ratio, and more—see the docs.",
+      "apiSelfieHint": "Uploads image via /uploadSelfieNet, then requests analysis via /selfieNetApi with signed params.",
+      "apiTrichoscopeHint": "For JSON analysis by image URL, use POST /file/trichoscopeApi with signing.",
+      "apiFieldHint": "Responses include density, follicle stats, redness, oil level, ratios, and more.",
       "hairLossPosition": "Hair Loss Position",
       "hairLossStage": "Hair Loss Stage",
       "pendingApiResult": "Pending API result",
@@ -236,7 +244,7 @@
   "hardware": {
     "badge": "White Label Hardware Solutions",
     "title": "Lushair White Label Hardware Pricing",
-    "subtitle": "Professional hair analysis hardware, brand customization, flexible tiered pricing, fast delivery",
+    "subtitle": "Professional analysis hardware with flexible pricing and fast delivery.",
     "banner": {
       "tier1to50": "1–50 units (entry tier)",
       "volumeNote": "Higher volumes unlock lower per-unit pricing—see the volume table and calculator below.",
@@ -312,7 +320,7 @@
   "api": {
     "badge": "AI Analysis API Services",
     "title": "Lushair Hair Analysis API",
-    "subtitle": "Integrate medical-grade AI analysis into your platform, flexible subscription, quick integration",
+    "subtitle": "Integrate clinical-level AI analysis into your product fast.",
     "plans": {
       "basic": {
         "name": "Basic",
@@ -340,7 +348,7 @@
     },
     "metrics": {
       "title": "Available Metrics",
-      "subtitle": "Select the analysis metrics you need (each metric billed separately)",
+      "subtitle": "Pick only the metrics you need.",
       "hairDensity": "Hair Density Analysis",
       "scalpHealth": "Scalp Health Score",
       "sebum": "Sebum Level Detection",
@@ -356,8 +364,8 @@
       "selected": "Selected {count} metrics",
       "totalPrice": "Total: ${price}/year",
       "startTrial": "Start 14-Day Free Trial",
-      "trialNote": "💡 14-day trial, no credit card required",
-      "bundleTitle": "Bundle pricing by metric count (same discount ratio applies to all plans)",
+      "trialNote": "💡 14-day trial. No card required.",
+      "bundleTitle": "Bundle pricing by metric count",
       "termDiscounts": "Long-term terms: 2-year contract gets 10% off; 3-year contract gets 15% off."
     },
     "docs": {
@@ -396,10 +404,10 @@
   "saas": {
     "badge": "Store Management SaaS System",
     "title": "Complete Management Platform for Salons and Clinics",
-    "subtitle": "Customer management, analysis reports, product recommendations, revenue tracking - all-in-one solution",
+      "subtitle": "Manage customers, reports, recommendations, and revenue in one place.",
     "demo": {
       "title": "Interactive Demo Experience",
-      "subtitle": "Click below to see the management system in action",
+      "subtitle": "Preview the live management workflow below.",
       "header": "Lushair Store Management System",
       "demoAccount": "Demo Account",
       "customerManagement": "Customer Management",
@@ -420,27 +428,27 @@
     "features": {
       "customer": {
         "title": "Customer Profile Management",
-        "desc": "Complete customer information, history, preference tracking"
+        "desc": "Profiles, visit history, and preferences."
       },
       "analytics": {
         "title": "Smart Data Analytics",
-        "desc": "Real-time revenue statistics, product sales analysis, trend forecasting"
+        "desc": "Revenue, sales mix, and trend insights in real time."
       },
       "recommendations": {
         "title": "Product Recommendation Engine",
-        "desc": "AI-driven personalized product recommendations, boost sales conversion"
+        "desc": "AI product suggestions to improve conversion."
       },
       "appointments": {
         "title": "Appointment Management",
-        "desc": "Online booking, automatic reminders, scheduling"
+        "desc": "Booking, reminders, and scheduling."
       },
       "tracking": {
         "title": "Health Tracking",
-        "desc": "Long-term hair health trend analysis, visual display"
+        "desc": "Long-term hair health trend tracking."
       },
       "inventory": {
         "title": "Inventory Management",
-        "desc": "Product inventory sync, low stock alerts, purchase suggestions"
+        "desc": "Inventory sync with low-stock alerts."
       }
     },
     "pricing": {
@@ -514,7 +522,7 @@
   "implementation": {
     "badge": "Implementation Timeline",
     "title": "From Inquiry to Launch: Your Lushair Journey",
-    "subtitle": "Transparent process, clear timeline, predictable delivery",
+    "subtitle": "Clear process, clear timeline, predictable launch.",
     "overview": {
       "title": "Complete Implementation Cycle",
       "weeks": "12-16 weeks",
@@ -603,31 +611,31 @@
     "cases": {
       "title": "Success Stories",
       "case1": {
-        "company": "Beauty Chain Salon",
-        "type": "Chain Hair Salon",
-        "locations": "50 locations",
-        "timeline": "Implemented in 3 months",
-        "result1": "Customer satisfaction +35%",
-        "result2": "Product sales +120%",
-        "result3": "Repurchase rate +40%"
+        "company": "Minoxidil Brand",
+        "type": "Hair Growth Brand",
+        "locations": "DTC + retail channels",
+        "timeline": "Launched in 10 weeks",
+        "result1": "Scan-to-product conversion +42%",
+        "result2": "Repeat purchase rate +31%",
+        "result3": "Customer support tickets -26%"
       },
       "case2": {
-        "company": "Wellness Medical Clinic",
-        "type": "Medical Aesthetics",
-        "locations": "5 clinics",
-        "timeline": "Implemented in 2.5 months",
-        "result1": "New customers +80%",
-        "result2": "Service efficiency +50%",
-        "result3": "Revenue +150%"
+        "company": "Red Light Helmet Brand",
+        "type": "Wearable Device Brand",
+        "locations": "12 online markets",
+        "timeline": "Implemented in 3 months",
+        "result1": "Demo-to-checkout conversion +38%",
+        "result2": "Return rate -19%",
+        "result3": "Average order value +24%"
       },
       "case3": {
-        "company": "Beauty E-commerce Platform",
-        "type": "E-commerce",
-        "locations": "API Integration",
-        "timeline": "Integrated in 1 month",
-        "result1": "User retention +60%",
-        "result2": "Conversion rate +85%",
-        "result3": "Average order value +45%"
+        "company": "Exosome Hair Serum Distribution Clinics",
+        "type": "Clinic Distribution Network",
+        "locations": "32 partner clinics",
+        "timeline": "Rolled out in 12 weeks",
+        "result1": "Consultation booking rate +44%",
+        "result2": "Treatment plan acceptance +29%",
+        "result3": "Monthly serum sales +36%"
       },
       "keyResults": "Key Results:"
     }
@@ -704,7 +712,7 @@
     "feature3Title": "Sync with analysis",
     "feature3Desc": "Continue from your free web report—nothing is lost when you open the app.",
     "extraLead": "What you get with Lushair",
-    "extra1": "Fast scalp capture with guided photo flow and instant AI readouts aligned with our clinical models.",
+    "extra1": "Fast scalp capture with guided photo flow and instant AI readouts aligned with our clinical-level models.",
     "extra2": "Personalized care suggestions based on your metrics—not generic tips—so you know what to do next.",
     "extra3": "Works with our analyzers and web tools so salons, clinics, and individuals stay on one consistent journey.",
     "storesNote": "Download Lushair directly from App Store or Google Play.",
@@ -713,7 +721,7 @@
   },
   "notFound": {
     "title": "Page Not Found",
-    "subtitle": "Sorry, the page you are looking for does not exist or has been removed",
+    "subtitle": "This page doesn't exist or has been moved.",
     "backHome": "Back to Home",
     "tryFree": "Try Free",
     "mightWant": "You might want to visit:",
@@ -735,7 +743,7 @@
   "shop": {
     "badge": "Consumer Products Store",
     "title": "Lushair Hair Analyzers",
-    "subtitle": "Professional AI-powered hair analysis devices for personal and professional use",
+    "subtitle": "AI hair analyzers for personal and professional use.",
     "categories": {
       "all": "All Products",
       "devices": "Hair Analyzers",
@@ -745,7 +753,7 @@
     "products": {
       "lushairOne": {
         "name": "Lushair One",
-        "desc": "Wireless scalp analyzer with AI: complete a scan in seconds and get 16+ hair and scalp metrics with personalized care tips. Compact and portable—connect via Wi‑Fi, capture guided photos, and review results anywhere (aligned with lushair.ai Lushair Scalp Explorer)."
+        "desc": "Wireless AI scalp analyzer with guided capture and instant key metrics."
       },
       "lushairPro": {
         "name": "Lushair Pro",
@@ -753,15 +761,15 @@
       },
       "lushairStudioWifiScreen": {
         "name": "Lushair Studio (Wi‑Fi screen)",
-        "desc": "Three-spectrum, auto focus, optional 200X LED. Wi‑Fi with integrated screen for professional workflows."
+        "desc": "Tri-spectrum auto-focus with optional 200X LED and integrated screen."
       },
       "lushairStudioPlugIn": {
         "name": "Lushair Studio (wired screen)",
-        "desc": "Professional grade with plug-in (wired) screen. Three-spectrum analysis with optional high magnification for clinics and salons."
+        "desc": "Tri-spectrum professional model with wired screen and optional magnification."
       },
       "lushairStudioMirror": {
         "name": "Lushair Studio (Wi‑Fi mirror)",
-        "desc": "Premium mirror design with Wi‑Fi display. Three-spectrum analysis with salon-grade aesthetics."
+        "desc": "Premium Wi‑Fi mirror model with tri-spectrum analysis."
       }
     },
     "mostPopular": "Most Popular",
@@ -786,7 +794,7 @@
     },
     "banner": {
       "title": "Shop with Confidence",
-      "subtitle": "All products backed by our satisfaction guarantee and professional support",
+      "subtitle": "Every order is backed by support and satisfaction guarantee.",
       "feature1": "Free Shipping",
       "feature2": "30-Day Returns",
       "feature3": "1 Year Warranty"

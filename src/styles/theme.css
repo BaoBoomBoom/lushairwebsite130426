@@ -180,7 +180,7 @@
   }
 }
 
-/* Clinical purple-only visual system override */
+/* Brand purple-only visual system override */
 @layer utilities {
   /* Text colors */
   [class*='text-blue-'],

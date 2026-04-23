@@ -88,7 +88,7 @@ const quizSections: QuizSection[] = [
   {
     title: 'Section 4: Behavior & Pain Points',
     questions: [
-      { id: 'q15', prompt: 'Have you tried any hair or scalp treatments?', options: ['Medical / dermatologist treatments', 'Hair growth products', 'Scalp care products', 'No'] },
+      { id: 'q15', prompt: 'Have you tried any hair or scalp treatments?', options: ['Dermatologist treatments', 'Hair growth products', 'Scalp care products', 'No'] },
       { id: 'q16', prompt: 'How confident are you that your current routine is effective?', options: ['Very confident', 'Somewhat confident', 'Not very confident', 'Not confident at all'] },
       { id: 'q17', prompt: 'Have you ever felt unsure whether your hair products are actually working?', options: ['Yes, often', 'Sometimes', 'Rarely', 'Never'] },
       { id: 'q18', prompt: 'What frustrates you most about managing your hair health? (Select all that apply)', multi: true, options: ['Not seeing clear results', 'Not knowing what’s actually happening', 'Trying products without certainty', 'Lack of reliable information'] },
@@ -97,7 +97,7 @@ const quizSections: QuizSection[] = [
   {
     title: 'Section 5: Device Mindset & Conversion',
     questions: [
-      { id: 'q19', prompt: 'What would make you trust a hair/scalp analysis the most?', options: ['Visual proof (scalp / follicle images)', 'Data tracking over time', 'Professional / clinical insights', 'Personal experience only'] },
+      { id: 'q19', prompt: 'What would make you trust a hair/scalp analysis the most?', options: ['Visual proof (scalp / follicle images)', 'Data tracking over time', 'Professional / clinical-level insights', 'Personal experience only'] },
       { id: 'q20', prompt: 'How likely are you to use a device that helps monitor hair growth and scalp health?', options: ['Very likely', 'Likely', 'Not sure', 'Unlikely'] },
     ],
   },
@@ -782,11 +782,11 @@ export default function TryFreeAnalysis() {
                   const inputId = `image-upload-${item.key}`;
                   return (
                     <div key={item.key} className="border-2 border-dashed border-gray-300 rounded-xl p-5 hover:border-purple-400 transition-colors">
-                      <input
-                        type="file"
-                        accept="image/*"
+                <input
+                  type="file"
+                  accept="image/*"
                         onChange={(e) => handleImageUpload(item.key, e)}
-                        className="hidden"
+                  className="hidden"
                         id={inputId}
                       />
                       <label htmlFor={inputId} className="cursor-pointer block">
@@ -813,7 +813,7 @@ export default function TryFreeAnalysis() {
                           )}
                           {!slot.uploading && slot.error && <span className="text-amber-700">{slot.error}</span>}
                         </div>
-                      </label>
+                </label>
                     </div>
                   );
                 })}
@@ -878,7 +878,7 @@ export default function TryFreeAnalysis() {
                     transition={{ duration: 0.25 }}
                   />
                 </div>
-              </div>
+                </div>
 
               <motion.div
                 key={currentFlowItem.id}
@@ -981,7 +981,7 @@ export default function TryFreeAnalysis() {
                     <div className="absolute inset-0 pointer-events-none">
                       <div className="absolute inset-0 bg-purple-900/10" />
 
-                      <motion.div
+              <motion.div
                         className="absolute left-0 right-0 h-1.5 bg-purple-300/50"
                         animate={{ y: ['0%', '6400%', '0%'] }}
                         transition={{ duration: 2.8, repeat: Infinity, ease: 'linear' }}
@@ -1008,7 +1008,7 @@ export default function TryFreeAnalysis() {
                           transition={{ duration: 1.8, repeat: Infinity, delay: idx * 0.25, ease: 'easeInOut' }}
                         >
                           <div className="w-3 h-3 rounded-full bg-cyan-300 shadow-[0_0_0_4px_rgba(34,211,238,0.25)]" />
-                        </motion.div>
+              </motion.div>
                       ))}
 
                       <motion.div
@@ -1074,9 +1074,9 @@ export default function TryFreeAnalysis() {
                   <div className="rounded-xl border border-indigo-100 bg-indigo-50/60 p-4">
                     <div className="text-xs font-semibold text-indigo-600 uppercase tracking-wide mb-1">
                       {t('tryFree.results.hairLossPosition')}
-                    </div>
+                </div>
                     <div className="text-lg font-bold text-gray-900">{hairLossPositionEn}</div>
-                  </div>
+                    </div>
                   <div className="rounded-xl border border-fuchsia-100 bg-fuchsia-50/60 p-4">
                     <div className="text-xs font-semibold text-fuchsia-600 uppercase tracking-wide mb-1">
                       {t('tryFree.results.hairLossStage')}
@@ -1095,8 +1095,8 @@ export default function TryFreeAnalysis() {
                     <ExternalLink size={14} />
                   </a>
                   <span className="text-xs text-gray-500">based on the Norwood Scale</span>
-                </div>
-              </div>
+                    </div>
+                  </div>
 
               {frontPreview && (
                 <div className="bg-white rounded-2xl border border-slate-200 p-4 mb-24">
@@ -1144,9 +1144,9 @@ export default function TryFreeAnalysis() {
                           </svg>
                           <div className="absolute top-3 left-3 text-xs bg-white/85 text-purple-700 px-2 py-1 rounded-md">
                             Estimated hairline
-                          </div>
-                        </div>
-                      </div>
+                    </div>
+                    </div>
+                  </div>
                     </div>
                     <div className="flex flex-col">
                       <div className="text-sm font-semibold text-gray-800 mb-3">Hair Loss Type &amp; Stage Reference</div>
@@ -1206,14 +1206,14 @@ export default function TryFreeAnalysis() {
                             />
                             <div className="absolute top-2 left-2 text-[11px] bg-white/85 text-purple-700 px-2 py-1 rounded">
                               Focused match
-                            </div>
+                    </div>
                           </motion.div>
-                        </div>
-                      </div>
+                    </div>
+                  </div>
                       <div className="mt-2 text-xs text-gray-600">
                         {referencePattern.label} · Class {referenceStage}
-                      </div>
-                    </div>
+                </div>
+              </div>
                   </div>
                 </div>
               )}
@@ -1264,7 +1264,7 @@ export default function TryFreeAnalysis() {
                         strokeWidth="2"
                       />
                     </svg>
-                  </div>
+              </div>
 
                   <div className="grid gap-3 sm:grid-cols-2">
                     {radarLabels.map((label, idx) => (
@@ -1358,7 +1358,7 @@ export default function TryFreeAnalysis() {
                       >
                         Shop Devices
                       </Link>
-                    </div>
+                      </div>
                     <p className="text-sm text-gray-600 mt-2">
                       Continue in app for tracking, or explore devices for deeper scalp monitoring.
                     </p>

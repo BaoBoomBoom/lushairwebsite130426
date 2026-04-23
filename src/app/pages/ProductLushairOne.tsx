@@ -28,7 +28,7 @@ const features = [
   {
     icon: Zap,
     title: '20MP Medical-Grade Sensor',
-    desc: 'Crystal-clear scalp imagery at clinical resolution — right in the palm of your hand.',
+    desc: 'Crystal-clear scalp imagery at clinical-level resolution — right in the palm of your hand.',
     color: 'blue',
   },
   {
@@ -268,7 +268,7 @@ export default function ProductLushairOne() {
           >
             <h2 className="text-3xl font-black text-gray-900 mb-4">Technical specifications</h2>
             <p className="text-gray-600 mb-10">
-              Engineered to clinical standards, designed for everyday life.
+              Engineered to clinical-level standards, designed for everyday life.
             </p>
             <div className="divide-y divide-gray-100">
               {specs.map((s) => (

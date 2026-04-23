@@ -423,7 +423,7 @@ export default function ProductLushairStudio() {
               <h2 className="text-3xl font-black text-white mb-4">Make it yours.</h2>
               <p className="text-gray-300 mb-6 leading-relaxed">
                 Order 1,000+ units and Studio becomes your brand. Custom exterior, your logo,
-                your colours — all backed by Lushair's clinical-grade technology. Mould tooling fee applies.
+                your colours — all backed by Lushair's clinical-level technology. Mould tooling fee applies.
               </p>
               <div className="space-y-3">
                 {[
