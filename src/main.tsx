@@ -1,6 +1,7 @@
 
   import { createRoot } from "react-dom/client";
   import { ClerkProvider } from "@clerk/clerk-react";
+  import { SpeedInsights } from "@vercel/speed-insights/react";
   import App from "./app/App.tsx";
   import "./styles/index.css";
 
@@ -13,5 +14,6 @@
   createRoot(document.getElementById("root")!).render(
     <ClerkProvider publishableKey={PUBLISHABLE_KEY} afterSignOutUrl="/">
       <App />
+      <SpeedInsights />
     </ClerkProvider>
   );
