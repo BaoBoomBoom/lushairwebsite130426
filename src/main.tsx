@@ -5,10 +5,14 @@
   import App from "./app/App.tsx";
   import "./styles/index.css";
 
-  const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY;
+  const PUBLISHABLE_KEY =
+    import.meta.env.VITE_CLERK_PUBLISHABLE_KEY ||
+    "pk_test_b3JnYW5pYy1xdWFpbC0xMS5jbGVyay5hY2NvdW50cy5kZXYk";
 
-  if (!PUBLISHABLE_KEY) {
-    throw new Error("Missing VITE_CLERK_PUBLISHABLE_KEY in .env");
+  if (!import.meta.env.VITE_CLERK_PUBLISHABLE_KEY) {
+    console.warn(
+      "VITE_CLERK_PUBLISHABLE_KEY is missing. Falling back to test Clerk key."
+    );
   }
 
   createRoot(document.getElementById("root")!).render(
