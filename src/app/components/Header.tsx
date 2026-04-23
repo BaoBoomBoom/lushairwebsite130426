@@ -1,9 +1,11 @@
 import { Link, useLocation } from 'react-router';
 import { Menu, X, Globe, ShoppingCart, Building2, ChevronDown } from 'lucide-react';
 import { useState } from 'react';
-import { SignedIn, SignedOut, SignInButton, SignUpButton, UserButton } from '@clerk/clerk-react';
+import { SignedIn, SignedOut, SignInButton, UserButton } from '@clerk/clerk-react';
 import { useLanguage, LANGUAGES, Language } from '../contexts/LanguageContext';
 import { useCart } from '../contexts/CartContext';
+
+const TRY_FREE_URL = 'https://www.lushair.ai/try-free';
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -167,11 +169,12 @@ export default function Header() {
                   Sign in
                 </button>
               </SignInButton>
-              <SignUpButton mode="modal">
-                <button className="px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors text-sm font-medium">
-                  {t('nav.getStarted')}
-                </button>
-              </SignUpButton>
+              <a
+                href={TRY_FREE_URL}
+                className="px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors text-sm font-medium"
+              >
+                {t('nav.getStarted')}
+              </a>
             </SignedOut>
             <SignedIn>
               <UserButton afterSignOutUrl="/" />
@@ -284,11 +287,12 @@ export default function Header() {
                     Sign in
                   </button>
                 </SignInButton>
-                <SignUpButton mode="modal">
-                  <button className="px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors text-sm font-medium">
-                    {t('nav.getStarted')}
-                  </button>
-                </SignUpButton>
+                <a
+                  href={TRY_FREE_URL}
+                  className="px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors text-sm font-medium text-center"
+                >
+                  {t('nav.getStarted')}
+                </a>
               </SignedOut>
               <SignedIn>
                 <div className="pt-2">
