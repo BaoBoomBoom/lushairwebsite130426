@@ -1,6 +1,7 @@
 import { lazy } from 'react';
 import { createBrowserRouter } from 'react-router';
 import Root from './pages/Root';
+import ProtectedRoute from './components/ProtectedRoute';
 
 const Home = lazy(() => import('./pages/Home'));
 const TryFreeAnalysis = lazy(() => import('./pages/TryFreeAnalysis'));
@@ -31,7 +32,14 @@ export const router = createBrowserRouter([
       { path: 'api', Component: ApiServices },
       { path: 'saas', Component: SaasPlatform },
       { path: 'implementation', Component: Implementation },
-      { path: 'dashboard', Component: Dashboard },
+      {
+        path: 'dashboard',
+        element: (
+          <ProtectedRoute>
+            <Dashboard />
+          </ProtectedRoute>
+        ),
+      },
       { path: 'products/one', Component: ProductLushairOne },
       { path: 'products/pro', Component: ProductLushairPro },
       { path: 'products/studio', Component: ProductLushairStudio },

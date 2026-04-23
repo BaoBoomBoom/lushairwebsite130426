@@ -28,6 +28,7 @@ import {
   RefreshCw,
   FileText,
 } from 'lucide-react';
+import { useUser } from '@clerk/clerk-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { CALENDLY_BOOK_CALL_URL } from '../../constants/calendly';
 
@@ -121,6 +122,15 @@ export default function Dashboard() {
   const [reportGeneratedAt, setReportGeneratedAt] = useState<string | null>(null);
   const [actionMessage, setActionMessage] = useState<string>('');
   const { t } = useLanguage();
+  const { user } = useUser();
+  const displayName =
+    user?.firstName ||
+    user?.username ||
+    user?.primaryEmailAddress?.emailAddress.split('@')[0] ||
+    '';
+  const consumerWelcome = displayName
+    ? `Welcome back, ${displayName}! 👋`
+    : t('dashboard.welcome');
 
   const mockMetrics = [
     { name: t('dashboard.overview.hairDensity'), current: 78, previous: 75, trend: 'up' },
@@ -246,7 +256,7 @@ export default function Dashboard() {
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-6">
           <div>
             <h1 className="text-3xl font-bold text-gray-900 mb-2">
-              {accountType === 'consumer' ? t('dashboard.welcome') : t('dashboard.businessWelcome')}
+              {accountType === 'consumer' ? consumerWelcome : t('dashboard.businessWelcome')}
             </h1>
             <p className="text-gray-600">
               {accountType === 'consumer' ? t('dashboard.lastScan') : t('dashboard.businessSubtitle')}
