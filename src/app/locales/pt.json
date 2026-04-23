@@ -506,7 +506,7 @@
     "gantt": {
       "title": "Gráfico de Gantt Interativo",
       "step": "Passo",
-      "downloadPdf": "📥 Baixar Roteiro Detalhado em PDF"
+      "bookCall": "Agendar uma chamada"
     },
     "decision": {
       "title": "Qual Solução É Certa para Você?",

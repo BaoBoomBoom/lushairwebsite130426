@@ -100,7 +100,7 @@ export default function ProductLushairOne() {
             transition={{ duration: 0.6 }}
             className="relative"
           >
-            <div className="relative bg-gradient-to-br from-purple-50 via-violet-50 to-blue-50 rounded-3xl p-12 aspect-square flex items-center justify-center overflow-hidden">
+            <div className="relative bg-purple-50 rounded-3xl p-12 aspect-square flex items-center justify-center overflow-hidden">
               {/* Glow blobs */}
               <div className="absolute top-1/4 left-1/4 w-48 h-48 bg-purple-300/30 rounded-full blur-3xl" />
               <div className="absolute bottom-1/4 right-1/4 w-32 h-32 bg-blue-300/30 rounded-full blur-2xl" />
@@ -223,7 +223,7 @@ export default function ProductLushairOne() {
       </section>
 
       {/* Feature Grid */}
-      <section className="bg-gradient-to-br from-purple-50 via-blue-50 to-white py-20">
+      <section className="bg-slate-50 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -294,7 +294,7 @@ export default function ProductLushairOne() {
               {reviews.map((r) => (
                 <div key={r.name} className="bg-gray-50 rounded-2xl p-6">
                   <div className="flex items-center gap-3 mb-3">
-                    <div className="w-9 h-9 rounded-full bg-gradient-to-br from-purple-400 to-blue-400 flex items-center justify-center text-white font-bold text-sm">
+                    <div className="w-9 h-9 rounded-full bg-purple-500 flex items-center justify-center text-white font-bold text-sm">
                       {r.name[0]}
                     </div>
                     <div>
@@ -316,7 +316,7 @@ export default function ProductLushairOne() {
       </section>
 
       {/* Bottom CTA */}
-      <section className="bg-gradient-to-r from-purple-600 to-blue-600 py-20">
+      <section className="bg-purple-700 py-20">
         <div className="max-w-3xl mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

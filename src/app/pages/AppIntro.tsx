@@ -20,7 +20,7 @@ export default function AppIntro() {
   ] as const;
 
   return (
-    <div className="pt-16 min-h-screen bg-gradient-to-br from-slate-50 via-purple-50/40 to-white">
+    <div className="pt-16 min-h-screen bg-slate-50">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <Link
           to="/"

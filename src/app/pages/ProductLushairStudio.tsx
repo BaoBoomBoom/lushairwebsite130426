@@ -172,7 +172,7 @@ export default function ProductLushairStudio() {
             transition={{ duration: 0.6 }}
             className="relative"
           >
-            <div className="relative bg-gradient-to-br from-indigo-50 via-purple-50 to-violet-50 rounded-3xl p-12 aspect-square flex items-center justify-center overflow-hidden">
+            <div className="relative bg-slate-50 rounded-3xl p-12 aspect-square flex items-center justify-center overflow-hidden">
               {/* Glow blobs */}
               <div className="absolute top-1/4 left-1/4 w-48 h-48 bg-indigo-300/30 rounded-full blur-3xl" />
               <div className="absolute bottom-1/4 right-1/4 w-32 h-32 bg-violet-300/30 rounded-full blur-2xl" />
@@ -186,7 +186,7 @@ export default function ProductLushairStudio() {
                 className="relative z-10 w-full h-full object-contain drop-shadow-2xl"
               />
               {active.badge && (
-                <div className="absolute top-6 right-6 bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-4 py-2 rounded-full text-xs font-bold shadow-lg">
+                <div className="absolute top-6 right-6 bg-purple-700 text-white px-4 py-2 rounded-full text-xs font-bold shadow-lg">
                   {active.badge}
                 </div>
               )}
@@ -409,7 +409,7 @@ export default function ProductLushairStudio() {
       </section>
 
       {/* Custom Branding CTA */}
-      <section className="bg-gradient-to-r from-gray-900 to-indigo-950 py-20">
+      <section className="bg-gray-900 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -485,7 +485,7 @@ export default function ProductLushairStudio() {
       </section>
 
       {/* Bottom CTA */}
-      <section className="bg-gradient-to-r from-indigo-600 to-purple-600 py-20">
+      <section className="bg-purple-700 py-20">
         <div className="max-w-3xl mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

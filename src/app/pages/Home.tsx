@@ -53,7 +53,7 @@ export default function Home() {
             backgroundSize: '48px 48px',
           }}
         />
-        <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-violet-950/40 via-transparent to-[#0A0A0A]" />
+        <div className="pointer-events-none absolute inset-0 bg-violet-950/25" />
 
         <div className="relative z-10 mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
           <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
@@ -79,7 +79,7 @@ export default function Home() {
                   <>
                     <span className="text-white">{t('home.hero.title')}</span>
                     <br />
-                    <span className="bg-gradient-to-r from-violet-300 to-cyan-300 bg-clip-text text-transparent">
+                    <span className="text-violet-300">
                       {t('home.hero.titleHighlight')}
                     </span>
                   </>
@@ -139,8 +139,8 @@ export default function Home() {
               transition={{ duration: 0.55, delay: 0.12 }}
               className="relative"
             >
-              <div className="relative overflow-hidden rounded-xl border border-white/10 bg-gradient-to-br from-neutral-100 to-white p-3 shadow-2xl shadow-black/40 sm:p-4">
-                <div className="absolute inset-0 bg-gradient-to-tr from-[#7622ff]/10 to-transparent pointer-events-none" />
+              <div className="relative overflow-hidden rounded-xl border border-white/10 bg-neutral-100 p-3 shadow-2xl shadow-black/40 sm:p-4">
+                <div className="absolute inset-0 bg-[#7622ff]/10 pointer-events-none" />
                 <ImageWithFallback
                   src="https://images.unsplash.com/photo-1732203191374-6c8304b55d1a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3b21hbiUyMGJlYXV0aWZ1bCUyMGhhaXIlMjBzY2FscCUyMGhlYWx0aHxlbnwxfHx8fDE3NzU2MzIwMjh8MA&ixlib=rb-4.1.0&q=80&w=1080"
                   alt=""
@@ -151,7 +151,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="h-px w-full bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+        <div className="h-px w-full bg-white/10" />
       </section>
 
       {/* Precision strip — reference TechnicalGallery, kept airy */}
@@ -270,7 +270,7 @@ export default function Home() {
                 </div>
 
                 <div className="grid md:grid-cols-3 gap-8">
-                  <div className="bg-gradient-to-br from-purple-50 to-white p-8 rounded-2xl border border-purple-100">
+                  <div className="bg-purple-50 p-8 rounded-2xl border border-purple-100">
                     <div className="w-12 h-12 bg-purple-600 rounded-xl flex items-center justify-center mb-4">
                       <Shield className="text-white" size={24} />
                     </div>
@@ -282,7 +282,7 @@ export default function Home() {
                     </Link>
                   </div>
 
-                  <div className="bg-gradient-to-br from-blue-50 to-white p-8 rounded-2xl border border-blue-100">
+                  <div className="bg-blue-50 p-8 rounded-2xl border border-blue-100">
                     <div className="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center mb-4">
                       <TrendingUp className="text-white" size={24} />
                     </div>
@@ -293,7 +293,7 @@ export default function Home() {
                     </Link>
                   </div>
 
-                  <div className="bg-gradient-to-br from-green-50 to-white p-8 rounded-2xl border border-green-100">
+                  <div className="bg-green-50 p-8 rounded-2xl border border-green-100">
                     <div className="w-12 h-12 bg-green-600 rounded-xl flex items-center justify-center mb-4">
                       <Sparkles className="text-white" size={24} />
                     </div>
@@ -308,7 +308,7 @@ export default function Home() {
             ) : (
               <div className="space-y-10">
                 <div className="grid md:grid-cols-3 gap-8">
-                  <div className="bg-gradient-to-br from-purple-50 to-white p-8 rounded-2xl border border-purple-100">
+                  <div className="bg-purple-50 p-8 rounded-2xl border border-purple-100">
                     <div className="w-12 h-12 bg-purple-600 rounded-xl flex items-center justify-center mb-4">
                       <Zap className="text-white" size={24} />
                     </div>
@@ -319,7 +319,7 @@ export default function Home() {
                     </Link>
                   </div>
 
-                  <div className="bg-gradient-to-br from-blue-50 to-white p-8 rounded-2xl border-2 border-blue-300 ring-2 ring-blue-100 shadow-md">
+                  <div className="bg-blue-50 p-8 rounded-2xl border-2 border-blue-300 ring-2 ring-blue-100 shadow-md">
                     <div className="flex items-center gap-2 mb-2">
                       <span className="text-xs font-bold uppercase tracking-wide text-blue-700 bg-blue-100 px-2 py-0.5 rounded">
                         {t('home.business.api.badge')}
@@ -338,7 +338,7 @@ export default function Home() {
                     </Link>
                   </div>
 
-                  <div className="bg-gradient-to-br from-green-50 to-white p-8 rounded-2xl border-2 border-emerald-300 ring-2 ring-emerald-100 shadow-md">
+                  <div className="bg-green-50 p-8 rounded-2xl border-2 border-emerald-300 ring-2 ring-emerald-100 shadow-md">
                     <div className="flex items-center gap-2 mb-2">
                       <span className="text-xs font-bold uppercase tracking-wide text-emerald-800 bg-emerald-100 px-2 py-0.5 rounded">
                         {t('home.business.saas.badge')}
@@ -358,7 +358,7 @@ export default function Home() {
                   </div>
                 </div>
 
-                <div className="rounded-2xl border-2 border-dashed border-purple-200 bg-gradient-to-r from-slate-50 to-purple-50/40 p-6 md:p-8">
+                <div className="rounded-2xl border-2 border-dashed border-purple-200 bg-slate-50 p-6 md:p-8">
                   <p className="text-center text-sm font-semibold text-gray-500 uppercase tracking-wide mb-4">
                     {t('home.business.apiSaasStrip.title')}
                   </p>
@@ -449,7 +449,7 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-purple-600 to-blue-600">
+      <section className="py-20 bg-purple-700">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

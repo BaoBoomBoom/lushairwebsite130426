@@ -1,19 +1,17 @@
 import { useState } from 'react';
 import { Link } from 'react-router';
 import { motion, AnimatePresence } from 'motion/react';
-import { ShoppingCart, Star, Check, Zap, Eye, Sparkles, ArrowRight, Phone, Bell } from 'lucide-react';
+import { ShoppingCart, Star, Check, ArrowRight, Phone, Bell } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { useCart, Product } from '../contexts/CartContext';
 import { LUSHAIR_ONE_PRODUCT_IMAGE_URL } from '../../constants/productImages';
+import { CALENDLY_BOOK_CALL_URL } from '../../constants/calendly';
 import lushairProImg from '@/assets/products/lushair-pro.png';
 import lushairStudioWifiScreen from '@/assets/products/lushair-studio-wifi-screen.png';
 import lushairStudioPlugIn from '@/assets/products/lushair-studio-plug-in.png';
 import lushairStudioWifiMirror from '@/assets/products/lushair-studio-wifi-mirror.png';
 
 type PurchaseMode = 'buy' | 'coming_soon' | 'book_call';
-
-const SALES_MAILTO =
-  'mailto:sales@lushair.ai?subject=Lushair%20Studio%20%E2%80%94%20book%20a%20call';
 
 const products: (Product & {
   series: 'one' | 'pro' | 'studio';
@@ -166,7 +164,7 @@ export default function Shop() {
       : products.filter((p) => p.series === activeTab);
 
   return (
-    <div className="pt-16 min-h-screen bg-gradient-to-br from-gray-50 via-purple-50/30 to-white">
+    <div className="pt-16 min-h-screen bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
 
         {/* Header */}
@@ -252,7 +250,7 @@ export default function Shop() {
                   className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col"
                 >
                   {/* Product Image */}
-                  <div className={`relative aspect-[4/3] overflow-hidden bg-gradient-to-br from-gray-50 to-white`}>
+                  <div className={`relative aspect-[4/3] overflow-hidden bg-gray-50`}>
                     <img
                       src={product.image}
                       alt={product.name}
@@ -369,7 +367,9 @@ export default function Shop() {
                         {product.purchaseMode === 'book_call' && (
                           <>
                             <a
-                              href={SALES_MAILTO}
+                              href={CALENDLY_BOOK_CALL_URL}
+                              target="_blank"
+                              rel="noopener noreferrer"
                               className={`flex-1 py-2.5 ${accent.btn} text-white rounded-lg transition-colors font-semibold text-sm flex items-center justify-center gap-1.5`}
                             >
                               <Phone size={14} />
@@ -399,95 +399,19 @@ export default function Shop() {
           </motion.div>
         </AnimatePresence>
 
-        {/* Series Hero Cards (visible only when All is selected) */}
-        {activeTab === 'all' && (
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-            className="mt-16 grid md:grid-cols-3 gap-6"
-          >
-            {[
-              {
-                title: 'Lushair One',
-                subtitle: 'Where healthy hair begins',
-                desc: 'The perfect starting point for your hair health journey.',
-                price: 'From $99',
-                path: '/products/one',
-                gradient: 'from-purple-600 to-violet-600',
-                icon: Eye,
-              },
-              {
-                title: 'Lushair Pro',
-                subtitle: 'Coming soon',
-                desc: 'Three spectrums for clinical-grade insight—waitlist opening shortly.',
-                price: '$199',
-                path: '/products/pro',
-                gradient: 'from-blue-600 to-indigo-600',
-                icon: Sparkles,
-              },
-              {
-                title: 'Lushair Studio',
-                subtitle: 'Professional power',
-                desc: 'Built for salons, clinics, and brands.',
-                price: 'From $1,699',
-                path: '/products/studio',
-                gradient: 'from-indigo-600 to-purple-700',
-                icon: Zap,
-              },
-            ].map((item) => (
-              <Link
-                key={item.title}
-                to={item.path}
-                className={`bg-gradient-to-br ${item.gradient} rounded-2xl p-6 text-white hover:scale-[1.02] transition-all duration-300 shadow-lg group`}
-              >
-                <item.icon size={28} className="mb-3 text-white/80" />
-                <div className="font-black text-xl mb-1">{item.title}</div>
-                <div className="text-white/70 text-sm mb-2">{item.subtitle}</div>
-                <p className="text-white/60 text-xs mb-4">{item.desc}</p>
-                <div className="flex items-center justify-between">
-                  <span className="font-bold">{item.price}</span>
-                  <span className="text-white/80 group-hover:translate-x-1 transition-transform">→</span>
-                </div>
-              </Link>
-            ))}
-          </motion.div>
-        )}
-
-        {/* Studio Customization Banner */}
-        <div className="mt-16 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl p-8 text-white">
-          <div className="max-w-3xl mx-auto text-center">
-            <h3 className="text-2xl font-bold mb-3">{t('shop.studio.title')}</h3>
-            <p className="text-purple-100 mb-4">{t('shop.studio.subtitle')}</p>
-            <a
-              href={SALES_MAILTO}
-              className="inline-flex items-center justify-center gap-2 mb-6 px-6 py-3 rounded-xl bg-white text-indigo-700 font-semibold text-sm hover:bg-indigo-50 transition-colors"
-            >
-              <Phone size={18} />
-              {t('shop.bookCall')}
-            </a>
-            <div className="grid md:grid-cols-3 gap-4 text-sm">
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
-                <div className="font-semibold mb-2">{t('shop.studio.option1')}</div>
-                <div className="text-purple-100 text-xs">{t('shop.studio.option1Desc')}</div>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
-                <div className="font-semibold mb-2">{t('shop.studio.option2')}</div>
-                <div className="text-purple-100 text-xs">{t('shop.studio.option2Desc')}</div>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
-                <div className="font-semibold mb-2">{t('shop.studio.option3')}</div>
-                <div className="text-purple-100 text-xs">{t('shop.studio.option3Desc')}</div>
-              </div>
-            </div>
-            <p className="text-sm text-purple-200 mt-6">{t('shop.studio.customNote')}</p>
-          </div>
-        </div>
-
         {/* Info Banner */}
-        <div className="mt-8 bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 text-white text-center">
+        <div className="mt-16 bg-purple-700 rounded-2xl p-8 text-white text-center">
           <h3 className="text-2xl font-bold mb-3">{t('shop.banner.title')}</h3>
           <p className="text-purple-100 mb-6 max-w-2xl mx-auto">{t('shop.banner.subtitle')}</p>
+          <a
+            href={CALENDLY_BOOK_CALL_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center gap-2 mb-8 px-6 py-3 rounded-xl bg-white text-purple-800 font-semibold text-sm hover:bg-purple-50 transition-colors"
+          >
+            <Phone size={18} />
+            {t('shop.bookCall')}
+          </a>
           <div className="flex flex-wrap justify-center gap-8">
             <div className="flex items-center">
               <Check className="mr-2" size={20} />

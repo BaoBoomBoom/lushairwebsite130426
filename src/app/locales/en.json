@@ -570,7 +570,7 @@
     "gantt": {
       "title": "Interactive Gantt Chart",
       "step": "Step",
-      "downloadPdf": "📥 Download Detailed Roadmap PDF"
+      "bookCall": "Book a call"
     },
     "decision": {
       "title": "Which Solution Is Right for You?",

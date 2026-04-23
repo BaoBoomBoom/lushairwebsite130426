@@ -506,7 +506,7 @@
     "gantt": {
       "title": "互動式甘特圖",
       "step": "步驟",
-      "downloadPdf": "📥 下載詳細路線圖PDF"
+      "bookCall": "預約通話"
     },
     "decision": {
       "title": "哪種解決方案適合您？",

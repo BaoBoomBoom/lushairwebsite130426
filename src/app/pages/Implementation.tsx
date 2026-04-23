@@ -1,8 +1,7 @@
 import { motion } from 'motion/react';
 import { Check, Clock, FileText, Factory, TestTube, Package, ArrowRight } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
-
-const CALENDLY_URL = 'https://calendly.com/wendyhair/30min';
+import { CALENDLY_BOOK_CALL_URL, CALENDLY_FACTORY_VISIT_URL } from '../../constants/calendly';
 
 export default function Implementation() {
   const { t } = useLanguage();
@@ -23,10 +22,11 @@ export default function Implementation() {
     icon: stepIcons[num - 1],
     tasks: [1, 2, 3, ...(num === 6 ? [4] : [])].map((taskNum) => t(`implementation.steps.step${num}.task${taskNum}`)),
     cta: num <= 2 ? t(`implementation.steps.step${num}.cta`) : null,
+    ctaHref: num === 1 ? CALENDLY_BOOK_CALL_URL : num === 2 ? CALENDLY_FACTORY_VISIT_URL : null,
   }));
 
   return (
-    <div className="pt-16 min-h-screen bg-gradient-to-br from-gray-50 to-white">
+    <div className="pt-16 min-h-screen bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         {/* Header */}
         <div className="text-center mb-16">
@@ -78,7 +78,7 @@ export default function Implementation() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-gradient-to-br from-gray-50 to-white border-2 border-gray-200 rounded-xl p-6 hover:border-purple-300 transition-colors"
+                className="bg-gray-50 border-2 border-gray-200 rounded-xl p-6 hover:border-purple-300 transition-colors"
               >
                 <div className="flex items-center space-x-3 mb-4">
                   <div className="flex-shrink-0">{step.icon}</div>
@@ -99,8 +99,15 @@ export default function Implementation() {
                     </li>
                   ))}
                 </ul>
-                {step.cta && (
-                  <button className="w-full px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors text-sm font-medium">{step.cta}</button>
+                {step.cta && step.ctaHref && (
+                  <a
+                    href={step.ctaHref}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block w-full text-center px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors text-sm font-medium"
+                  >
+                    {step.cta}
+                  </a>
                 )}
               </motion.div>
             ))}
@@ -127,7 +134,7 @@ export default function Implementation() {
                       whileInView={{ width: `${widths[index]}%` }}
                       viewport={{ once: true }}
                       transition={{ duration: 1, delay: index * 0.1 }}
-                      className="absolute h-full bg-gradient-to-r from-purple-600 to-purple-400 rounded"
+                      className="absolute h-full bg-purple-600 rounded"
                       style={{ left: `${offsets[index]}%` }}
                     >
                       <div className="absolute inset-0 flex items-center justify-center text-xs text-white font-medium">
@@ -140,12 +147,19 @@ export default function Implementation() {
             })}
           </div>
           <div className="mt-8 pt-8 border-t border-gray-200">
-            <button className="px-8 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors font-semibold">{t('implementation.gantt.downloadPdf')}</button>
+            <a
+              href={CALENDLY_BOOK_CALL_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block px-8 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors font-semibold"
+            >
+              {t('implementation.gantt.bookCall')}
+            </a>
           </div>
         </div>
 
         {/* Decision Tree */}
-        <div className="bg-gradient-to-br from-purple-50 to-blue-50 rounded-2xl p-8 mb-16">
+        <div className="bg-purple-50 rounded-2xl p-8 mb-16">
           <div className="text-center mb-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">{t('implementation.decision.title')}</h2>
             <p className="text-gray-600">{t('implementation.decision.subtitle')}</p>
@@ -214,7 +228,7 @@ export default function Implementation() {
           </div>
           <div className="text-center mt-8">
             <a
-              href={CALENDLY_URL}
+              href={CALENDLY_BOOK_CALL_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block px-8 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors font-semibold"
@@ -235,7 +249,7 @@ export default function Implementation() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-gradient-to-br from-purple-50 to-white rounded-xl p-6 border border-purple-100"
+                className="bg-purple-50 rounded-xl p-6 border border-purple-100"
               >
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{t(`implementation.cases.${caseKey}.company`)}</h3>
                 <div className="text-sm text-gray-600 mb-4">

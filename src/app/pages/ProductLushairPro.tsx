@@ -20,21 +20,21 @@ const proProduct = {
 const spectrums = [
   {
     name: 'White Light',
-    color: 'from-yellow-200 to-amber-200',
+    color: 'bg-amber-100',
     textColor: 'text-amber-700',
     desc: 'Reveals surface-level scalp texture, follicle distribution, and hair density patterns.',
     icon: '☀️',
   },
   {
     name: 'UV Light',
-    color: 'from-violet-200 to-purple-200',
+    color: 'bg-violet-200',
     textColor: 'text-violet-700',
     desc: 'Detects dandruff, fungal conditions, and sebum buildup invisible to standard light.',
     icon: '🔮',
   },
   {
     name: 'Polarised Light',
-    color: 'from-blue-200 to-cyan-200',
+    color: 'bg-slate-200',
     textColor: 'text-blue-700',
     desc: 'Penetrates below the surface to map sub-dermal inflammation and follicle health.',
     icon: '💠',
@@ -134,7 +134,7 @@ export default function ProductLushairPro() {
             transition={{ duration: 0.6 }}
             className="relative order-2 lg:order-1"
           >
-            <div className="relative bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 rounded-3xl p-12 aspect-square flex items-center justify-center overflow-hidden">
+            <div className="relative bg-slate-50 rounded-3xl p-12 aspect-square flex items-center justify-center overflow-hidden">
               {/* Glow blobs */}
               <div className="absolute top-1/4 left-1/4 w-48 h-48 bg-indigo-300/30 rounded-full blur-3xl" />
               <div className="absolute bottom-1/4 right-1/4 w-32 h-32 bg-purple-300/30 rounded-full blur-2xl" />
@@ -145,7 +145,7 @@ export default function ProductLushairPro() {
                 className="relative z-10 w-full h-full object-contain drop-shadow-2xl"
               />
               {/* Premium badge */}
-              <div className="absolute top-6 right-6 bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-4 py-2 rounded-full text-xs font-bold shadow-lg">
+              <div className="absolute top-6 right-6 bg-purple-700 text-white px-4 py-2 rounded-full text-xs font-bold shadow-lg">
                 Premium
               </div>
               {/* Spectrum pills */}
@@ -290,12 +290,12 @@ export default function ProductLushairPro() {
                 transition={{ delay: i * 0.15 }}
                 className="relative bg-white/5 border border-white/10 rounded-2xl p-8 backdrop-blur-sm"
               >
-                <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${s.color} flex items-center justify-center text-2xl mb-6`}>
+                <div className={`w-16 h-16 rounded-2xl ${s.color} flex items-center justify-center text-2xl mb-6`}>
                   {s.icon}
                 </div>
                 <h3 className="text-white font-black text-xl mb-3">{s.name}</h3>
                 <p className="text-gray-400 text-sm leading-relaxed">{s.desc}</p>
-                <div className={`mt-4 inline-block px-3 py-1 bg-gradient-to-r ${s.color} rounded-full text-xs font-semibold ${s.textColor}`}>
+                <div className={`mt-4 inline-block px-3 py-1 ${s.color} rounded-full text-xs font-semibold ${s.textColor}`}>
                   Spectrum {i + 1} of 3
                 </div>
               </motion.div>
@@ -305,7 +305,7 @@ export default function ProductLushairPro() {
       </section>
 
       {/* Feature Grid */}
-      <section className="py-20 bg-gradient-to-br from-blue-50 to-white">
+      <section className="py-20 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -367,7 +367,7 @@ export default function ProductLushairPro() {
               {reviews.map((r) => (
                 <div key={r.name} className="bg-gray-50 rounded-2xl p-6">
                   <div className="flex items-center gap-3 mb-3">
-                    <div className="w-9 h-9 rounded-full bg-gradient-to-br from-blue-400 to-indigo-500 flex items-center justify-center text-white font-bold text-sm">
+                    <div className="w-9 h-9 rounded-full bg-purple-600 flex items-center justify-center text-white font-bold text-sm">
                       {r.name[0]}
                     </div>
                     <div>
@@ -389,7 +389,7 @@ export default function ProductLushairPro() {
       </section>
 
       {/* Bottom CTA */}
-      <section className="bg-gradient-to-r from-blue-600 to-indigo-600 py-20">
+      <section className="bg-purple-700 py-20">
         <div className="max-w-3xl mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

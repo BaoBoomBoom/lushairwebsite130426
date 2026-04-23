@@ -18,6 +18,7 @@ import {
   Leaf,
 } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
+import { CALENDLY_BOOK_CALL_URL } from '../../constants/calendly';
 
 const mockHistoryData = [
   { date: '2026-01-10', score: 78 },
@@ -40,7 +41,7 @@ export default function Dashboard() {
   ];
 
   return (
-    <div className="pt-16 min-h-screen bg-gradient-to-br from-gray-50 to-white">
+    <div className="pt-16 min-h-screen bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         {/* Header */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-6">
@@ -105,7 +106,7 @@ export default function Dashboard() {
           <div className="grid md:grid-cols-2 gap-6 mb-12">
             <Link
               to="/api"
-              className="group rounded-2xl border-2 border-blue-100 bg-gradient-to-br from-blue-50 to-white p-6 hover:border-blue-300 transition-colors"
+              className="group rounded-2xl border-2 border-blue-100 bg-blue-50 p-6 hover:border-blue-300 transition-colors"
             >
               <Code className="text-blue-600 mb-3" size={28} />
               <div className="font-bold text-gray-900 text-lg mb-1">{t('dashboard.businessCardApi')}</div>
@@ -113,7 +114,7 @@ export default function Dashboard() {
             </Link>
             <Link
               to="/saas"
-              className="group rounded-2xl border-2 border-emerald-100 bg-gradient-to-br from-emerald-50 to-white p-6 hover:border-emerald-300 transition-colors"
+              className="group rounded-2xl border-2 border-emerald-100 bg-emerald-50 p-6 hover:border-emerald-300 transition-colors"
             >
               <Building2 className="text-emerald-600 mb-3" size={28} />
               <div className="font-bold text-gray-900 text-lg mb-1">{t('dashboard.businessCardSaas')}</div>
@@ -121,15 +122,17 @@ export default function Dashboard() {
             </Link>
             <Link
               to="/hardware"
-              className="group rounded-2xl border-2 border-purple-100 bg-gradient-to-br from-purple-50 to-white p-6 hover:border-purple-300 transition-colors"
+              className="group rounded-2xl border-2 border-purple-100 bg-purple-50 p-6 hover:border-purple-300 transition-colors"
             >
               <Package className="text-purple-600 mb-3" size={28} />
               <div className="font-bold text-gray-900 text-lg mb-1">{t('dashboard.businessCardHardware')}</div>
               <div className="text-sm text-purple-700 font-semibold group-hover:underline">{t('common.learnMore')} →</div>
             </Link>
             <a
-              href="mailto:sales@lushair.ai?subject=Lushair%20%E2%80%94%20business%20account"
-              className="group rounded-2xl border-2 border-orange-100 bg-gradient-to-br from-orange-50 to-white p-6 hover:border-orange-300 transition-colors"
+              href={CALENDLY_BOOK_CALL_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group rounded-2xl border-2 border-orange-100 bg-orange-50 p-6 hover:border-orange-300 transition-colors"
             >
               <Phone className="text-orange-600 mb-3" size={28} />
               <div className="font-bold text-gray-900 text-lg mb-1">{t('dashboard.businessCardContact')}</div>
@@ -189,7 +192,7 @@ export default function Dashboard() {
           {activeTab === 'overview' && (
             <div className="space-y-8">
               {/* Overall Score Card */}
-              <div className="bg-gradient-to-br from-purple-600 to-blue-600 rounded-2xl p-8 text-white">
+              <div className="bg-purple-700 rounded-2xl p-8 text-white">
                 <div className="grid md:grid-cols-2 gap-8">
                   <div>
                     <div className="text-purple-200 mb-2">{t('dashboard.overview.totalScore')}</div>
@@ -402,7 +405,7 @@ export default function Dashboard() {
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.6, delay: index * 0.1 }}
-                      className="border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition-shadow bg-gradient-to-br from-white to-purple-50/40"
+                      className="border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition-shadow bg-white"
                     >
                       <div className="p-5">
                         <div className="flex items-start justify-between gap-3 mb-3">
@@ -421,7 +424,7 @@ export default function Dashboard() {
                 </div>
               </div>
 
-              <div className="bg-gradient-to-br from-purple-50 to-blue-50 rounded-xl p-6 border border-purple-100">
+              <div className="bg-purple-50 rounded-xl p-6 border border-purple-100">
                 <h3 className="font-semibold text-gray-900 mb-3">{t('dashboard.ingredients.whyThese')}</h3>
                 <ul className="space-y-2 text-sm text-gray-700">
                   <li className="flex items-start space-x-2">

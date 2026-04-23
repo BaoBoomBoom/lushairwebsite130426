@@ -570,7 +570,7 @@
     "gantt": {
       "title": "交互式甘特图",
       "step": "步骤",
-      "downloadPdf": "📥 下载详细实施路线图 PDF"
+      "bookCall": "预约沟通"
     },
     "decision": {
       "title": "哪种方案适合您?",

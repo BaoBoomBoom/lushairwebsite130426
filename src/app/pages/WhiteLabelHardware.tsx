@@ -2,6 +2,7 @@ import { useMemo, useState } from 'react';
 import { motion } from 'motion/react';
 import { Calculator, Check, Clock, Package, Star, TrendingUp } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
+import { CALENDLY_BOOK_CALL_URL } from '../../constants/calendly';
 
 type ProductTier = 'single' | 'tri' | 'tri-screen';
 
@@ -84,10 +85,9 @@ export default function WhiteLabelHardware() {
   const requestQuoteHref = `mailto:support@lushair.ai?subject=${encodeURIComponent(
     `Custom Quote Request - ${selectedProductLabel}`
   )}&body=${encodeURIComponent(quoteBody)}`;
-  const scheduleCallHref = 'https://calendly.com/wendyhair/30min';
 
   return (
-    <div className="pt-16 min-h-screen bg-gradient-to-br from-gray-50 to-white">
+    <div className="pt-16 min-h-screen bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         {/* Header */}
         <div className="text-center mb-16">
@@ -250,7 +250,7 @@ export default function WhiteLabelHardware() {
         </div>
 
         {/* Pricing Calculator */}
-        <div className="bg-gradient-to-br from-purple-50 to-blue-50 rounded-2xl p-8 mb-12">
+        <div className="bg-purple-50 rounded-2xl p-8 mb-12">
           <div className="flex items-center space-x-2 mb-6">
             <Calculator className="text-purple-600" size={28} />
             <h2 className="text-2xl font-bold text-gray-900">{t('hardware.calculator.title')}</h2>
@@ -319,7 +319,7 @@ export default function WhiteLabelHardware() {
               {t('hardware.calculator.requestQuote')}
             </a>
             <a
-              href={scheduleCallHref}
+              href={CALENDLY_BOOK_CALL_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="flex-1 px-6 py-4 bg-white text-purple-600 border-2 border-purple-600 rounded-xl hover:bg-purple-50 transition-colors font-semibold text-center"

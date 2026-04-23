@@ -2,9 +2,9 @@ import { useState } from 'react';
 import { motion } from 'motion/react';
 import { Code, Key, Zap, Check, Copy, Eye, EyeOff, Send } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
+import { CALENDLY_BOOK_CALL_URL } from '../../constants/calendly';
 
 type PricingTier = 'basic' | 'standard' | 'professional';
-const CALENDLY_URL = 'https://calendly.com/wendyhair/30min';
 const DOCS_URL = 'https://lushair.readme.io/docs/getting-started';
 const API_KEY_URL = 'https://organic-quail-11.clerk.accounts.dev';
 
@@ -64,7 +64,7 @@ export default function ApiServices() {
   };
 
   return (
-    <div className="pt-16 min-h-screen bg-gradient-to-br from-gray-50 to-white">
+    <div className="pt-16 min-h-screen bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         {/* Header */}
         <div className="text-center mb-16">
@@ -132,14 +132,14 @@ export default function ApiServices() {
               </button>
             ))}
           </div>
-          <div className="bg-gradient-to-br from-purple-50 to-blue-50 rounded-xl p-6">
+          <div className="bg-purple-50 rounded-xl p-6">
             <div className="flex justify-between items-center">
               <div>
                 <div className="text-sm text-gray-600 mb-1">{t('api.metrics.selected').replace('{count}', String(selectedMetrics.length))}</div>
                 <div className="text-3xl font-bold text-gray-900">{t('api.metrics.totalPrice').replace('{price}', calculateTotalPrice().toLocaleString())}</div>
               </div>
               <a
-                href={CALENDLY_URL}
+                href={CALENDLY_BOOK_CALL_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-8 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors font-semibold"
