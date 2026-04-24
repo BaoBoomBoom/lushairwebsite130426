@@ -31,6 +31,8 @@ import {
 import { useUser } from '@clerk/clerk-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { CALENDLY_BOOK_CALL_URL } from '../../constants/calendly';
+import ClerkDebug from '../components/ClerkDebug';
+import OpenApiDocsButton from '../components/OpenApiDocsButton';
 
 const mockHistoryData = [
   { date: '2026-01-10', score: 78 },
@@ -252,6 +254,7 @@ export default function Dashboard() {
   return (
     <div className="pt-16 min-h-screen bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <ClerkDebug />
         {/* Header */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-6">
           <div>
@@ -280,6 +283,9 @@ export default function Dashboard() {
                   <Camera className="mr-2" size={20} />
                   {t('dashboard.newScan')}
                 </Link>
+                <OpenApiDocsButton
+                  className="px-6 py-3 border border-purple-600 text-purple-700 hover:bg-purple-50 rounded-lg transition-colors font-semibold inline-flex items-center gap-2"
+                />
               </>
             )}
           </div>

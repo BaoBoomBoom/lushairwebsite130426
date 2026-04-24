@@ -3,10 +3,10 @@ import { motion } from 'motion/react';
 import { Code, Key, Zap, Check, Copy, Eye, EyeOff, Send } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { CALENDLY_BOOK_CALL_URL } from '../../constants/calendly';
+import OpenApiDocsButton from '../components/OpenApiDocsButton';
 
 type PricingTier = 'basic' | 'standard' | 'professional';
 const DOCS_URL = 'https://lushair.readme.io/docs/getting-started';
-const API_KEY_URL = 'https://organic-quail-11.clerk.accounts.dev';
 
 export default function ApiServices() {
   const [selectedTier, setSelectedTier] = useState<PricingTier>('standard');
@@ -229,7 +229,7 @@ export default function ApiServices() {
               </div>
             </div>
           </div>
-          <div className="mt-8 flex gap-4">
+          <div className="mt-8 flex gap-4 flex-wrap">
             <a
               href={DOCS_URL}
               target="_blank"
@@ -238,14 +238,7 @@ export default function ApiServices() {
             >
               {t('api.docs.viewFullDocs')}
             </a>
-            <a
-              href={API_KEY_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-6 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors font-semibold"
-            >
-              {t('api.docs.getApiKey')}
-            </a>
+            <OpenApiDocsButton label={t('api.docs.getApiKey')} />
           </div>
         </div>
 
